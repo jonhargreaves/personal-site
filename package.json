@@ -1,6 +1,7 @@
 {
-  "name": "my-app",
+  "name": "personal-site",
   "version": "0.1.0",
+  "homepage": "https://jonhargreaves.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
