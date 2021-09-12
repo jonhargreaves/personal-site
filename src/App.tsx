@@ -4,6 +4,10 @@ import './App.css';
 function App() {
   return (
     <div className="app">
+      <header>
+        <title>Jon Hargreaves | Design Generalist</title>
+        <meta name="description" content="Multi-disciplinary designer from Norfolk, VA | Head of Design at Caretaker" />
+      </header>
       <div className="app-wrapper">
         <div className="app-section__white-divider" />
         <div className="app-section__vertical-spacing" />
