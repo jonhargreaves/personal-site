@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.a617e044.chunk.css",
-    "main.js": "/static/js/main.1228d184.chunk.js",
-    "main.js.map": "/static/js/main.1228d184.chunk.js.map",
+    "main.css": "/static/css/main.3853e5ab.chunk.css",
+    "main.js": "/static/js/main.abbdc916.chunk.js",
+    "main.js.map": "/static/js/main.abbdc916.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b3cce0f9.js",
     "runtime-main.js.map": "/static/js/runtime-main.b3cce0f9.js.map",
     "static/js/2.e86e6a88.chunk.js": "/static/js/2.e86e6a88.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.0984edc4.chunk.js": "/static/js/3.0984edc4.chunk.js",
     "static/js/3.0984edc4.chunk.js.map": "/static/js/3.0984edc4.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/static/css/main.a617e044.chunk.css.map",
+    "static/css/main.3853e5ab.chunk.css.map": "/static/css/main.3853e5ab.chunk.css.map",
     "static/js/2.e86e6a88.chunk.js.LICENSE.txt": "/static/js/2.e86e6a88.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg"
+    "static/media/index.css": "/static/media/Pinopolis-Regular.2bd37172.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.b3cce0f9.js",
     "static/js/2.e86e6a88.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.1228d184.chunk.js"
+    "static/css/main.3853e5ab.chunk.css",
+    "static/js/main.abbdc916.chunk.js"
   ]
 }
