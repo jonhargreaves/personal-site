@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "BroadSans-Bold";
+  src: local("BroadSansBold"),
+    url("./fonts/BroadSans/BroadSans-Bold.woff") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Pinopolis-Regular";
+  src: local("PinopolisRegular"),
+    url("./fonts/Pinopolis/Pinopolis-Regular.woff") format("truetype");
+  font-weight: 300;
+}

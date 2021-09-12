@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './fonts/BroadSans/BroadSans-Bold.woff';
+import './fonts/Pinopolis/Pinopolis-Regular.woff';
 
 ReactDOM.render(
   <React.StrictMode>
