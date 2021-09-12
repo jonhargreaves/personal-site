@@ -25,7 +25,7 @@
 .app-section__yellow-divider,
 .app-section__red-divider,
 .app-section__blue-divider {
-  height: 8px;
+  height: 6px;
   width: 100%;
 }
 
@@ -73,6 +73,31 @@
 
 .app-section__blue-heading {
   color: #0093CF;
+}
+
+.app-section__white-link,
+.app-section__yellow-link,
+.app-section__red-link,
+.app-section__blue-link {
+  border-bottom: 1px solid #FFF;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.app-section__yellow-link {
+  border-bottom: 1px solid #E6BE2F;
+}
+
+.app-section__red-link {
+  border-bottom: 1px solid #D72F31;
+}
+
+.app-section__blue-link {
+  border-bottom: 1px solid #0093CF;
+}
+
+a:hover {
+  color: #AAA;
 }
 
 .app-section__medium-text-column {

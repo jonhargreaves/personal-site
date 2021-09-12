@@ -14,8 +14,9 @@ function App() {
         <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
         <h3>
-          Design generalist
+          Design Generalist
         </h3>
+        <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
         <div className="app-section__yellow-divider" />
@@ -29,19 +30,17 @@ function App() {
           </div>
           <div className="app-section__medium-text-column">
             <p>
-              I'm a designer who works remotely as the Head of Design at Caretaker. We are attempting to disrupt the property management and rental industry with our software.
+              I'm a designer working remotely as the Head of Design at <a href="https://caretaker.com/" className="app-section__yellow-link">Caretaker</a>. We are attempting to disrupt the property management and rental industry with our property management software.
               <br />
               <br />
               I’m currently not freelancing.
               <br />
               <br />
-              When not designing, I’m either researching fashion trends, getting tattoos, listening to house music or jazz, searching for weird vintage furniture, shooting film, riding my bike, or reading about mid century architecture.
-              <br />
-              <br />
-              Massimo and Lella Vignelli are my design heros.
+              When not designing, I’m either researching fashion trends, getting tattoos, listening to house or jazz music, searching for weird vintage furniture, <a href="https://www.instagram.com/jonhargreaves.film/?hl=en" className="app-section__yellow-link">shooting 35mm film</a>, riding my bike, or reading about mid century architecture.
             </p>
           </div>
         </div>
+        <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
         <div className="app-section__red-divider" />
@@ -55,18 +54,20 @@ function App() {
           </div>
           <div className="app-section__medium-text-column">
             <p>
-              I've designed and branded www.caretaker.com<br />
+              I've designed and branded <a href="https://caretaker.com/" className="app-section__red-link">www.caretaker.com</a><br />
               (a product for landlords)
               <br />
               <br />
-              I’ve designed and branded www.apartment.app<br />
+              I’ve designed and branded <a href="https://apartment.app/" className="app-section__red-link">www.apartment.app</a><br />
               (a Caretaker company for renters)
               <br />
               <br />
-              I've done a few small, personal design projects and developed a few rolls of film here. I started my career as an illustrator and brand designer, moved to product design and front end dev, and finally landed on being a design generalist.
+              I started my design career as a freelance illustrator and brand designer. I was contracted and hired by Caretaker (previously Flip) to work on brand development, illustration, and product design.
+              As time went on I started creating and maintaining Caretaker's design system as a designer and front end dev. That's how I started labeling myself as a Design Generalist.
             </p>
           </div>
         </div>
+        <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
         <div className="app-section__blue-divider" />
@@ -80,13 +81,15 @@ function App() {
           </div>
           <div className="app-section__medium-text-column">
             <p>
-              I'm working on starting a podcast about working remotely as a designer called Designers Drinking Coffee.
+              I'm currently working on starting a podcast about working remotely as a designer called Designers Drinking Coffee.
               <br />
               <br />
-              I want to collect rare, mid century/modern furniture, buy a mid century house in Virginia, and to design more than just things that live on the internet. I want to design homes, furniture, houseware, clothing, etc.
+              I would like to collect rare, mid century/modern furniture, buy a mid century house, and design more than just things that live on the internet. The possiblity of designing homes, furniture, houseware, and clothing excites me.
+              Most of all, I would like to explore design the way <a href="https://www.rit.edu/vignellicenter/vignelli-legacy" className="app-section__blue-link">Massimo and Lella Vignelli</a> did.
               </p>
           </div>
         </div>
+        <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
         <div className="app-section__white-divider" />
@@ -100,16 +103,16 @@ function App() {
           </div>
           <div className="app-section__small-text-column">
             <p>
-              If you want to talk, reach out to me here and I'll respond when I can.
+              If you want to talk, <a href="mailto:jhargreavesdesigns@gmail.com" className="app-section__white-link">message me</a> and I'll respond to you as soon as I can.
               <br />
               <br />
-              For projects I’m working on, go here. For thoughts and rants I have, go here.
+              For projects I’m working on, go <a href="https://www.instagram.com/jonhargreaves/?hl=en" className="app-section__white-link">here</a>. For thoughts and rants I have, go <a href="https://twitter.com/shml_onathan?lang=en" className="app-section__white-link">here</a>.
             </p>
           </div>
           <div className="app-section__horizontal-spacing" />
           <div className="app-section__small-text-column">
             <p>
-              Special thanks to Pretend Foundry for the beautiful typefaces used on this site. Check them out here.
+              A very special thanks to <a href="https://pretendfoundry.com/" className="app-section__white-link">Pretend Foundry</a> for the beautiful typefaces used on this site: Broad Bold and Pinopolis.
             </p>
           </div>
         </div>
