@@ -1,11 +1,16 @@
 import './App.css';
 
+const META_TITLE = 'Jon Hargreaves | Design Generalist'
+const META_DESCRIPTION = 'Multi-disciplinary designer from Norfolk, VA | Head of Design at Caretaker'
+
 function App() {
   return (
     <div className="app">
       <header>
-        <title>Jon Hargreaves | Design Generalist</title>
-        <meta name="description" content="Multi-disciplinary designer from Norfolk, VA | Head of Design at Caretaker" />
+        <title>{META_TITLE}</title>
+        <meta name="description" content={META_DESCRIPTION} />
+        <meta property="og:description" content={META_DESCRIPTION} />
+        <meta property="og:title" content={META_TITLE} />
       </header>
       <div className="app-wrapper">
         <div className="app-section__white-divider" />
@@ -131,7 +136,7 @@ function App() {
         <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
-        <p>Designed and coded by Jon Hargeaves © 2021</p>
+        <p>This website was designed and coded by Jon Hargeaves © 2021</p>
       </div>
     </div>
   );
