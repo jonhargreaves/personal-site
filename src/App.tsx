@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -34,13 +33,13 @@ function App() {
           </div>
           <div className="app-section__medium-text-column">
             <p>
-              I'm a designer working remotely as the Head of Design at <a href="https://caretaker.com/" className="app-section__yellow-link">Caretaker</a>. We are attempting to disrupt the property management and rental industry with our property management software.
+              I'm currently working remotely as the Head of Design at <a href="https://caretaker.com/" className="app-section__yellow-link">Caretaker</a>. We are attempting to disrupt the rental housing industry with our property management software.
               <br />
               <br />
               I’m currently not freelancing.
               <br />
               <br />
-              When not designing, I’m either researching fashion trends, getting tattoos, listening to house or jazz music, searching for weird vintage furniture, <a href="https://www.instagram.com/jonhargreaves.film/?hl=en" className="app-section__yellow-link">shooting 35mm film</a>, riding my bike, or reading about mid century architecture.
+              When not designing, I’m researching fashion trends, getting tattoos, listening to house or jazz music, reading about mid century/modern furniture and architecutre, shooting 35mm film, or riding my fixie bike.
             </p>
           </div>
         </div>
@@ -58,16 +57,16 @@ function App() {
           </div>
           <div className="app-section__medium-text-column">
             <p>
-              I've designed and branded <a href="https://caretaker.com/" className="app-section__red-link">www.caretaker.com</a><br />
-              (a product for landlords)
+              I've designed, branded, and coded <a href="https://caretaker.com/" className="app-section__red-link">www.caretaker.com</a><br />
+              <span>(a product for property owners)</span>
               <br />
               <br />
-              I’ve designed and branded <a href="https://apartment.app/" className="app-section__red-link">www.apartment.app</a><br />
-              (a Caretaker company for renters)
+              I’ve designed, branded, and coded <a href="https://apartment.app/" className="app-section__red-link">www.apartment.app</a><br />
+              <span>(a Caretaker company for renters)</span>
               <br />
               <br />
-              I started my design career as a freelance illustrator and brand designer. I was contracted and hired by Caretaker (previously Flip) to work on brand development, illustration, and product design.
-              As time went on I started creating and maintaining Caretaker's design system as a designer and front end dev. That's how I started labeling myself as a Design Generalist.
+              I started my career as a freelance brand designer and illustrator. I was contracted and later hired by Caretaker (previously Flip) to do brand design, illustration, and product design.
+              As time went on I learned front end development and started maintaining Caretaker's design system. I've realized that I'm a Design Generalist: a designer with many focuses.
             </p>
           </div>
         </div>
@@ -85,11 +84,11 @@ function App() {
           </div>
           <div className="app-section__medium-text-column">
             <p>
-              I'm currently working on starting a podcast about working remotely as a designer called Designers Drinking Coffee.
+              I'm in the process of starting on a podcast about working remotely as a designer called Designers Drinking Coffee.
               <br />
               <br />
-              I would like to collect rare, mid century/modern furniture, buy a mid century house, and design more than just things that live on the internet. The possiblity of designing homes, furniture, houseware, and clothing excites me.
-              Most of all, I would like to explore design the way <a href="https://www.rit.edu/vignellicenter/vignelli-legacy" className="app-section__blue-link">Massimo and Lella Vignelli</a> did.
+              I would like to collect mid century/modern furniture, buy a mid century house, and design more than just things that live on the internet. The possiblity of designing homes, furniture, houseware, and clothing is exciting to me.
+              Most of all, I want to explore design the way <a href="https://www.rit.edu/vignellicenter/vignelli-legacy" className="app-section__blue-link">Massimo and Lella Vignelli</a> did.
               </p>
           </div>
         </div>
@@ -108,15 +107,14 @@ function App() {
           <div className="app-section__small-text-column">
             <p>
               If you want to talk, <a href="mailto:jhargreavesdesigns@gmail.com" className="app-section__white-link">message me</a> and I'll respond to you as soon as I can.
-              <br />
-              <br />
-              For projects I’m working on, go <a href="https://www.instagram.com/jonhargreaves/?hl=en" className="app-section__white-link">here</a>. For thoughts and rants I have, go <a href="https://twitter.com/shml_onathan?lang=en" className="app-section__white-link">here</a>.
+              For recent projects I’ve worked on, go <a href="https://www.instagram.com/jonhargreaves/?hl=en" className="app-section__white-link">here</a>.
+              For rants and thoughts I have about design, go <a href="https://twitter.com/shml_onathan?lang=en" className="app-section__white-link">here</a>.
             </p>
           </div>
           <div className="app-section__horizontal-spacing" />
           <div className="app-section__small-text-column">
             <p>
-              A very special thanks to <a href="https://pretendfoundry.com/" className="app-section__white-link">Pretend Foundry</a> for the beautiful typefaces used on this site: Broad Bold and Pinopolis.
+              A very special thanks to <a href="https://pretendfoundry.com/" className="app-section__white-link">Pretend Foundry</a> for the beautiful typefaces used on this website: Broad Bold and Pinopolis.
             </p>
           </div>
         </div>
@@ -133,7 +131,7 @@ function App() {
         <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
         <div className="app-section__vertical-spacing" />
-        <p>Site designed and coded by Jon Hargeaves © 2021</p>
+        <p>Designed and coded by Jon Hargeaves © 2021</p>
       </div>
     </div>
   );
