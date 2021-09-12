@@ -2,16 +2,20 @@ import './App.css';
 
 const META_TITLE = 'Jon Hargreaves | Design Generalist'
 const META_DESCRIPTION = 'Multi-disciplinary designer from Norfolk, VA | Head of Design at Caretaker'
+const DEFAULT_KEYWORDS = 'Jon Hargreaves, designer, frontend developer, Virginia'
+const AUTHOR = 'Jon Hargreaves'
 
 function App() {
   return (
     <div className="app">
-      <header>
+      <head>
         <title>{META_TITLE}</title>
         <meta name="description" content={META_DESCRIPTION} />
         <meta property="og:description" content={META_DESCRIPTION} />
         <meta property="og:title" content={META_TITLE} />
-      </header>
+        <meta name="keywords" content={DEFAULT_KEYWORDS} />
+        <meta name="author" content={AUTHOR} />
+      </head>
       <div className="app-wrapper">
         <div className="app-section__white-divider" />
         <div className="app-section__vertical-spacing" />
