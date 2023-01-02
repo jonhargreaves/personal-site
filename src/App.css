@@ -17,6 +17,11 @@
   width: 1000px;
 }
 
+.app-section__logo {
+  height: 80px;
+  width: 80px;
+}
+
 .app-section__row {
   display: flex;
   width: 100%;
@@ -26,7 +31,7 @@
 .app-section__yellow-divider,
 .app-section__red-divider,
 .app-section__blue-divider {
-  height: 6px;
+  height: 4px;
   width: 100%;
 }
 
@@ -35,15 +40,15 @@
 }
 
 .app-section__yellow-divider {
-  background-color: #E6BE2F;
+  background-color: #FFC800;
 }
 
 .app-section__red-divider {
-  background-color: #D72F31;
+  background-color: #FF2801;
 }
 
 .app-section__blue-divider {
-  background-color: #0093CF;
+  background-color: #0050FF;
 }
 
 .app-section__vertical-spacing {
@@ -61,19 +66,19 @@
 .app-section__red-heading, 
 .app-section__blue-heading {
   display: flex;
-  width: 33%;
+  width: 50%;
 }
 
 .app-section__yellow-heading {
-  color: #E6BE2F;
+  color: #FFC800;
 }
 
 .app-section__red-heading {
-  color: #D72F31;
+  color: #FF2801;
 }
 
 .app-section__blue-heading {
-  color: #0093CF;
+  color: #0040FF;
 }
 
 .app-section__white-link,
@@ -86,27 +91,23 @@
 }
 
 .app-section__yellow-link {
-  border-bottom: 1px solid #E6BE2F;
+  border-bottom: 1px solid #FFC800;
 }
 
 .app-section__red-link {
-  border-bottom: 1px solid #D72F31;
+  border-bottom: 1px solid #FF2801;
 }
 
 .app-section__blue-link {
-  border-bottom: 1px solid #0093CF;
+  border-bottom: 1px solid #0040FF;
 }
 
 a:hover {
-  color: #AAA;
+  color: #888;
 }
 
-.app-section__medium-text-column {
-  width: 66%;
-}
-
-.app-section__small-text-column {
-  width: 33%;
+.app-section__column {
+  width: 50%;
 }
 
 h1, h2, h3 {
@@ -116,7 +117,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 120px;
-  line-height: 110px;
+  line-height: 120px;
 }
 
 h2 {
@@ -131,14 +132,14 @@ h3 {
 
 p {
   font-family: "Pinopolis-Regular";
-  font-size: 20px;
+  font-size: 18px;
   line-height: 32px;
   margin: 0;
   white-space: pre-line;
 }
 
 span {
-  color: #AAA;
+  color: #888;
 }
 
 @media (max-width: 1000px) {
@@ -194,11 +195,7 @@ span {
     line-height: 24px;
   }
 
-  .app-section__medium-text-column {
-    width: 100%;
-  }
-  
-  .app-section__small-text-column {
+  .app-section__column {
     width: 100%;
   }
 }
