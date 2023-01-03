@@ -91,7 +91,7 @@ function App() {
               <br />
               <span>11/2016 - 01/2022</span>
               <br />
-              Head of Design at <a href="https://caretaker.com/" target="_blank" className="app-section__red-link">Caretaker</a>
+              Product Designer → Head of Design at <a href="https://caretaker.com/" target="_blank" className="app-section__red-link">Caretaker</a>
               <br />
               <br />
               My career started as a freelance brand designer and illustrator. I was contracted and later hired by Caretaker (previously Flip) as a brand and product designer.
@@ -141,8 +141,9 @@ function App() {
               For recent projects, thoughts I have about design, and insights on remote work go <a href="https://twitter.com/JonGHargreaves" target="_blank" className="app-section__white-link">here</a>.
               <br />
               <br />
-              A very special thanks to all of my wonderful friends who have helped me along my journey and to <a href="https://pretendfoundry.com/" target="_blank" className="app-section__white-link">Pretend Foundry</a> for the beautiful typefaces used on this website:&nbsp;
+              A very special thanks to <a href="https://pretendfoundry.com/" target="_blank" className="app-section__white-link">Pretend Foundry</a> for the beautiful typefaces used on this website:&nbsp;
               <a href="https://pretendfoundry.com/broad" target="_blank" className="app-section__white-link">Broad Bold</a>&nbsp;&&nbsp;<a href="https://pretendfoundry.com/pinopolis" target="_blank" className="app-section__white-link">Pinopolis</a>.
+              I would also like to thank my loving, supportive partner Abby and all of my wonderful friends and colleages who have supported me during my journey.
             </p>
           </div>
           <div className="app-section__horizontal-spacing" />
