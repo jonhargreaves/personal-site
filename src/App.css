@@ -78,7 +78,7 @@
 }
 
 .app-section__blue-heading {
-  color: #0040FF;
+  color: #0050FF;
 }
 
 .app-section__white-link,
@@ -99,7 +99,7 @@
 }
 
 .app-section__blue-link {
-  border-bottom: 1px solid #0040FF;
+  border-bottom: 1px solid #0050FF;
 }
 
 a:hover {
