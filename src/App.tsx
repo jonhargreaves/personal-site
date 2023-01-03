@@ -153,8 +153,6 @@ function App() {
         <div className="app-section__vertical-spacing" />
         <div className="app-section__white-divider" />
         <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
         <h3>
           "Styles come and go. Good design is a language, not a style."
         </h3>
