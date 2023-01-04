@@ -103,7 +103,7 @@
 }
 
 a:hover {
-  color: #666;
+  color: #888;
 }
 
 .app-section__column {
@@ -139,7 +139,7 @@ p {
 }
 
 span {
-  color: #666;
+  color: #888;
 }
 
 @media (max-width: 1000px) {
