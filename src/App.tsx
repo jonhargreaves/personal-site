@@ -1,5 +1,4 @@
-import Logo from './logo.svg';
-import './App.css';
+import Logo from './svgs/logo.svg';
 
 const META_TITLE = 'Jon Hargreaves | Design Generalist'
 const META_DESCRIPTION = 'Multi-disciplinary designer from Norfolk, VA | Senior Product Designer at QuickNode'
@@ -8,7 +7,7 @@ const AUTHOR = 'Jon Hargreaves'
 
 function App() {
   return (
-    <div className="app">
+    <div className="bg-black flex justify-center">
       <head>
         <title>{META_TITLE}</title>
         <meta name="description" content={META_DESCRIPTION} />
@@ -17,153 +16,162 @@ function App() {
         <meta name="keywords" content={DEFAULT_KEYWORDS} />
         <meta name="author" content={AUTHOR} />
       </head>
-      <div className="app-wrapper">
-        <div className="app-section__white-divider" />
-        <div className="app-section__vertical-spacing" />
-        <img src={Logo} className="app-section__logo" alt="logo" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <h1>
-          Jon Hargreaves
-        </h1>
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <h3>
+      <div className="flex flex-col font-mono overflow-hidden px-4 py-4 lg:py-20 text-white h-full w-[1000px]">
+        <div className="bg-white h-px w-full" />
+        <div className="h-5 w-full lg:h-10" />
+        <img src={Logo} className="h-12 w-12" alt="logo" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="font-sans text-2xl lg:text-4xl lg:mb-4">
+          Jon
+          <br />
+          Hargreaves
+        </div>
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="font-sans text-xl lg:text-2xl">
           Design Generalist:
           <br />
-          <span>A designer with many focuses.</span>
-        </h3>
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__yellow-divider" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__row">
-          <div className="app-section__yellow-heading">
-            <h3>
-              Currently
-            </h3>
+          <div className="text-gray">
+            An adaptive, multidisciplinary designer focused on solving problems.
           </div>
-          <div className="app-section__horizontal-spacing" />
-          <div className="app-section__column">
-            <p>
-              I'm focused on branding, product design, design systems, front end development, and mentoring. I've never worked in an office and I intend to work remotely for my entire design career.
-              <br />
-              <br />
-              I'm working remotely as a Senior Product Designer at <a href="https://quicknode.com/" target="_blank" className="app-section__yellow-link">QuickNode</a>.
-              <br />
-              <br />
-              When I'm not designing, I&#39;m researching fashion trends, collecting modernist furniture, watching Formula 1, listening to jazz, learning about modernist architecutre, shooting 35mm film, or riding my fixie bike around Norfolk, VA.
-              <br />
-              <br />
-              Freelancing status: <span>UNAVAILABLE</span>
-            </p>
-          </div>
-          <div className="app-section__horizontal-spacing" />
         </div>
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__red-divider" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__row">
-          <div className="app-section__red-heading">
-            <h3>
-              Previously
-            </h3>
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="bg-yellow h-px w-full" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="flex w-full flex-col lg:flex-row">
+          <div className="font-bold text-yellow text-sm lg:text-md mb-6 lg:mb-0 tracking-wide w-full lg:w-1/2">
+            CURRENTLY
           </div>
-          <div className="app-section__horizontal-spacing" />
-          <div className="app-section__column">
-            <p>
-              <span>01/2022 - 05/2022</span>
+          <div className="h-full w-5 lg:w-10" />
+          <div className="w-full lg:w-1/2">
+            <div className="text-sm lg:text-md">
+              I'm a Senior Product Designer at <a href="https://quicknode.com/" target="_blank" className="border-b border-yellow hover:text-gray">QuickNode</a> working on the core product and design system.
+              I'm also the Co-Founder of <a href="https://essential.design/" target="_blank" className="border-b border-yellow hover:text-gray">Essential</a> (WIP) - a project dedicated to unifying designer and developer workflows.
               <br />
-              Senior Product Designer at <a href="https://icy.tools/" target="_blank" className="app-section__red-link">Icy Tools</a>
+              <br />
+              I've never worked in an office and I intend to work remotely for my entire design career.
               <br />
               <br />
-              <span>11/2020 - 01/2022</span>
+              When not designing, I&#39;m collecting modernist furniture, watching Formula 1, learning to surf, or riding my fixie bike around Norfolk, VA.
               <br />
-              Head of Design at <a href="https://apartment.app/" target="_blank" className="app-section__red-link">Apartment App</a>
+              <br />
+              Freelancing status: <span className="text-gray">UNAVAILABLE</span>
+            </div>
+          </div>
+          <div className="h-full w-5 lg:w-10" />
+        </div>
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="bg-red h-px w-full" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="flex w-full flex-col lg:flex-row">
+          <div className="font-bold text-red text-sm lg:text-md mb-6 lg:mb-0 tracking-wide w-full lg:w-1/2">
+            PREVIOUSLY
+          </div>
+          <div className="h-full w-5 lg:w-10" />
+          <div className="h-full w-full lg:w-1/2">
+            <div className="text-sm lg:text-md">
+              <div className="text-gray text-sm lg:text-md">01/2022 - 05/2022</div>
+              Senior Product Designer at <a href="https://icy.tools/" target="_blank" className="border-b border-red hover:text-gray">Icy Tools</a>
+              <br />
+              (acquired by QuickNode)
+              <br />
+              <br />
+              <div className="text-gray text-sm lg:text-md">11/2020 - 01/2022</div>
+              Head of Design at <a href="https://apartment.app/" target="_blank" className="border-b border-red hover:text-gray">Apartment App</a>
               <br />
               (a Caretaker company)
               <br />
               <br />
-              <span>11/2016 - 01/2022</span>
+              <div className="text-gray text-sm lg:text-md">07/2017 - 01/2022</div>
+              Product Designer → Head of Design at <a href="https://caretaker.com/" target="_blank" className="border-b border-red hover:text-gray">Caretaker</a>
               <br />
-              Product Designer → Head of Design at <a href="https://caretaker.com/" target="_blank" className="app-section__red-link">Caretaker</a>
+              (previously Flip)
               <br />
               <br />
-              My career started as a freelance brand designer and illustrator. I was contracted and later hired by Caretaker (previously Flip) as a brand and product designer.
-              As time went on, I learned front end development and started maintaining Caretaker's design system. I realized later that I'm a Design Generalist.
-            </p>
+              <div className="text-gray text-sm lg:text-md">11/2016 - 07/2017</div>
+              Freelance Visual Designer at Flip
+            </div>
+            <div className="h-10 w-full" />
+            <div className="border border-red rounded mr-auto px-3 py-1 lg:py-0 hover:text-gray w-fit">
+              <a
+                href="https://www.figma.com/file/oC4tbj7gO948anusmMwTzE/Case-Studies?type=design&node-id=1%3A3&t=qdWNeC5KnRC5W84l-1"
+                target="_blank"
+                className="text-sm lg:text-md">
+                  View case studies&nbsp;&nbsp;↗
+              </a>
+            </div>
           </div>
-          <div className="app-section__horizontal-spacing" />
+          <div className="h-full w-5 lg:w-10" />
         </div>
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__blue-divider" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__row">
-          <div className="app-section__blue-heading">
-            <h3>
-              Looking ahead
-            </h3>
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="bg-blue h-px w-full" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="flex w-full flex-col lg:flex-row">
+          <div className="font-bold text-blue text-sm lg:text-md mb-6 lg:mb-0 tracking-wide w-full lg:w-1/2">
+            LOOKING AHEAD
           </div>
-          <div className="app-section__horizontal-spacing" />
-          <div className="app-section__column">
-            <p>
-              I want to continue learning and design more than things that exist exclusively on the internet. The possiblity of designing homes, furniture, houseware, and clothing is very exciting to me.
+          <div className="h-full w-5 lg:w-10" />
+          <div className="w-full lg:w-1/2">
+            <div className="text-sm lg:text-md">
+              I want to mentor designers, build a more sustainable future with thoughtful design, and make good design accessible to everyone.
+              Most of all, I want to explore design problems the way <a href="https://www.rit.edu/vignellicenter/vignelli-legacy" target="_blank" className="border-b border-blue hover:text-gray">Massimo and Lella Vignelli</a> did.
               <br />
               <br />
-              I would also love to continue growing my collection of modernist furniture, find ways to build a more sustainable future with thoughtful design, and make good design accessible to everyone.
-              Most of all, I want to explore design the way <a href="https://www.rit.edu/vignellicenter/vignelli-legacy" target="_blank" className="app-section__blue-link">Massimo and Lella Vignelli</a> did.
-              </p>
+              As a self-taught designer, I would love to learn as much as I can about other design disciplines like industrial design and architecture.
+              The possibility of designing and building my own home, furniture pieces, and houseware is very exciting to me.
+              <br />
+              <br />
+              For an in-depth look at these future ambitions, I did an <a href="https://theperfectplay.co/jon-hargreaves-designing-for-humanity/" target="_blank" className="border-b border-blue hover:text-gray">an interview</a> with The Perfect Play.
+            </div>
           </div>
-          <div className="app-section__horizontal-spacing" />
+          <div className="h-full w-5 lg:w-10" />
         </div>
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__white-divider" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__row">
-          <div className="app-section__white-heading">
-            <h3>
-              Some links
-            </h3>
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="bg-white h-px w-full" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="flex w-full flex-col lg:flex-row">
+          <div className="font-bold text-sm lg:text-md mb-6 lg:mb-0 tracking-wide w-full lg:w-1/2">
+            SOME LINKS
           </div>
-          <div className="app-section__horizontal-spacing" />
-          <div className="app-section__column">
-            <p>
-              If you want to talk, are curious about remote work, or are interested in working together, <a href="mailto:jhargreavesdesigns@gmail.com" target="_blank" className="app-section__white-link">message me</a> and I'll respond to you as soon as I can.
-              For recent projects, thoughts I have about design, and insights on remote work go <a href="https://twitter.com/JonGHargreaves" target="_blank" className="app-section__white-link">here</a>.
+          <div className="h-full w-5 lg:w-10" />
+          <div className="w-full lg:w-1/2">
+            <div className="text-sm lg:text-md">
+              If you'd like to talk or are interested in working together, <a href="mailto:jhargreavesdesigns@gmail.com" target="_blank" className="border-b border-white hover:text-gray">message me</a> and I'll respond to you as soon as I can.
+              For thoughts I have on design and remote work <a href="https://twitter.com/JonGHargreaves" target="_blank" className="border-b border-white hover:text-gray">follow me</a> on Twitter.
               <br />
               <br />
-              A very special thanks to <a href="https://pretendfoundry.com/" target="_blank" className="app-section__white-link">Pretend Foundry</a> for the beautiful typefaces used on this website:&nbsp;
-              <a href="https://pretendfoundry.com/broad" target="_blank" className="app-section__white-link">Broad Bold</a>&nbsp;&&nbsp;<a href="https://pretendfoundry.com/pinopolis" target="_blank" className="app-section__white-link">Pinopolis</a>.
-              I would also like to thank my loving, supportive partner Abby and all of my wonderful friends and colleages who have supported me during my journey.
-            </p>
+              A very special thanks to my loving partner Abby, my wonderful friends, and my colleages who have supported me during my journey.
+              I would also like to thank the fine folks at <a href="https://pretendfoundry.com/" target="_blank" className="border-b border-white hover:text-gray">Pretend Foundry</a> for the beautiful typefaces used on this website:&nbsp;
+              <a href="https://pretendfoundry.com/broad" target="_blank" className="border-b border-white hover:text-gray">Broad Bold</a>&nbsp;&&nbsp;<a href="https://pretendfoundry.com/pinopolis" target="_blank" className="border-b border-white hover:text-gray">Pinopolis</a>.
+            </div>
           </div>
-          <div className="app-section__horizontal-spacing" />
+          <div className="h-full w-5 lg:w-10" />
         </div>
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__white-divider" />
-        <div className="app-section__vertical-spacing" />
-        <h3>
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="bg-white h-px w-full" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="font-sans text-xl lg:text-2xl">
           "Styles come and go. Good design is a language, not a style."
-        </h3>
-        <div className="app-section__vertical-spacing" />
-        <h2>
+        </div>
+        <div className="h-5 w-full lg:h-10" />
+        <div className="font-sans text-2xl lg:text-3xl">
           Massimo Vignelli
-        </h2>
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <div className="app-section__vertical-spacing" />
-        <p><span>This website was designed and coded by Jon Hargeaves © 2023</span></p>
+        </div>
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="h-5 w-full lg:h-10" />
+        <div className="text-gray text-sm">This website was designed and coded by Jon Hargreaves © 2023</div>
       </div>
     </div>
   );
