@@ -76,7 +76,7 @@ function App() {
           <div className="h-full w-full lg:w-1/2">
             <div className="text-sm lg:text-md">
               <div className="text-gray text-sm lg:text-md">01/2022 - 05/2022</div>
-              Senior Product Designer at <a href="https://icy.tools/" target="_blank" className="border-b border-red hover:text-gray">Icy Tools</a>
+              Staff Product Designer at <a href="https://icy.tools/" target="_blank" className="border-b border-red hover:text-gray">Icy Tools</a>
               <br />
               (acquired by QuickNode)
               <br />
@@ -96,15 +96,10 @@ function App() {
               <div className="text-gray text-sm lg:text-md">11/2016 - 07/2017</div>
               Freelance Visual Designer at Flip
             </div>
-            <div className="h-10 w-full" />
-            <div className="border border-red rounded mr-auto px-3 py-1 lg:py-0 hover:text-gray w-fit">
-              <a
-                href="https://www.figma.com/file/oC4tbj7gO948anusmMwTzE/Case-Studies?type=design&node-id=1%3A3&t=qdWNeC5KnRC5W84l-1"
-                target="_blank"
-                className="text-sm lg:text-md">
-                  View case studies&nbsp;&nbsp;↗
-              </a>
-            </div>
+            <div className="h-5 w-full lg:h-10" />
+            <div className="h-5 w-full lg:h-10" />
+            <div className="h-5 w-full lg:h-10" />
+            <div className="text-gray text-xs lg:text-sm">Case studies available upon request.</div>
           </div>
           <div className="h-full w-5 lg:w-10" />
         </div>
@@ -171,7 +166,7 @@ function App() {
         <div className="h-5 w-full lg:h-10" />
         <div className="h-5 w-full lg:h-10" />
         <div className="h-5 w-full lg:h-10" />
-        <div className="text-gray text-sm">This website was designed and coded by Jon Hargreaves © 2023</div>
+        <div className="text-gray text-xs lg:text-sm">This website was designed and coded by Jon Hargreaves © 2023</div>
       </div>
     </div>
   );

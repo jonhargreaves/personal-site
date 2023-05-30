@@ -22,6 +22,9 @@ module.exports = {
         'mono': ['"Pinopolis-Regular"', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
+        xs: ['0.875rem', {
+          lineHeight: '1.5rem',
+        }],
         sm: ['1rem', {
           lineHeight: '1.5rem',
         }],
