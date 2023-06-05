@@ -98,8 +98,14 @@ function App() {
             </div>
             <div className="h-5 w-full lg:h-10" />
             <div className="h-5 w-full lg:h-10" />
-            <div className="h-5 w-full lg:h-10" />
-            <div className="text-gray text-xs lg:text-sm">Case studies available upon request.</div>
+            <div className="border border-red rounded px-3 py-1 text-sm lg:text-md w-fit">
+              <a
+                href="https://www.figma.com/file/oC4tbj7gO948anusmMwTzE/Case-Studies?type=design&node-id=1%3A3&t=QgvXFFylchpqdH0h-1"
+                target="_blank"
+                className="hover:text-gray">
+                  View case studies ↗
+              </a>
+            </div>
           </div>
           <div className="h-full w-5 lg:w-10" />
         </div>
@@ -140,7 +146,7 @@ function App() {
           <div className="h-full w-5 lg:w-10" />
           <div className="w-full lg:w-1/2">
             <div className="text-sm lg:text-md">
-              If you'd like to talk or are interested in working together, <a href="mailto:jhargreavesdesigns@gmail.com" target="_blank" className="border-b border-white hover:text-gray">message me</a> and I'll respond to you as soon as I can.
+              If you'd like to talk or are interested in working together, <a href="mailto:hello@jonhargreaves.com" target="_blank" className="border-b border-white hover:text-gray">message me</a> and I'll respond to you as soon as I can.
               For thoughts I have on design and remote work <a href="https://twitter.com/JonGHargreaves" target="_blank" className="border-b border-white hover:text-gray">follow me</a> on Twitter.
               <br />
               <br />
