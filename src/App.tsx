@@ -33,8 +33,8 @@ function App() {
         <div className="h-5 w-full lg:h-10" />
         <div className="font-sans text-xl lg:text-2xl">
           <div className="text-gray">
-            An adaptive, multidisciplinary product designer focused on
-            identifying and solving problems.
+            An adaptive, multidisciplinary designer focused on identifying and
+            solving problems.
           </div>
         </div>
         <div className="h-5 w-full lg:h-10" />
@@ -53,6 +53,7 @@ function App() {
               <a
                 href="https://quicknode.com/"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-yellow hover:text-gray"
               >
                 QuickNode
@@ -62,6 +63,7 @@ function App() {
               <a
                 href="https://essential.design/"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-yellow hover:text-gray"
               >
                 Essential
@@ -103,9 +105,10 @@ function App() {
               <a
                 href="https://icy.tools/"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-red hover:text-gray"
               >
-                Icy Tools
+                icy.tools
               </a>
               <br />
               (acquired by QuickNode)
@@ -118,6 +121,7 @@ function App() {
               <a
                 href="https://apartment.app/"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-red hover:text-gray"
               >
                 Apartment App
@@ -133,6 +137,7 @@ function App() {
               <a
                 href="https://caretaker.com/"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-red hover:text-gray"
               >
                 Caretaker
@@ -152,6 +157,7 @@ function App() {
               <a
                 href="https://www.figma.com/file/oC4tbj7gO948anusmMwTzE/Case-Studies?type=design&node-id=1%3A3&t=QgvXFFylchpqdH0h-1"
                 target="_blank"
+                rel="noreferrer"
                 className="hover:text-gray"
               >
                 View case studies ↗
@@ -178,6 +184,7 @@ function App() {
               <a
                 href="https://www.rit.edu/vignellicenter/vignelli-legacy"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-blue hover:text-gray"
               >
                 Massimo and Lella Vignelli
@@ -195,6 +202,7 @@ function App() {
               <a
                 href="https://theperfectplay.co/jon-hargreaves-designing-for-humanity/"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-blue hover:text-gray"
               >
                 an interview
@@ -220,6 +228,7 @@ function App() {
               <a
                 href="mailto:hello@jonhargreaves.com"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-white hover:text-gray"
               >
                 message me
@@ -229,6 +238,7 @@ function App() {
               <a
                 href="https://twitter.com/JonGHargreaves"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-white hover:text-gray"
               >
                 follow me
@@ -241,6 +251,7 @@ function App() {
               <a
                 href="https://pretendfoundry.com/"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-white hover:text-gray"
               >
                 Pretend Foundry
@@ -249,6 +260,7 @@ function App() {
               <a
                 href="https://pretendfoundry.com/broad"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-white hover:text-gray"
               >
                 Broad Bold
@@ -257,6 +269,7 @@ function App() {
               <a
                 href="https://pretendfoundry.com/pinopolis"
                 target="_blank"
+                rel="noreferrer"
                 className="border-b border-white hover:text-gray"
               >
                 Pinopolis
@@ -280,7 +293,7 @@ function App() {
         <div className="h-5 w-full lg:h-10" />
         <div className="h-5 w-full lg:h-10" />
         <div className="text-gray text-xs lg:text-sm">
-          This website was designed and coded by Jon Hargreaves © 2023
+          This website was designed and coded by Jon Hargreaves © 2024
         </div>
       </div>
     </div>
