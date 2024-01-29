@@ -90,17 +90,17 @@ function App() {
               <br />
               Freelancing status: <span className="text-gray">UNAVAILABLE</span>
             </div>
-            <div className="h-full w-5 lg:w-10" />
-            <div className="border border-yellow rounded-full px-4 py-1 text-sm lg:text-md w-fit">
-              <a
-                href="https://www.figma.com/proto/ZWigLGMSDosOK4v2NmpaRp/JH-Case-Studies?page-id=221%3A9911&type=design&node-id=221-17478&viewport=45%2C447%2C0.02&t=FNOlyiRApxZOjurN-1&scaling=contain&mode=design"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-gray"
-              >
-                View case studies ↗
-              </a>
-            </div>
+          </div>
+          <div className="h-full w-5 lg:w-10" />
+          <div className="border border-yellow rounded-full px-4 py-1 text-sm lg:text-md w-fit">
+            <a
+              href="https://www.figma.com/proto/ZWigLGMSDosOK4v2NmpaRp/JH-Case-Studies?page-id=221%3A9911&type=design&node-id=221-17478&viewport=45%2C447%2C0.02&t=FNOlyiRApxZOjurN-1&scaling=contain&mode=design"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-gray"
+            >
+              View case studies ↗
+            </a>
           </div>
           <div className="h-full w-5 lg:w-10" />
         </div>
