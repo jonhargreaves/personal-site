@@ -31,7 +31,7 @@ function App() {
         </div>
         <div className="h-5 w-full lg:h-10" />
         <div className="h-5 w-full lg:h-10" />
-        <div className="font-sans text-xl lg:text-2xl">
+        <div className="font-sans text-xl lg:text-2xl lg:pr-20">
           <div className="text-gray">
             An adaptive, multidisciplinary product designer focused on
             identifying and solving problems.
@@ -284,7 +284,7 @@ function App() {
         <div className="h-5 w-full lg:h-10" />
         <div className="bg-white h-px w-full" />
         <div className="h-5 w-full lg:h-10" />
-        <div className="font-sans text-xl lg:text-2xl">
+        <div className="font-sans text-xl lg:text-2xl lg:pr-20">
           "Styles come and go. Good design is a language, not a style."
         </div>
         <div className="h-5 w-full lg:h-10" />
