@@ -249,7 +249,7 @@ function App() {
               >
                 Threads
               </a>{" "}
-              and/or on{" "}
+              and/or{" "}
               <a
                 href="https://posts.cv/jonhargreaves"
                 target="_blank"
