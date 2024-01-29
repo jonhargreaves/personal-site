@@ -1,24 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.3e02337c.chunk.css",
-    "main.js": "/static/js/main.6d3c83f2.chunk.js",
-    "main.js.map": "/static/js/main.6d3c83f2.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.df8f6d0a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.df8f6d0a.js.map",
-    "static/js/2.87e147b1.chunk.js": "/static/js/2.87e147b1.chunk.js",
-    "static/js/2.87e147b1.chunk.js.map": "/static/js/2.87e147b1.chunk.js.map",
-    "static/js/3.6bb9bc0d.chunk.js": "/static/js/3.6bb9bc0d.chunk.js",
-    "static/js/3.6bb9bc0d.chunk.js.map": "/static/js/3.6bb9bc0d.chunk.js.map",
+    "main.css": "/static/css/main.b5a72325.css",
+    "main.js": "/static/js/main.e3a087fd.js",
+    "static/js/787.d94c3740.chunk.js": "/static/js/787.d94c3740.chunk.js",
+    "static/media/BroadSans-Bold.woff": "/static/media/BroadSans-Bold.dbd1c2f3d7e6592b3562.woff",
+    "static/media/Pinopolis-Regular.woff": "/static/media/Pinopolis-Regular.2bd37172e8484cc91d8d.woff",
     "index.html": "/index.html",
-    "static/css/main.3e02337c.chunk.css.map": "/static/css/main.3e02337c.chunk.css.map",
-    "static/js/2.87e147b1.chunk.js.LICENSE.txt": "/static/js/2.87e147b1.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/Pinopolis-Regular.2bd37172.woff",
-    "static/media/logo.ccde5d72.svg": "/static/media/logo.ccde5d72.svg"
+    "static/media/logo.svg": "/static/media/logo.ccde5d72fc10ca737fb8789417afb41a.svg",
+    "main.b5a72325.css.map": "/static/css/main.b5a72325.css.map",
+    "main.e3a087fd.js.map": "/static/js/main.e3a087fd.js.map",
+    "787.d94c3740.chunk.js.map": "/static/js/787.d94c3740.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.df8f6d0a.js",
-    "static/js/2.87e147b1.chunk.js",
-    "static/css/main.3e02337c.chunk.css",
-    "static/js/main.6d3c83f2.chunk.js"
+    "static/css/main.b5a72325.css",
+    "static/js/main.e3a087fd.js"
   ]
 }
