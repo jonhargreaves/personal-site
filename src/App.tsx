@@ -1,10 +1,10 @@
 import Logo from "./svgs/logo.svg";
 
-const META_TITLE = "Jon Hargreaves | Design Generalist";
+const META_TITLE = "Jon Hargreaves | Product Designer";
 const META_DESCRIPTION =
-  "Multi-disciplinary designer from Norfolk, VA | Senior Product Designer at QuickNode";
+  "An adaptive, multidisciplinary product designer focused on identifying and solving problems.";
 const DEFAULT_KEYWORDS =
-  "Jon Hargreaves, design, designer, frontend developer, brand systems, design systems, Virginia, Norfolk";
+  "Jon Hargreaves, design, designer, product designer, frontend developer, brand systems, design systems, Virginia, Norfolk";
 const AUTHOR = "Jon Hargreaves";
 
 function App() {
