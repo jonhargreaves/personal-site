@@ -239,7 +239,7 @@ function App() {
               >
                 message me
               </a>{" "}
-              and I'll respond as soon as I can. For thoughts I have on design
+              and I'll respond as soon as I can. For thoughts I have on design,
               follow me on{" "}
               <a
                 href="https://www.threads.net/@jonhargreaves"
