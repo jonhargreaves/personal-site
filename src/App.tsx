@@ -33,8 +33,8 @@ function App() {
         <div className="h-5 w-full lg:h-10" />
         <div className="font-sans text-xl lg:text-2xl">
           <div className="text-gray">
-            An adaptive, multidisciplinary designer focused on identifying and
-            solving problems.
+            An adaptive, multidisciplinary product designer focused on
+            identifying and solving problems.
           </div>
         </div>
         <div className="h-5 w-full lg:h-10" />
