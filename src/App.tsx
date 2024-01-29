@@ -304,7 +304,6 @@ function App() {
         <div className="font-sans text-2xl lg:text-3xl">Massimo Vignelli</div>
         <div className="h-6 w-full lg:h-12" />
         <div className="h-6 w-full lg:h-12" />
-        <div className="h-6 w-full lg:h-12" />
         <div className="text-gray text-xs lg:text-sm">
           This website was designed and coded by Jon Hargreaves © 2024
         </div>
