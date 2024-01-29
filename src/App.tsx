@@ -49,7 +49,7 @@ function App() {
           <div className="h-full w-5 lg:w-10" />
           <div className="w-full lg:w-1/2">
             <div className="text-sm lg:text-md">
-              I'm a Senior Product Designer at{" "}
+              I'm currently a Senior Product Designer at{" "}
               <a
                 href="https://quicknode.com/"
                 target="_blank"
@@ -58,18 +58,25 @@ function App() {
               >
                 QuickNode
               </a>{" "}
-              working on the core product and design system. I'm also the
-              Co-Founder of{" "}
+              working on the core product and dashboard. I'm also the Founder of{" "}
+              <a
+                href="https://coffeeclub.net/"
+                target="_blank"
+                rel="noreferrer"
+                className="border-b border-yellow hover:text-gray"
+              >
+                Coffee Club
+              </a>{" "}
+              and{" "}
               <a
                 href="https://essential.design/"
                 target="_blank"
                 rel="noreferrer"
                 className="border-b border-yellow hover:text-gray"
               >
-                Essential
+                Essential Studio
               </a>{" "}
-              (WIP) - a project dedicated to unifying designer and developer
-              workflows.
+              (WIP).
               <br />
               <br />
               I've never worked in an office and I intend to work remotely for
