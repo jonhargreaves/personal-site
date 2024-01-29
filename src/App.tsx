@@ -20,28 +20,28 @@ function App() {
       </head>
       <div className="flex flex-col font-mono overflow-hidden px-4 py-4 lg:py-20 text-white h-full w-[1000px]">
         <div className="bg-white h-px w-full" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
         <img src={Logo} className="h-12 w-12" alt="logo" />
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="font-sans text-2xl lg:text-4xl lg:mb-4">
           Jon
           <br />
           Hargreaves
         </div>
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="font-sans text-xl lg:text-2xl lg:pr-20">
           <div className="text-gray">
             An adaptive, multidisciplinary product designer focused on
             identifying and solving problems.
           </div>
         </div>
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="bg-yellow h-px w-full" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="flex w-full flex-col lg:flex-row">
           <div className="font-bold text-yellow text-sm lg:text-md mb-6 lg:mb-0 tracking-wide w-full lg:w-1/2">
             CURRENTLY
@@ -90,7 +90,7 @@ function App() {
               <br />
               Freelancing status: <span className="text-gray">UNAVAILABLE</span>
             </div>
-            <div className="h-6 w-full lg:h-10" />
+            <div className="h-6 w-full lg:h-12" />
             <div className="border border-yellow rounded-full px-4 py-1 text-sm lg:text-md w-fit">
               <a
                 href="https://www.figma.com/proto/ZWigLGMSDosOK4v2NmpaRp/JH-Case-Studies?page-id=221%3A9911&type=design&node-id=221-17478&viewport=45%2C447%2C0.02&t=FNOlyiRApxZOjurN-1&scaling=contain&mode=design"
@@ -104,11 +104,11 @@ function App() {
           </div>
           <div className="h-full w-5 lg:w-10" />
         </div>
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="bg-red h-px w-full" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="flex w-full flex-col lg:flex-row">
           <div className="font-bold text-red text-sm lg:text-md mb-6 lg:mb-0 tracking-wide w-full lg:w-1/2">
             PREVIOUSLY
@@ -172,11 +172,11 @@ function App() {
           </div>
           <div className="h-full w-5 lg:w-10" />
         </div>
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="bg-blue h-px w-full" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="flex w-full flex-col lg:flex-row">
           <div className="font-bold text-blue text-sm lg:text-md mb-6 lg:mb-0 tracking-wide w-full lg:w-1/2">
             LOOKING AHEAD
@@ -218,11 +218,11 @@ function App() {
           </div>
           <div className="h-full w-5 lg:w-10" />
         </div>
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="bg-white h-px w-full" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="flex w-full flex-col lg:flex-row">
           <div className="font-bold text-sm lg:text-md mb-6 lg:mb-0 tracking-wide w-full lg:w-1/2">
             SOME LINKS
@@ -293,19 +293,19 @@ function App() {
           </div>
           <div className="h-full w-5 lg:w-10" />
         </div>
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="bg-white h-px w-full" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="font-sans text-xl lg:text-2xl lg:pr-20">
           "Styles come and go. Good design is a language, not a style."
         </div>
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="font-sans text-2xl lg:text-3xl">Massimo Vignelli</div>
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
-        <div className="h-6 w-full lg:h-10" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
+        <div className="h-6 w-full lg:h-12" />
         <div className="text-gray text-xs lg:text-sm">
           This website was designed and coded by Jon Hargreaves © 2024
         </div>
