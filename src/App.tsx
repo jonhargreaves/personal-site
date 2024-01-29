@@ -91,7 +91,7 @@ function App() {
               Freelancing status: <span className="text-gray">UNAVAILABLE</span>
             </div>
             <div className="h-5 w-full lg:h-10" />
-            <div className="border border-yellow rounded-full px-3 py-1 text-sm lg:text-md w-fit">
+            <div className="border border-yellow rounded-full px-4 py-1 text-sm lg:text-md w-fit">
               <a
                 href="https://www.figma.com/proto/ZWigLGMSDosOK4v2NmpaRp/JH-Case-Studies?page-id=221%3A9911&type=design&node-id=221-17478&viewport=45%2C447%2C0.02&t=FNOlyiRApxZOjurN-1&scaling=contain&mode=design"
                 target="_blank"
@@ -239,17 +239,25 @@ function App() {
               >
                 message me
               </a>{" "}
-              and I'll respond to you as soon as I can. For thoughts I have on
-              design and remote work{" "}
+              and I'll respond as soon as I can. For thoughts I have on design
+              follow me on{" "}
               <a
-                href="https://twitter.com/JonGHargreaves"
+                href="https://www.threads.net/@jonhargreaves"
                 target="_blank"
                 rel="noreferrer"
                 className="border-b border-white hover:text-gray"
               >
-                follow me
+                Threads
               </a>{" "}
-              on Twitter.
+              and/or on{" "}
+              <a
+                href="https://posts.cv/jonhargreaves"
+                target="_blank"
+                rel="noreferrer"
+                className="border-b border-white hover:text-gray"
+              >
+                Posts.cv
+              </a>{" "}
               <br />
               <br />A very special thanks to my loving partner Abby, my
               wonderful friends, and my colleages who have supported me during
