@@ -257,6 +257,7 @@ function App() {
               >
                 Posts.cv
               </a>{" "}
+              .
               <br />
               <br />A very special thanks to my loving partner Abby, my
               wonderful friends, and my colleages who have supported me during
