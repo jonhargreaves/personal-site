@@ -18,7 +18,7 @@ function App() {
         <meta name="keywords" content={DEFAULT_KEYWORDS} />
         <meta name="author" content={AUTHOR} />
       </head>
-      <div className="flex flex-col font-mono overflow-hidden px-4 py-4 lg:py-20 text-white h-full w-[1000px]">
+      <div className="flex flex-col font-mono overflow-hidden px-4 py-4 lg:py-12 text-white h-full w-[1000px]">
         <div className="bg-white h-px w-full" />
         <div className="h-6 w-full lg:h-12" />
         <img src={Logo} className="h-12 w-12" alt="logo" />
