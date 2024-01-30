@@ -248,7 +248,7 @@ function App() {
               >
                 Threads
               </a>{" "}
-              and/or{" "}
+              and/or&nbsp;
               <a
                 href="https://posts.cv/jonhargreaves"
                 target="_blank"
@@ -256,7 +256,7 @@ function App() {
                 className="border-b border-white hover:text-gray"
               >
                 Posts.cv
-              </a>{" "}
+              </a>
               .
               <br />
               <br />A very special thanks to my loving partner Abby, my
