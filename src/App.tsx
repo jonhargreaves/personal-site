@@ -2,9 +2,9 @@ import Logo from "./svgs/logo.svg";
 
 const META_TITLE = "Jon Hargreaves | Product Designer";
 const META_DESCRIPTION =
-  "An adaptable, multidisciplinary product designer focused on identifying and solving problems.";
+  "A multidisciplinary product designer focused on building thoughtful, end-to-end experiences that users love.";
 const DEFAULT_KEYWORDS =
-  "Jon Hargreaves, design, designer, product designer, frontend developer, brand systems, design systems, Virginia, Norfolk";
+  "Jon Hargreaves, design, designer, product designer, frontend developer, branding, design systems, Virginia, Norfolk";
 const AUTHOR = "Jon Hargreaves";
 
 function App() {
