@@ -32,8 +32,8 @@ function App() {
         <div className="h-6 w-full lg:h-12" />
         <div className="font-sans text-xl lg:text-2xl lg:pr-20">
           <div className="text-gray">
-            An adaptable, multidisciplinary product designer focused on
-            identifying and solving problems.
+            A multidisciplinary product designer focused on building thoughtful,
+            end-to-end experiences that users love.
           </div>
         </div>
         <div className="h-6 w-full lg:h-12" />
@@ -59,7 +59,7 @@ function App() {
               </a>{" "}
               working on the core product and dashboard. I'm also the Founder of{" "}
               <a
-                href="https://coffeeclub.net/"
+                href="https://coffeeclubglobal.com/"
                 target="_blank"
                 rel="noreferrer"
                 className="border-b border-yellow hover:text-gray"
@@ -68,12 +68,12 @@ function App() {
               </a>{" "}
               and{" "}
               <a
-                href="https://essential.design/"
+                href="https://www.figma.com/@essentialdesign"
                 target="_blank"
                 rel="noreferrer"
                 className="border-b border-yellow hover:text-gray"
               >
-                Essential Studio
+                Essential Design
               </a>{" "}
               (WIP).
               <br />
@@ -201,18 +201,6 @@ function App() {
               about other design disciplines like industrial design and
               architecture. The possibility of designing and building my own
               home, furniture pieces, and houseware is very exciting to me.
-              <br />
-              <br />
-              For an in-depth look at these future ambitions, I did an{" "}
-              <a
-                href="https://theperfectplay.co/jon-hargreaves-designing-for-humanity/"
-                target="_blank"
-                rel="noreferrer"
-                className="border-b border-blue hover:text-gray"
-              >
-                an interview
-              </a>{" "}
-              with The Perfect Play.
             </div>
           </div>
           <div className="h-full w-5 lg:w-10" />
@@ -306,7 +294,7 @@ function App() {
         <div className="h-6 w-full lg:h-12" />
         <div className="h-6 w-full lg:h-12" />
         <div className="text-gray text-xs lg:text-sm">
-          This website was designed and coded by Jon Hargreaves © 2024
+          This website was designed and coded by Jon Hargreaves © 2025
         </div>
       </div>
     </div>
