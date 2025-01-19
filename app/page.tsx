@@ -238,12 +238,12 @@ export default function Home() {
               </a>{" "}
               and/or&nbsp;
               <a
-                href="https://posts.cv/jonhargreaves"
+                href="https://bsky.app/profile/jonhargreaves.bsky.social"
                 target="_blank"
                 rel="noreferrer"
                 className="border-b border-white hover:text-gray"
               >
-                Posts.cv
+                Bluesky
               </a>
               .
               <br />
