@@ -58,7 +58,7 @@ export default function Home() {
           <div className="h-full w-5 lg:w-10" />
           <div className="w-full lg:w-1/2">
             <div className="text-sm lg:text-md">
-              I'm currently a Senior Product Designer at{" "}
+              I&#39;m currently a Senior Product Designer at{" "}
               <a
                 href="https://quicknode.com/"
                 target="_blank"
@@ -67,7 +67,8 @@ export default function Home() {
               >
                 QuickNode
               </a>{" "}
-              working on the core product and dashboard. I'm also the Founder of{" "}
+              working on the core product and dashboard. I&#39;m also the
+              Founder of{" "}
               <a
                 href="https://coffeeclubglobal.com/"
                 target="_blank"
@@ -88,13 +89,13 @@ export default function Home() {
               (WIP).
               <br />
               <br />
-              I've never worked in an office and I intend to work remotely for
-              my entire design career.
+              I&#39;ve never worked in an office and I intend to work remotely
+              for my entire design career.
               <br />
               <br />
-              When not designing, I'm collecting modernist furniture, watching
-              Formula 1, learning to surf, or riding my fixie bike around
-              Norfolk, VA.
+              When not designing, I&#39;m collecting modernist furniture,
+              watching Formula 1, learning to surf, or riding my fixie bike
+              around Norfolk, VA.
               <br />
               <br />
               Freelancing status: <span className="text-gray">UNAVAILABLE</span>
@@ -216,7 +217,7 @@ export default function Home() {
           <div className="h-full w-5 lg:w-10" />
           <div className="w-full lg:w-1/2">
             <div className="text-sm lg:text-md">
-              If you'd like to talk or are interested in working together,{" "}
+              If you&#39;d like to talk or are interested in working together,{" "}
               <a
                 href="mailto:hello@jonhargreaves.com"
                 target="_blank"
@@ -225,8 +226,8 @@ export default function Home() {
               >
                 message me
               </a>{" "}
-              and I'll respond as soon as I can. For thoughts I have on design,
-              follow me on{" "}
+              and I&#39;ll respond as soon as I can. For thoughts I have on
+              design, follow me on{" "}
               <a
                 href="https://www.threads.net/@jonhargreaves"
                 target="_blank"
@@ -286,7 +287,8 @@ export default function Home() {
         <div className="bg-white h-px w-full" />
         <div className="h-6 w-full lg:h-12" />
         <div className="font-sans text-lg lg:text-xl lg:pr-20">
-          "Styles come and go. Good design is a language, not a style."
+          &quot;Styles come and go. Good design is a language, not a
+          style.&quot;
         </div>
         <div className="h-4 w-full lg:h-6" />
         <div className="font-sans text-[32px] lg:text-[56px]">
