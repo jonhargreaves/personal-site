@@ -92,9 +92,9 @@ export default function Home() {
               my entire design career.
               <br />
               <br />
-              When not designing, I&#39;m collecting modernist furniture,
-              watching Formula 1, learning to surf, or riding my fixie bike
-              around Norfolk, VA.
+              When not designing, I'm collecting modernist furniture, watching
+              Formula 1, learning to surf, or riding my fixie bike around
+              Norfolk, VA.
               <br />
               <br />
               Freelancing status: <span className="text-gray">UNAVAILABLE</span>
