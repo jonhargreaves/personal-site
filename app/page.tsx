@@ -59,7 +59,7 @@ export default function Home() {
           >
             Coffee Club
           </a>
-          . I was previously the founding product design at{" "}
+          . Previously, I was the Founding Product Designer at{" "}
           <a
             href="https://icy.tools/"
             target="_blank"
