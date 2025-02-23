@@ -516,6 +516,10 @@ code {
   background-color: #ffffff80;
 }
 
+.bg-white\/25 {
+  background-color: #ffffff40;
+}
+
 .fill-current {
   fill: currentColor;
 }
@@ -602,6 +606,10 @@ code {
 
 .text-white\/75 {
   color: #ffffffbf;
+}
+
+.text-white\/25 {
+  color: #ffffff40;
 }
 
 .antialiased {
@@ -756,6 +764,21 @@ code {
   .lg\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .lg\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .lg\:py-\[72px\] {
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
 }
 
