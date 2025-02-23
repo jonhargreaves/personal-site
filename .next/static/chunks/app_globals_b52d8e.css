@@ -520,6 +520,10 @@ code {
   background-color: #ffffff40;
 }
 
+.bg-white\/10 {
+  background-color: #ffffff1a;
+}
+
 .fill-current {
   fill: currentColor;
 }
@@ -610,6 +614,10 @@ code {
 
 .text-white\/25 {
   color: #ffffff40;
+}
+
+.text-white\/60 {
+  color: #fff9;
 }
 
 .antialiased {
