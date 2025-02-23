@@ -27,11 +27,11 @@ export default function Home() {
         <Image src="/logo.svg" alt="JH logo" width={24} height={24} priority />
         <div className="h-8 w-full" />
         <div>
-          Hello, I'm <span className="text-white">Jon Hargreaves</span>.
+          Hello, I&apos;m <span className="text-white">Jon Hargreaves</span>.
         </div>
         <div className="h-6 w-full" />
         <div>
-          I’m a Senior Product Designer at{" "}
+          I&apos;m a Senior Product Designer at{" "}
           <a
             href="https://www.quicknode.com/"
             target="_blank"
