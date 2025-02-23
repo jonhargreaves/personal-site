@@ -4,6 +4,13 @@ import Head from "next/head";
 import React from "react";
 
 import Project from "@/components/Project/project";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuSeparator,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 const META_TITLE = "Jon Hargreaves | Product Designer";
 const META_DESCRIPTION =
@@ -73,16 +80,83 @@ export default function Home() {
           . I love specialty coffee and work remotely in Norfolk, Virginia.
         </div>
         <div className="h-6 w-full" />
-        <div>
-          <a
-            href="https://abcdinamo.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="w-fit text-white border-b border-white/50 hover:border-white/100 transition ease-in-out"
-          >
-            Connect
-          </a>{" "}
-          ·{" "}
+        <div className="flex">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <div className="w-fit cursor-pointer text-white border-b border-white/50 hover:border-white/100 transition ease-in-out">
+                Connect
+              </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              className="font-mono"
+              alignOffset={-12}
+              side="bottom"
+              align="start"
+            >
+              <DropdownMenuItem>
+                <Link
+                  className="flex w-full"
+                  href="mailto:hello@jonhargreaves.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Email
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link
+                  className="flex w-full"
+                  href="https://www.linkedin.com/in/jon-g-hargreaves/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link
+                  className="flex w-full"
+                  href="https://github.com/jonhargreaves"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Github
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <Link
+                  className="flex w-full"
+                  href="https://bsky.app/profile/jonhargreaves.bsky.social"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Bluesky
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link
+                  className="flex w-full"
+                  href="https://www.instagram.com/jonhargreaves/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Instagram
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link
+                  className="flex w-full"
+                  href="https://www.threads.net/@jonhargreaves"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Threads
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <div>&nbsp;·&nbsp;</div>
           <a
             href="https://www.figma.com/proto/ZWigLGMSDosOK4v2NmpaRp/JH-Case-Studies?page-id=221%3A9911&type=design&node-id=221-17478&viewport=-4794%2C301%2C0.21&t=7ygTMcT4tOLzBejn-1&scaling=contain"
             target="_blank"
@@ -98,7 +172,7 @@ export default function Home() {
         </div>
         <div className="h-2 w-full" />
         <div className="bg-white/25 h-px w-full" />
-        <div className="flex flex-col items-center gap-4 pt-4 -mx-3">
+        <div className="flex flex-col items-center gap-2 pt-4 -mx-3">
           <Link
             className="flex w-full"
             href="https://www.coffeeclubglobal.com/"
