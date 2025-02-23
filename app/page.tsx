@@ -1,6 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import Head from "next/head";
 import React from "react";
+
+import Project from "@/components/Project/project";
 
 const META_TITLE = "Jon Hargreaves | Product Designer";
 const META_DESCRIPTION =
@@ -22,7 +25,7 @@ export default function Home() {
       </Head>
       <div
         className="flex flex-col overflow-hidden px-4 py-4 lg:py-[72px] text-white/75 text-base font-mono
- h-full w-[600px]"
+ h-full w-[632px]"
       >
         <Image src="/logo.svg" alt="JH logo" width={24} height={24} priority />
         <div className="h-8 w-full" />
@@ -31,7 +34,7 @@ export default function Home() {
         </div>
         <div className="h-6 w-full" />
         <div>
-          I&apos;m a Senior Product Designer at{" "}
+          Currently, I&apos;m a Senior Product Designer at{" "}
           <a
             href="https://www.quicknode.com/"
             target="_blank"
@@ -49,7 +52,7 @@ export default function Home() {
           >
             Coffee Club
           </a>
-          . I was previously a founding product design at{" "}
+          . I was previously the founding product design at{" "}
           <a
             href="https://icy.tools/"
             target="_blank"
@@ -81,7 +84,7 @@ export default function Home() {
           </a>{" "}
           ·{" "}
           <a
-            href="https://www.figma.com/proto/ZWigLGMSDosOK4v2NmpaRp/JH-Case-Studies?page-id=221%3A9911&type=design&node-id=221-17478&viewport=45%2C447%2C0.02&t=FNOlyiRApxZOjurN-1&scaling=contain&mode=design"
+            href="https://www.figma.com/proto/ZWigLGMSDosOK4v2NmpaRp/JH-Case-Studies?page-id=221%3A9911&type=design&node-id=221-17478&viewport=-4794%2C301%2C0.21&t=7ygTMcT4tOLzBejn-1&scaling=contain"
             target="_blank"
             rel="noreferrer"
             className="w-fit text-white border-b border-white/50 hover:border-white/100 transition ease-in-out"
@@ -89,21 +92,67 @@ export default function Home() {
             Portfolio
           </a>
         </div>
-        <div className="h-6 w-full" />
-        <div className="h-6 w-full" />
-        <div className="h-6 w-full" />
+        <div className="h-[72px] w-full" />
         <div className="text-white/50 text-xs uppercase tracking-[1px]">
           Projects
         </div>
         <div className="h-2 w-full" />
         <div className="bg-white/25 h-px w-full" />
-
-        <div className="h-6 w-full" />
-        <div className="h-6 w-full" />
-        <div className="h-6 w-full" />
-        <div className="h-6 w-full" />
-        <div className="h-6 w-full" />
-        <div className="h-6 w-full" />
+        <div className="flex flex-col items-center gap-4 pt-4 -mx-3">
+          <Link
+            className="flex w-full"
+            href="https://www.coffeeclubglobal.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Project>
+              <div className="text-white">Coffee Club Newsletter</div>
+              <div className="flex">
+                2024-present · Writing, Branding, Marketing
+              </div>
+            </Project>
+          </Link>
+          <Link
+            className="flex w-full"
+            href="https://www.figma.com/proto/Wi6kqSdzjk7kvVtgnKuXGa/Web?page-id=647%3A2143&node-id=679-9090&p=f&viewport=45%2C127%2C0.06&t=IEbnHoyWNbolbJMz-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=679%3A9090"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Project>
+              <div className="text-white">Coffee Club App Concept</div>
+              <div className="flex">
+                2024 · Branding, Product Design, Prototyping
+              </div>
+            </Project>
+          </Link>
+          <Link
+            className="flex w-full"
+            href="https://www.figma.com/community/plugin/1327859070716103519/name-your-frames"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Project>
+              <div className="text-white">Name Your Frames Figma Plug-in</div>
+              <div className="flex">
+                2024-present · Frontend Development, Interaction, Branding
+              </div>
+            </Project>
+          </Link>
+          <Link
+            className="flex w-full"
+            href="https://www.figma.com/community/file/1218589809425735347"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Project>
+              <div className="text-white">Essential Icons Library</div>
+              <div className="flex">
+                2023-present · Icon Design, Design System, Branding
+              </div>
+            </Project>
+          </Link>
+        </div>
+        <div className="h-[72px] w-full" />
         <div className="text-white/50 text-xs uppercase tracking-[1px]">
           Colophon
         </div>
@@ -135,11 +184,10 @@ export default function Home() {
         <div className="h-6 w-full" />
         <div>
           &quot;Styles come and go. Good design is a language, not a
-          style.&quot; - Massimo Vignelli
+          style.&quot;
         </div>
-        <div className="h-6 w-full" />
-        <div className="h-6 w-full" />
-        <div className="h-6 w-full" />
+        <div>- Massimo Vignelli</div>
+        <div className="h-[72px] w-full" />
         <div className="text-white/50 text-xs uppercase tracking-[1px]">
           Designed & coded by Jon Hargreaves © 2025
         </div>
