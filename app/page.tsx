@@ -205,7 +205,7 @@ export default function Home() {
             <Project>
               <div className="text-white">Coffee Club App Concept</div>
               <div className="flex">
-                2024 · Product Design, Prototyping, Branding
+                2024 · Product Design, Prototyping, Interaction
               </div>
             </Project>
           </Link>
