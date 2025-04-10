@@ -127,6 +127,16 @@ export default function Home() {
               <DropdownMenuItem>
                 <Link
                   className="flex w-full"
+                  href="https://substack.com/@jonhargreaves?r=123js1&utm_campaign=profile&utm_medium=profile-page"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Substack
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link
+                  className="flex w-full"
                   href="https://bsky.app/profile/jonhargreaves.bsky.social"
                   target="_blank"
                   rel="noreferrer"
