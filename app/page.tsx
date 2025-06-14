@@ -41,14 +41,14 @@ export default function Home() {
         </div>
         <div className="h-6 w-full" />
         <div>
-          Currently, I&apos;m a Senior Product Designer at{" "}
+          Currently, I&apos;m the Co-founder & CPO at{" "}
           <a
-            href="https://www.quicknode.com/"
+            href="https://fathom.care/"
             target="_blank"
             rel="noreferrer"
             className="w-fit text-white border-b border-white/50 hover:border-white/100 transition ease-in-out"
           >
-            QuickNode
+            Fathom
           </a>{" "}
           and the Founder of{" "}
           <a
@@ -59,7 +59,16 @@ export default function Home() {
           >
             Coffee Club
           </a>
-          . Previously, I was the Founding Product Designer at{" "}
+          . Previously, I was a Product Designer at{" "}
+          <a
+            href="https://www.quicknode.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="w-fit text-white border-b border-white/50 hover:border-white/100 transition ease-in-out"
+          >
+            QuickNode
+          </a>
+          ,{" "}
           <a
             href="https://icy.tools/"
             target="_blank"
@@ -67,8 +76,8 @@ export default function Home() {
             className="w-fit text-white border-b border-white/50 hover:border-white/100 transition ease-in-out"
           >
             icy.tools
-          </a>{" "}
-          and{" "}
+          </a>
+          , and{" "}
           <a
             href="https://caretaker.com/"
             target="_blank"

@@ -635,6 +635,21 @@ code {
   line-height: 1rem;
 }
 
+.text-base\/6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-base\/8 {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.text-base\/7 {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
 .font-semibold {
   font-weight: 600;
 }
