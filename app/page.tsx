@@ -50,7 +50,7 @@ export default function Home() {
           >
             Fathom
           </a>{" "}
-          and the Founder of{" "}
+          and Founder of{" "}
           <a
             href="https://www.coffeeclubglobal.com/"
             target="_blank"
