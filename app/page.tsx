@@ -41,7 +41,7 @@ export default function Home() {
         </div>
         <div className="h-6 w-full" />
         <div>
-          Currently, I&apos;m the Co-founder & CPO at{" "}
+          Currently, I&apos;m the Co-founder & CPO of{" "}
           <a
             href="https://fathom.care/"
             target="_blank"
@@ -59,7 +59,7 @@ export default function Home() {
           >
             Coffee Club
           </a>
-          . Previously, I was a Product Designer at{" "}
+          . Previously, I designed products for{" "}
           <a
             href="https://www.quicknode.com/"
             target="_blank"
