@@ -79,7 +79,7 @@ export default function Home() {
           </a>
           , and{" "}
           <a
-            href="https://caretaker.com/"
+            href="https://1393.xyz/blog/we-replaced-rental-brokers-with-software-and-filled-200-vacant-apartments"
             target="_blank"
             rel="noreferrer"
             className="w-fit text-white border-b border-white/50 hover:border-white/100 transition ease-in-out"
