@@ -1,16 +1,13 @@
-import React, { ReactNode } from "react";
-
 interface ProjectProps {
-  // Expect exactly two children: one for the left column and one for the right column.
-  children: ReactNode;
+  title: string;
+  details: string;
 }
 
-const Project: React.FC<ProjectProps> = ({ children }) => {
+export default function Project({ title, details }: ProjectProps) {
   return (
-    <div className="flex flex-col px-3 py-2 w-full rounded-lg hover:bg-white/10 transition ease-in-out">
-      {children}
-    </div>
+    <article className="flex w-full flex-col rounded-lg px-3 py-2 transition ease-in-out group-hover:bg-white/10 motion-reduce:transition-none">
+      <h3 className="text-white">{title}</h3>
+      <p>{details}</p>
+    </article>
   );
-};
-
-export default Project;
+}
