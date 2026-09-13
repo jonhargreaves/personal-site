@@ -54,6 +54,83 @@
   }
 }
 
+.project-row::before,
+.dropdown-menu-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: rgb(255 255 255 / 10%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.group:focus-visible .project-row::before,
+.dropdown-menu-item[data-highlighted]::before {
+  opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-row::before,
+  .dropdown-menu-item::before {
+    transition: opacity 160ms ease;
+  }
+
+  .group:hover .project-row::before {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-row::before,
+  .dropdown-menu-item::before {
+    transition: opacity 100ms ease;
+  }
+}
+
+/* Keyboard navigation keeps its immediate, unambiguous focus highlight. */
+.group:focus-visible .project-row::before,
+.dropdown-content:has(:focus-visible) .dropdown-menu-item::before {
+  transition: none;
+}
+
+.pixel-emoji-card {
+  transition: transform 160ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pixel-emoji-card:hover {
+    transform: scale(0.98);
+  }
+}
+
+.pixel-emoji-card:active {
+  transform: scale(0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-emoji-card {
+    transition: opacity 160ms ease;
+  }
+
+  .pixel-emoji-card:active {
+    transform: none;
+    opacity: 0.96;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .pixel-emoji-card:hover {
+      transform: none;
+      opacity: 0.98;
+    }
+
+    .pixel-emoji-card:active {
+      opacity: 0.96;
+    }
+  }
+}
+
 .dropdown-content {
   transform-origin: var(--radix-dropdown-menu-content-transform-origin);
 }

@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 
 import Project from "@/components/Project/project";
+import PixelEmojiCard from "@/components/PixelEmojiCard/pixel-emoji-card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const textLinkClass =
-  "w-fit border-b border-white/50 text-white transition ease-in-out hover:border-white/100 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none";
+  "w-fit border-b border-white/25 text-white transition ease-in-out hover:border-white/50 active:border-white/50 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none";
 
 const projects = [
   {
@@ -46,6 +47,7 @@ const primaryConnections = [
 ];
 
 const socialConnections = [
+  { label: "Are.na", href: "https://www.are.na/jon-hargreaves" },
   {
     label: "Substack",
     href: "https://substack.com/@jonhargreaves?r=123js1&utm_campaign=profile&utm_medium=profile-page",
@@ -91,22 +93,25 @@ function ConnectionItem({ label, href }: { label: string; href: string }) {
 export default function Home() {
   return (
     <main className="flex justify-center bg-black">
-      <div className="flex h-full w-[632px] flex-col overflow-hidden px-4 py-4 font-mono text-base text-white/75 lg:py-[72px]">
+      <div className="flex h-full w-full max-w-[632px] min-w-0 flex-col px-4 pt-4 pb-4 font-mono text-base text-white/75 lg:pt-[72px]">
         <header>
           <Image src="/logo.svg" alt="JH logo" width={24} height={24} priority />
           <div className="h-8" aria-hidden="true" />
-          <p>
+          <h1>
             Hello, I&apos;m <span className="text-white">Jon Hargreaves</span>.
-          </p>
+          </h1>
           <div className="h-6" aria-hidden="true" />
           <p>
-            Currently, I&apos;m the Co-founder &amp; CPO of{" "}
-            <ExternalLink href="https://fathom.care/">Fathom</ExternalLink>{" "}
+            I love coffee and work remotely in Norfolk, Virginia.
+            Currently, I&apos;m the Head of Design at{" "}
+            <ExternalLink href="https://hyper.video/">Hyper</ExternalLink>{" "}
             and Founder of{" "}
             <ExternalLink href="https://www.coffeeclubglobal.com/">
               Coffee Club
             </ExternalLink>
-            . Previously, I designed products for{" "}
+            . Previously, I co-founded{" "}
+            <ExternalLink href="https://fathom.care/">Fathom</ExternalLink>{" "}
+            and designed products for{" "}
             <ExternalLink href="https://www.quicknode.com/">
               QuickNode
             </ExternalLink>
@@ -114,7 +119,7 @@ export default function Home() {
             <ExternalLink href="https://1393.xyz/blog/we-replaced-rental-brokers-with-software-and-filled-200-vacant-apartments">
               Caretaker
             </ExternalLink>
-            . I love specialty coffee and work remotely in Norfolk, Virginia.
+            .
           </p>
           <div className="h-6" aria-hidden="true" />
           <nav aria-label="Personal links" className="flex">
@@ -122,7 +127,7 @@ export default function Home() {
               <DropdownMenuTrigger asChild>
                 <button
                   type="button"
-                  className="w-fit cursor-pointer border-b border-white/50 bg-transparent p-0 font-mono text-base text-white transition ease-in-out hover:border-white/100 data-[state=open]:border-white/100 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none"
+                  className="w-fit cursor-pointer border-b border-white/25 bg-transparent p-0 font-mono text-base text-white transition ease-in-out hover:border-white/50 active:border-white/50 data-[state=open]:border-white/50 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none"
                 >
                   Connect
                 </button>
@@ -208,8 +213,16 @@ export default function Home() {
 
         <div className="h-[72px]" aria-hidden="true" />
 
-        <footer className="text-xs uppercase tracking-[1px] text-white/50">
-          Designed &amp; coded by Jon Hargreaves © 2026
+        <footer
+          className="grid w-full grid-flow-col grid-cols-2 grid-rows-3 gap-2 min-[480px]:grid-flow-row min-[480px]:grid-cols-3 min-[480px]:grid-rows-2 min-[480px]:gap-3"
+          aria-label="Pixel emoji cards"
+        >
+          <PixelEmojiCard sound="smile" src="/pixel-emoji/slight-smile.svg" alt="Smiling face" width={128} height={128} color="red" />
+          <PixelEmojiCard sound="heart" src="/pixel-emoji/heart.svg" alt="Heart" width={128} height={112} color="blue" offsetY={4} />
+          <PixelEmojiCard sound="hands" src="/pixel-emoji/hands-pressed-together.svg" alt="Hands pressed together" width={128} height={128} color="yellow" />
+          <PixelEmojiCard sound="eyes" src="/pixel-emoji/eyes.svg" alt="Eyes" width={128} height={112} color="blue" />
+          <PixelEmojiCard sound="ok" src="/pixel-emoji/ok-hand-sign.svg" alt="OK hand sign" width={96} height={128} color="yellow" />
+          <PixelEmojiCard sound="fire" src="/pixel-emoji/fire.svg" alt="Fire" width={100} height={128} color="red" />
         </footer>
       </div>
     </main>
