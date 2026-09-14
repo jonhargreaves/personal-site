@@ -65,7 +65,25 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           />
         )}
       </head>
-      <body className={`${diatypeMono.variable} antialiased`}>{children}</body>
+      <body className={`${diatypeMono.variable} antialiased`}>
+        {children}
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-RLR91ZLTBT"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-RLR91ZLTBT');
+              `}
+            </Script>
+          </>
+        )}
+      </body>
     </html>
   );
 }
