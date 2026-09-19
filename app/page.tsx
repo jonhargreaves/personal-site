@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 
 import Project from "@/components/Project/project";
 import PixelEmojiCard from "@/components/PixelEmojiCard/pixel-emoji-card";
+import DialogDemo from "@/components/dialog-demo";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -212,6 +213,8 @@ export default function Home() {
         </section>
 
         <div className="h-[72px]" aria-hidden="true" />
+
+        <DialogDemo />
 
         <footer
           className="grid w-full grid-flow-col grid-cols-2 grid-rows-3 gap-2 min-[480px]:grid-flow-row min-[480px]:grid-cols-3 min-[480px]:grid-rows-2 min-[480px]:gap-3"

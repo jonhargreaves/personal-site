@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --font-mono: var(--font-diatype-mono), ui-monospace, SFMono-Regular, Menlo,
@@ -14,6 +17,12 @@
   --color-accent-foreground: hsl(var(--accent-foreground));
   --color-border: hsl(var(--border));
   --color-ring: hsl(var(--ring));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-input: hsl(var(--input));
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -33,6 +42,12 @@
     --accent-foreground: 0 0% 98%;
     --border: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 50.6%;
+    --input: 0 0% 14.9%;
     --radius: 0.5rem;
   }
 
