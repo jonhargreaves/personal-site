@@ -113,7 +113,7 @@ export default function AboutMeContent({ variant }: { variant: AboutMeVariant })
       ) : (
         <div className="aspect-[4/3] w-full bg-[#0055FF] outline outline-1 -outline-offset-1 outline-white/10" aria-hidden="true" />
       )}
-      <p className="text-pretty text-[14px]">{content.text}</p>
+      <p className="text-[14px]">{content.text}</p>
     </div>
   );
 }
