@@ -93,7 +93,7 @@ function ConnectionItem({ label, href }: { label: string; href: string }) {
 export default function Home() {
   return (
     <main className="flex justify-center bg-black">
-      <div className="flex h-full w-full max-w-[632px] min-w-0 flex-col px-4 pt-4 pb-4 font-mono text-base text-white/75 lg:pt-[72px]">
+      <div className="flex h-full w-full max-w-[632px] min-w-0 flex-col px-4 py-8 font-mono text-base text-white/75 lg:pt-18">
         <header>
           <Image src="/logo.svg" alt="JH logo" width={24} height={24} priority />
           <div className="h-8" aria-hidden="true" />
@@ -103,13 +103,9 @@ export default function Home() {
           <div className="h-6" aria-hidden="true" />
           <p>
             I love coffee and work remotely in Norfolk, Virginia.
-            Currently, I&apos;m the Head of Design at{" "}
-            <ExternalLink href="https://hyper.video/">Hyper</ExternalLink>{" "}
-            and Founder of{" "}
-            <ExternalLink href="https://www.coffeeclubglobal.com/">
-              Coffee Club
-            </ExternalLink>
-            . Previously, I co-founded{" "}
+            Currently, I&apos;m Head of Design at{" "}
+            <ExternalLink href="https://hyper.video/">Hyper</ExternalLink>
+            . Previously, I was the co-founder of{" "}
             <ExternalLink href="https://fathom.care/">Fathom</ExternalLink>{" "}
             and designed products for{" "}
             <ExternalLink href="https://www.quicknode.com/">
