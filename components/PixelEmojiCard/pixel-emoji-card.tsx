@@ -20,6 +20,7 @@ type PixelEmojiCardProps = {
   color: keyof typeof backgrounds;
   offsetY?: number;
   sound: CardSound;
+  onColorChange?: (color: keyof typeof backgrounds, button: HTMLButtonElement) => void;
 };
 
 export default function PixelEmojiCard({
@@ -30,15 +31,19 @@ export default function PixelEmojiCard({
   color,
   offsetY = 0,
   sound,
+  onColorChange,
 }: PixelEmojiCardProps) {
-  const [currentColor, setCurrentColor] = useState(color);
+  const [localColor, setLocalColor] = useState(color);
+  const currentColor = onColorChange ? color : localColor;
 
   return (
     <button
       type="button"
       aria-label={`${alt}: ${currentColor} card. Change to ${nextColor[currentColor]}.`}
-      onClick={() => {
-        setCurrentColor((previous) => nextColor[previous]);
+      onClick={(event) => {
+        const updatedColor = nextColor[currentColor];
+        if (onColorChange) onColorChange(updatedColor, event.currentTarget);
+        else setLocalColor(updatedColor);
         void playCardSound(sound);
       }}
       className={`pixel-emoji-card flex aspect-square min-h-0 min-w-0 cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border-0 p-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${backgrounds[currentColor]}`}
