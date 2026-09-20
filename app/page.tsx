@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 
 import Project from "@/components/Project/project";
-import PixelEmojiCard from "@/components/PixelEmojiCard/pixel-emoji-card";
+import EmojiFooter from "@/components/emoji-footer";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -213,17 +213,7 @@ export default function Home() {
 
         <div className="h-[72px]" aria-hidden="true" />
 
-        <footer
-          className="grid w-full grid-flow-col grid-cols-2 grid-rows-3 gap-2 min-[480px]:grid-flow-row min-[480px]:grid-cols-3 min-[480px]:grid-rows-2 min-[480px]:gap-3"
-          aria-label="Pixel emoji cards"
-        >
-          <PixelEmojiCard sound="smile" src="/pixel-emoji/slight-smile.svg" alt="Smiling face" width={128} height={128} color="red" />
-          <PixelEmojiCard sound="heart" src="/pixel-emoji/heart.svg" alt="Heart" width={128} height={112} color="blue" offsetY={4} />
-          <PixelEmojiCard sound="hands" src="/pixel-emoji/hands-pressed-together.svg" alt="Hands pressed together" width={128} height={128} color="yellow" />
-          <PixelEmojiCard sound="eyes" src="/pixel-emoji/eyes.svg" alt="Eyes" width={128} height={112} color="blue" />
-          <PixelEmojiCard sound="ok" src="/pixel-emoji/ok-hand-sign.svg" alt="OK hand sign" width={96} height={128} color="yellow" />
-          <PixelEmojiCard sound="fire" src="/pixel-emoji/fire.svg" alt="Fire" width={100} height={128} color="red" />
-        </footer>
+        <EmojiFooter />
       </div>
     </main>
   );
