@@ -103,7 +103,7 @@ export default function Home() {
           <div className="h-6" aria-hidden="true" />
           <p>
             I love coffee and work remotely in Norfolk, Virginia.
-            Currently, I&apos;m Head of Design at{" "}
+            Currently, I&apos;m a Product Designer at{" "}
             <ExternalLink href="https://hyper.video/">Hyper</ExternalLink>
             . Previously, I was the co-founder of{" "}
             <ExternalLink href="https://fathom.care/">Fathom</ExternalLink>{" "}
