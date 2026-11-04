@@ -27,12 +27,12 @@ const projects = [
   },
   {
     title: "Name Your Frames Figma Plug-in",
-    details: "2024-present · Frontend Development, Interaction, Branding",
+    details: "2024 · Frontend Development, Interaction, Branding",
     href: "https://www.figma.com/community/plugin/1327859070716103519/name-your-frames",
   },
   {
     title: "Essential Icons Library",
-    details: "2023-present · Icon Design, Design System, Branding",
+    details: "2023-2024 · Icon Design, Design System, Branding",
     href: "https://www.figma.com/community/file/1218589809425735347",
   },
 ];
