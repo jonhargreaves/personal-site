@@ -27,9 +27,11 @@ export default function CaseStudy({ study }: { study: (typeof work)[number] }) {
         <Link
           href="/#work"
           aria-label="Back to Work"
-          className="mb-2 -ms-2.5 -mt-2 flex min-h-11 w-fit items-center gap-2 rounded-lg p-2.5 text-white/75 transition-[color,background-color,scale] duration-150 hover:bg-white/10 hover:text-white active:scale-[0.96] active:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none motion-reduce:active:scale-100"
+          className="mb-2 -mx-3 -mt-2 flex w-fit items-center gap-3 rounded-lg ps-3 pe-2 py-2 text-white/75 transition-[color,background-color,scale] duration-150 hover:bg-white/10 hover:text-white active:scale-[0.96] active:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none motion-reduce:active:scale-100"
         >
-          <ChevronLeft size={20} strokeWidth={1.5} aria-hidden="true" />
+          <div className="flex w-3 shrink-0 items-center justify-center" aria-hidden="true">
+            <ChevronLeft size={20} strokeWidth={1.5} className="shrink-0" />
+          </div>
           <Image src="/logo.svg" alt="JH logo" width={24} height={24} priority />
         </Link>
         <div className="flex flex-col gap-2">

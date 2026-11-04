@@ -25,7 +25,7 @@ const projects = [
   },
   {
     title: "Coffee Club App Concept",
-    details: "2024 · Product Design, Prototyping, Interaction",
+    details: "2024 · Design System, Prototyping, Interaction",
     href: "https://www.figma.com/proto/Wi6kqSdzjk7kvVtgnKuXGa/Web?page-id=647%3A2143&node-id=679-9090&p=f&viewport=45%2C127%2C0.06&t=IEbnHoyWNbolbJMz-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=679%3A9090",
   },
   {

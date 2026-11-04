@@ -8,13 +8,13 @@ export const work = [
   {
     slug: "fathom-ios-onboarding",
     title: "Fathom iOS Onboarding",
-    details: "2025 · Design System, Prototyping, Interaction",
+    details: "2025 · Design System, Growth Design, Interaction",
     href: "/work/fathom-ios-onboarding",
   },
   {
     slug: "quicknode-streams",
     title: "QuickNode Streams",
-    details: "2024 · Design System, Prototyping, Interaction",
+    details: "2024 · Design System, Prototyping, User Experience",
     href: "/work/quicknode-streams",
   },
 ] as const;
