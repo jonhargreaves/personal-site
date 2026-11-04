@@ -93,21 +93,19 @@ function ConnectionItem({ label, href }: { label: string; href: string }) {
 export default function Home() {
   return (
     <main className="flex justify-center bg-black">
-      <div className="flex h-full w-full max-w-[632px] min-w-0 flex-col px-4 py-8 font-mono text-base text-white/75 lg:pt-18">
-        <header>
-          <Image src="/logo.svg" alt="JH logo" width={24} height={24} priority />
-          <div className="h-8" aria-hidden="true" />
+      <div className="flex h-full w-full max-w-[632px] min-w-0 flex-col gap-18 px-4 py-8 font-mono text-base text-white/75 lg:pt-18">
+        <header className="flex flex-col gap-6">
+          <Image src="/logo.svg" alt="JH logo" width={24} height={24} priority className="mb-2 self-start" />
           <h1>
             Hello, I&apos;m <span className="text-white">Jon Hargreaves</span>.
           </h1>
-          <div className="h-6" aria-hidden="true" />
           <p>
-            I love coffee and work remotely in Norfolk, Virginia.
-            Currently, I&apos;m a Product Designer at{" "}
-            <ExternalLink href="https://hyper.video/">Hyper</ExternalLink>
-            . Previously, I was the co-founder of{" "}
-            <ExternalLink href="https://fathom.care/">Fathom</ExternalLink>{" "}
-            and designed products for{" "}
+            Currently, I&apos;m looking for my next full-time or contract role in
+            product design. Previously, I led design at{" "}
+            <ExternalLink href="https://hyper.video/">Hyper</ExternalLink>&nbsp;and
+            I co-founded{" "}
+            <ExternalLink href="https://fathom.care/">Fathom</ExternalLink>. Before
+            that, I designed products for{" "}
             <ExternalLink href="https://www.quicknode.com/">
               QuickNode
             </ExternalLink>
@@ -117,7 +115,10 @@ export default function Home() {
             </ExternalLink>
             .
           </p>
-          <div className="h-6" aria-hidden="true" />
+          <p>
+            I love thoughtful design, coffee brewed by hand, and working remotely
+            in Norfolk, Virginia.
+          </p>
           <nav aria-label="Personal links" className="flex">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -150,17 +151,13 @@ export default function Home() {
           </nav>
         </header>
 
-        <div className="h-[72px]" aria-hidden="true" />
-
         <section aria-labelledby="projects-heading">
           <h2
             id="projects-heading"
-            className="text-xs uppercase tracking-[1px] text-white/50"
+            className="border-b border-white/25 pb-2 text-xs uppercase tracking-[1px] text-white/50"
           >
             Projects
           </h2>
-          <div className="h-2" aria-hidden="true" />
-          <div className="h-px bg-white/25" aria-hidden="true" />
           <ul className="-mx-3 flex flex-col items-center gap-2 pt-4">
             {projects.map((project) => (
               <li key={project.title} className="w-full">
@@ -177,18 +174,13 @@ export default function Home() {
           </ul>
         </section>
 
-        <div className="h-[72px]" aria-hidden="true" />
-
-        <section aria-labelledby="colophon-heading">
+        <section aria-labelledby="colophon-heading" className="flex flex-col gap-6">
           <h2
             id="colophon-heading"
-            className="text-xs uppercase tracking-[1px] text-white/50"
+            className="border-b border-white/25 pb-2 text-xs uppercase tracking-[1px] text-white/50"
           >
             Colophon
           </h2>
-          <div className="h-2" aria-hidden="true" />
-          <div className="h-px bg-white/25" aria-hidden="true" />
-          <div className="h-6" aria-hidden="true" />
           <p>
             A very special thanks to my wonderful partner Abby, friends, family,
             and past/present colleagues. The typeface in-use on this website is{" "}
@@ -197,7 +189,6 @@ export default function Home() {
             </ExternalLink>{" "}
             by <ExternalLink href="https://abcdinamo.com/">Dinamo</ExternalLink>.
           </p>
-          <div className="h-6" aria-hidden="true" />
           <blockquote>
             <p>&ldquo;Styles come and go. Good design is a language, not a style.&rdquo;</p>
             <footer>
@@ -206,8 +197,6 @@ export default function Home() {
             </footer>
           </blockquote>
         </section>
-
-        <div className="h-[72px]" aria-hidden="true" />
 
         <EmojiFooter />
       </div>
