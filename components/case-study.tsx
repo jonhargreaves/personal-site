@@ -2,7 +2,6 @@ import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import EmojiFooter from "@/components/emoji-footer";
 import ProjectList from "@/components/project-list";
 import SectionHeading from "@/components/section-heading";
 import SiteShell from "@/components/site-shell";
@@ -28,7 +27,7 @@ export default function CaseStudy({ study }: { study: (typeof work)[number] }) {
         <Link
           href="/#work"
           aria-label="Back to Work"
-          className="mb-2 -ml-2 -my-2 flex min-h-11 w-fit items-center gap-2 rounded-lg p-2 text-white/75 transition-[color,background-color,scale] duration-150 hover:bg-white/10 hover:text-white active:scale-[0.96] active:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none motion-reduce:active:scale-100"
+          className="mb-2 -ms-2.5 -mt-2 flex min-h-11 w-fit items-center gap-2 rounded-lg p-2.5 text-white/75 transition-[color,background-color,scale] duration-150 hover:bg-white/10 hover:text-white active:scale-[0.96] active:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none motion-reduce:active:scale-100"
         >
           <ChevronLeft size={20} strokeWidth={1.5} aria-hidden="true" />
           <Image src="/logo.svg" alt="JH logo" width={24} height={24} priority />
@@ -74,8 +73,6 @@ export default function CaseStudy({ study }: { study: (typeof work)[number] }) {
         <SectionHeading id="more-work-heading">More Work</SectionHeading>
         <ProjectList items={work.filter((item) => item.slug !== study.slug)} />
       </section>
-
-      <EmojiFooter />
     </SiteShell>
   );
 }

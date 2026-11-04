@@ -2,19 +2,19 @@ export const work = [
   {
     slug: "hyper-meeting-ui",
     title: "Hyper Meeting UI",
-    details: "2026 · Product Design, Design System, Frontend Development, Interaction",
+    details: "2026 · Design System, Frontend Development, Interaction",
     href: "/work/hyper-meeting-ui",
   },
   {
     slug: "fathom-ios-onboarding",
     title: "Fathom iOS Onboarding",
-    details: "2025 · Product Design, Design System, Prototyping, Interaction",
+    details: "2025 · Design System, Prototyping, Interaction",
     href: "/work/fathom-ios-onboarding",
   },
   {
     slug: "quicknode-streams",
     title: "QuickNode Streams",
-    details: "2024 · Product Design, Design System, Prototyping, Interaction",
+    details: "2024 · Design System, Prototyping, Interaction",
     href: "/work/quicknode-streams",
   },
 ] as const;
