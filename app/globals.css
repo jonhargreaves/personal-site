@@ -89,7 +89,7 @@
 @media (hover: hover) and (pointer: fine) {
   .project-row::before,
   .dropdown-menu-item::before {
-    transition: opacity 160ms ease;
+    transition: opacity 150ms ease;
   }
 
   .group:hover .project-row::before {
