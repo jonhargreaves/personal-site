@@ -100,8 +100,8 @@ export default function Home() {
             Hello, I&apos;m <span className="text-white">Jon Hargreaves</span>.
           </h1>
           <p>
-            Currently, I&apos;m looking for my next full-time or contract role in
-            product design. Previously, I led design at{" "}
+            Currently, I&apos;m looking for my next full-time or contract product
+            design role. Previously, I led design at{" "}
             <ExternalLink href="https://hyper.video/">Hyper</ExternalLink>&nbsp;and
             I co-founded{" "}
             <ExternalLink href="https://fathom.care/">Fathom</ExternalLink>. Before
