@@ -1,0 +1,118 @@
+{
+  "name": "@hypervideo/tile-layouts",
+  "version": "2.0.1",
+  "description": "High-performance tile layout system for video conferencing interfaces, extracted from hyper-lite",
+  "homepage": "https://github.com/hypervideo/hyper-libs/tree/main/packages/tile-layouts#readme",
+  "bugs": {
+    "url": "https://github.com/hypervideo/hyper-libs/issues"
+  },
+  "license": "MPL-2.0",
+  "author": "Robin Schreiber",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypervideo/hyper-libs.git",
+    "directory": "packages/tile-layouts"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./dev": {
+      "types": "./dist/dev/index.dev.d.ts",
+      "import": "./dist/dev/index.dev.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "play": "vp dev --config playground/vite.config.ts",
+    "play:build": "vp build --config playground/vite.config.ts",
+    "play:deploy": "bun run play:build && wrangler deploy",
+    "test": "vp test --coverage",
+    "test:ui": "vp test --ui",
+    "coverage": "vp test --coverage",
+    "layout-test": "tsx src/cli.ts",
+    "check:types": "tsgo --noEmit --pretty false",
+    "check": "bun run check:types && bun run knip",
+    "knip": "knip --no-config-hints",
+    "size": "size-limit",
+    "clean": "rm -rf dist playground/dist",
+    "docs": "bun run scripts/generate-docs.ts",
+    "release": "bumpp && bun publish",
+    "prepublishOnly": "bun run docs && bun run build",
+    "release:local": "export NPM_TOKEN=$(op read 'op://Development/hypervideo-packages-github/credential') && bumpp && bun publish"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.37.3",
+    "@hypervideo/face-detection": "6.0.1",
+    "@hypervideo/media-pipeline": "11.0.2",
+    "@ngneat/falso": "^8.0.2",
+    "@size-limit/preset-small-lib": "^12.1.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@testing-library/jest-dom": "^6.10.0",
+    "@testing-library/react": "^16.3.0",
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/react-router-dom": "^5.3.3",
+    "@vitejs/plugin-react": "6.0.4",
+    "@vitest/coverage-v8": "4.1.10",
+    "@vitest/ui": "4.1.10",
+    "bumpp": "^10.4.1",
+    "cli-table3": "^0.6.5",
+    "clsx": "^2.1.1",
+    "happy-dom": "^20.11.1",
+    "knip": "^5.88.1",
+    "lucide-react": "^0.469.0",
+    "motion": "^12.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.1.0",
+    "react-scan": "^0.0.48",
+    "size-limit": "^12.1.0",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.20.0",
+    "usehooks-ts": "^3.1.0",
+    "vite": "npm:@voidzero-dev/vite-plus-core@0.2.6",
+    "vite-plus": "0.2.6",
+    "vitest": "4.1.10",
+    "wrangler": "4.114.0"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "size-limit": [
+    {
+      "name": "Core library",
+      "path": "dist/index.js",
+      "limit": "60 kB"
+    }
+  ]
+}

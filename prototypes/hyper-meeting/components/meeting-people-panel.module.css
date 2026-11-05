@@ -1,0 +1,53 @@
+.participantRow {
+  width: 100%;
+  min-height: 48px;
+  gap: 8px;
+  padding: 8px 8px 8px 16px;
+}
+
+.participantRow:hover,
+.participantRow:focus-within {
+  background-color: color-mix(in oklab, var(--input) 30%, transparent);
+}
+
+.participantRow > div:first-child {
+  min-width: 0;
+  gap: 8px;
+}
+
+.participantRow > div:first-child > div {
+  min-width: 0;
+}
+
+.participantRow > div:first-child > div > span {
+  overflow: hidden;
+  font-weight: 500;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.participantRow > div:last-child {
+  flex-shrink: 0;
+  gap: 4px;
+}
+
+.participantRow [aria-label="Audio off"] {
+  color: var(--destructive);
+}
+
+.participantRow [data-slot="avatar"] {
+  width: 24px;
+  height: 24px;
+}
+
+.participantRow [data-slot="avatar-fallback"] {
+  font-size: 10px;
+  outline: 0.5px solid rgb(255 255 255 / 5%);
+  outline-offset: -0.5px;
+}
+
+.participantRow [data-hyper-elid="participant-menu"] svg {
+  width: 16px;
+  height: 16px;
+}

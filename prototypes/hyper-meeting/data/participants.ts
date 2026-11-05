@@ -1,0 +1,43 @@
+export const participants = [
+  {
+    layoutId: "jon",
+    displayName: "Jon Hargreaves",
+    initials: "JH",
+    avatarColor: "#6366f1",
+    isSelf: true,
+    aspectRatio: 16 / 9,
+    source: "camera",
+  },
+  {
+    layoutId: "mina",
+    displayName: "Mina Patel",
+    initials: "MP",
+    avatarColor: "#b56d91",
+    isSelf: false,
+    aspectRatio: 16 / 9,
+    source: "camera",
+  },
+  {
+    layoutId: "avery",
+    displayName: "Avery Stone",
+    initials: "AS",
+    avatarColor: "#658b75",
+    isSelf: false,
+    aspectRatio: 16 / 9,
+    source: "camera",
+  },
+  {
+    layoutId: "sam",
+    displayName: "Sam Rivera",
+    initials: "SR",
+    avatarColor: "#a6784e",
+    isSelf: false,
+    aspectRatio: 16 / 9,
+    source: "camera",
+  },
+] as const;
+
+export type MeetingParticipant = (typeof participants)[number] & {
+  hasAudio: boolean;
+  hasVideo: boolean;
+};

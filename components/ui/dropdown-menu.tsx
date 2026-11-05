@@ -4,6 +4,7 @@ import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
+import { menuContentClassName, menuItemClassName } from "./menu-styles";
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
@@ -29,10 +30,7 @@ const DropdownMenuContent = React.forwardRef<
         <DropdownMenuPrimitive.Content
           ref={ref}
           sideOffset={sideOffset}
-          className={cn(
-            "dropdown-content z-50 w-[200px] min-w-32 overflow-hidden rounded-lg border bg-popover p-1 text-popover-foreground shadow-md",
-            className,
-          )}
+          className={cn(menuContentClassName, className)}
           onPointerDownOutside={(event) => {
             closedWithPointerRef.current = true;
             onPointerDownOutside?.(event);
@@ -60,10 +58,7 @@ const DropdownMenuItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.Item
     ref={ref}
-    className={cn(
-      "dropdown-menu-item relative isolate flex cursor-pointer select-none items-center rounded-sm px-2 py-1 text-base outline-none focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-      className,
-    )}
+    className={cn(menuItemClassName, className)}
     {...props}
   />
 ));

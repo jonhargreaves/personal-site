@@ -1,0 +1,35 @@
+import { createStrokeIcon } from "../lib/create-icon";
+import type { IconNode } from "../types";
+
+const iconNode = [
+  [
+    "circle",
+    {
+      cx: "12",
+      cy: "12",
+      r: "10",
+      stroke: "currentColor",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: "1.5",
+      key: "0",
+    },
+  ],
+  [
+    "path",
+    {
+      stroke: "currentColor",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: "1.5",
+      d: "M9.5 9.5a2.5 2.5 0 1 1 3.912 2.064C12.728 12.032 12 12.672 12 13.5m.125 3.25H12m.25 0a.25.25 0 1 1-.5 0 .25.25 0 0 1 .5 0",
+      key: "1",
+    },
+  ],
+] as const satisfies IconNode;
+
+export const HugeHelpCircleStroke = createStrokeIcon(
+  "HugeHelpCircleStroke",
+  iconNode,
+  { viewBox: "0.4 0.4 23.2 23.2" }
+);

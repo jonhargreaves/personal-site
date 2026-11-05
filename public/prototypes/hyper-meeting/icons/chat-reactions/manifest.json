@@ -1,0 +1,19 @@
+{
+  "fileKey": "bAUaF3c0AlJQ9gpOWA4ad8",
+  "assets": [
+    {
+      "file": "face-plus-16.svg",
+      "nodeId": "4781:17721",
+      "width": 16,
+      "height": 16,
+      "sha256": "d03782ab3ead10dbd955813b1acb3c3b4e2e965f909db93133672164254ac0b9"
+    },
+    {
+      "file": "face-plus-20.svg",
+      "nodeId": "4781:17283",
+      "width": 20,
+      "height": 20,
+      "sha256": "17dc410fe40218b24d455817d86bfbc8b50241f5e83d11ece9873ea97a576bf2"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+.frame {
+  max-width: 393px;
+  aspect-ratio: 393 / 852;
+}
+
+.loadingStatus {
+  position: absolute;
+  inset-inline: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: fit-content;
+  max-width: calc(100% - 24px);
+  margin-inline: auto;
+  padding: 8px 12px;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 12px;
+  background: #171717;
+}
+
+/* Match the initial device before hydration to reserve the correct page space. */
+@media (min-width: 1244px) {
+  .frame {
+    max-width: 1180px;
+    aspect-ratio: 1180 / 820;
+  }
+}
+
+@media (min-width: 1504px) {
+  .frame {
+    max-width: 1440px;
+    aspect-ratio: 1440 / 800;
+  }
+}
+
+.selectorLoading {
+  width: 180px;
+  height: 36px;
+  max-width: 100%;
+  border-radius: 8px;
+  background: rgb(255 255 255 / 0.07);
+}

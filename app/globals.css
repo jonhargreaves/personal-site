@@ -1,5 +1,12 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 @import "tw-animate-css";
+
+/* Each prototype builds its own theme inside an isolated iframe.
+   Scan portfolio code and lightweight previews, never the interactive UI. */
+@source "./**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+@source "../lib/**/*.{ts,tsx}";
+@source "../prototypes/*/preview/**/*.{ts,tsx}";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -89,7 +96,7 @@
 @media (hover: hover) and (pointer: fine) {
   .project-row::before,
   .dropdown-menu-item::before {
-    transition: opacity 160ms ease;
+    transition: opacity 150ms ease;
   }
 
   .group:hover .project-row::before {
@@ -147,14 +154,16 @@
 }
 
 .dropdown-content {
-  transform-origin: var(--radix-dropdown-menu-content-transform-origin);
+  transform-origin: var(--radix-dropdown-menu-content-transform-origin, var(--transform-origin));
 }
 
-.dropdown-content[data-state="open"] {
+.dropdown-content[data-state="open"],
+.dropdown-content[data-open] {
   animation: dropdown-in 150ms ease-out;
 }
 
-.dropdown-content[data-state="closed"] {
+.dropdown-content[data-state="closed"],
+.dropdown-content[data-closed] {
   animation: dropdown-out 150ms ease-in forwards;
 }
 
@@ -183,7 +192,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .dropdown-content[data-state] {
+  .dropdown-content:is([data-state], [data-open], [data-closed]) {
     animation: none;
   }
 }

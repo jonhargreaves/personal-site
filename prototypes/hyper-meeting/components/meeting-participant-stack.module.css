@@ -1,0 +1,28 @@
+.stack {
+  /* The next avatar starts one diameter minus the overlap after this one. */
+  --avatar-cutout-center: calc(var(--avatar-stack-size) * 1.5 - var(--avatar-stack-overlap));
+  --avatar-cutout-radius: calc(var(--avatar-stack-size) / 2 + 2px);
+}
+
+.stack:dir(rtl) {
+  --avatar-cutout-center: calc(var(--avatar-stack-overlap) - var(--avatar-stack-size) / 2);
+}
+
+.stack > [data-slot="avatar-stack-item"] + [data-slot="avatar-stack-item"] {
+  margin-left: 0;
+  margin-inline-start: calc(var(--avatar-stack-overlap) * -1);
+}
+
+.stack > [data-slot="avatar-stack-item"]:not(:last-child) {
+  /* Cut around the neighboring circle with a consistent 2px transparent gap. */
+  mask-image: radial-gradient(
+    circle var(--avatar-cutout-radius) at var(--avatar-cutout-center) 50%,
+    transparent calc(100% - 0.5px),
+    black 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle var(--avatar-cutout-radius) at var(--avatar-cutout-center) 50%,
+    transparent calc(100% - 0.5px),
+    black 100%
+  );
+}

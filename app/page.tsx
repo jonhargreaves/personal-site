@@ -1,8 +1,11 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 
-import Project from "@/components/Project/project";
 import EmojiFooter from "@/components/emoji-footer";
+import ProjectList from "@/components/project-list";
+import SectionHeading from "@/components/section-heading";
+import SiteShell from "@/components/site-shell";
+import { work } from "@/lib/work";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,7 +25,7 @@ const projects = [
   },
   {
     title: "Coffee Club App Concept",
-    details: "2024 · Product Design, Prototyping, Interaction",
+    details: "2024 · Design System, Prototyping, Interaction",
     href: "https://www.figma.com/proto/Wi6kqSdzjk7kvVtgnKuXGa/Web?page-id=647%3A2143&node-id=679-9090&p=f&viewport=45%2C127%2C0.06&t=IEbnHoyWNbolbJMz-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=679%3A9090",
   },
   {
@@ -92,114 +95,94 @@ function ConnectionItem({ label, href }: { label: string; href: string }) {
 
 export default function Home() {
   return (
-    <main className="flex justify-center bg-black">
-      <div className="flex h-full w-full max-w-[632px] min-w-0 flex-col gap-18 px-4 py-8 font-mono text-base text-white/75 lg:pt-18">
-        <header className="flex flex-col gap-6">
-          <Image src="/logo.svg" alt="JH logo" width={24} height={24} priority className="mb-2 self-start" />
-          <h1>
-            Hello, I&apos;m <span className="text-white">Jon Hargreaves</span>.
-          </h1>
-          <p>
-            Currently, I&apos;m looking for my next full-time or contract product
-            design role. Previously, I led design at{" "}
-            <ExternalLink href="https://hyper.video/">Hyper</ExternalLink>&nbsp;and
-            I co-founded{" "}
-            <ExternalLink href="https://fathom.care/">Fathom</ExternalLink>. Before
-            that, I designed products for{" "}
-            <ExternalLink href="https://www.quicknode.com/">
-              QuickNode
-            </ExternalLink>
-            , <ExternalLink href="https://icy.tools/">icy.tools</ExternalLink>, and{" "}
-            <ExternalLink href="https://1393.xyz/blog/we-replaced-rental-brokers-with-software-and-filled-200-vacant-apartments">
-              Caretaker
-            </ExternalLink>
-            .
-          </p>
-          <p>
-            I love thoughtful design, coffee brewed by hand, and working remotely
-            in Norfolk, Virginia.
-          </p>
-          <nav aria-label="Personal links" className="flex">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button
-                  type="button"
-                  className="w-fit cursor-pointer border-b border-white/25 bg-transparent p-0 font-mono text-base text-white transition ease-in-out hover:border-white/50 active:border-white/50 data-[state=open]:border-white/50 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none"
-                >
-                  Connect
-                </button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                className="font-mono"
-                alignOffset={-12}
-                side="bottom"
-                align="start"
+    <SiteShell>
+      <header className="flex flex-col gap-6">
+        <Image src="/logo.svg" alt="JH logo" width={24} height={24} priority className="mb-2 self-start" />
+        <h1>
+          Hello, I&apos;m <span className="text-white">Jon Hargreaves</span>.
+        </h1>
+        <p>
+          Currently, I&apos;m looking for my next full-time or contract product
+          design role. Previously, I led design at{" "}
+          <ExternalLink href="https://hyper.video/">Hyper</ExternalLink>&nbsp;and
+          I co-founded{" "}
+          <ExternalLink href="https://fathom.care/">Fathom</ExternalLink>. Before
+          that, I designed products for{" "}
+          <ExternalLink href="https://www.quicknode.com/">
+            QuickNode
+          </ExternalLink>
+          , <ExternalLink href="https://icy.tools/">icy.tools</ExternalLink>, and{" "}
+          <ExternalLink href="https://1393.xyz/blog/we-replaced-rental-brokers-with-software-and-filled-200-vacant-apartments">
+            Caretaker
+          </ExternalLink>
+          .
+        </p>
+        <p>
+          I love thoughtful design, coffee brewed by hand, and working remotely
+          in Norfolk, Virginia.
+        </p>
+        <nav aria-label="Personal links" className="flex">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button
+                type="button"
+                className="w-fit cursor-pointer border-b border-white/25 bg-transparent p-0 font-mono text-base text-white transition ease-in-out hover:border-white/50 active:border-white/50 data-[state=open]:border-white/50 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none"
               >
-                {primaryConnections.map((connection) => (
-                  <ConnectionItem key={connection.label} {...connection} />
-                ))}
-                <DropdownMenuSeparator />
-                {socialConnections.map((connection) => (
-                  <ConnectionItem key={connection.label} {...connection} />
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <span aria-hidden="true">&nbsp;·&nbsp;</span>
-            <ExternalLink href="https://www.figma.com/proto/ZWigLGMSDosOK4v2NmpaRp/JH-Case-Studies?page-id=221%3A9911&type=design&node-id=221-17478&viewport=-4794%2C301%2C0.21&t=7ygTMcT4tOLzBejn-1&scaling=contain">
-              Portfolio
-            </ExternalLink>
-          </nav>
-        </header>
+                Connect
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              className="font-mono"
+              alignOffset={-12}
+              side="bottom"
+              align="start"
+            >
+              {primaryConnections.map((connection) => (
+                <ConnectionItem key={connection.label} {...connection} />
+              ))}
+              <DropdownMenuSeparator />
+              {socialConnections.map((connection) => (
+                <ConnectionItem key={connection.label} {...connection} />
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <span aria-hidden="true">&nbsp;·&nbsp;</span>
+          <ExternalLink href="https://www.figma.com/proto/ZWigLGMSDosOK4v2NmpaRp/JH-Case-Studies?page-id=221%3A9911&type=design&node-id=221-17478&viewport=-4794%2C301%2C0.21&t=7ygTMcT4tOLzBejn-1&scaling=contain">
+            Portfolio
+          </ExternalLink>
+        </nav>
+      </header>
 
-        <section aria-labelledby="projects-heading">
-          <h2
-            id="projects-heading"
-            className="border-b border-white/25 pb-2 text-xs uppercase tracking-[1px] text-white/50"
-          >
-            Projects
-          </h2>
-          <ul className="-mx-3 flex flex-col items-center gap-2 pt-4">
-            {projects.map((project) => (
-              <li key={project.title} className="w-full">
-                <a
-                  className="group flex w-full rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                  href={project.href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Project title={project.title} details={project.details} />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
+      <section id="work" aria-labelledby="work-heading">
+        <SectionHeading id="work-heading">Work</SectionHeading>
+        <ProjectList items={work} />
+      </section>
 
-        <section aria-labelledby="colophon-heading" className="flex flex-col gap-6">
-          <h2
-            id="colophon-heading"
-            className="border-b border-white/25 pb-2 text-xs uppercase tracking-[1px] text-white/50"
-          >
-            Colophon
-          </h2>
-          <p>
-            A very special thanks to my wonderful partner Abby, friends, family,
-            and past/present colleagues. The typeface in-use on this website is{" "}
-            <ExternalLink href="https://abcdinamo.com/typefaces/diatype">
-              Diatype Mono
-            </ExternalLink>{" "}
-            by <ExternalLink href="https://abcdinamo.com/">Dinamo</ExternalLink>.
-          </p>
-          <blockquote>
-            <p>&ldquo;Styles come and go. Good design is a language, not a style.&rdquo;</p>
-            <footer>
-              <span aria-hidden="true">- </span>
-              <cite className="not-italic">Massimo Vignelli</cite>
-            </footer>
-          </blockquote>
-        </section>
+      <section aria-labelledby="projects-heading">
+        <SectionHeading id="projects-heading">Projects</SectionHeading>
+        <ProjectList items={projects} />
+      </section>
 
-        <EmojiFooter />
-      </div>
-    </main>
+      <section aria-labelledby="colophon-heading" className="flex flex-col gap-6">
+        <SectionHeading id="colophon-heading">Colophon</SectionHeading>
+        <p>
+          A very special thanks to my wonderful partner Abby, friends, family,
+          and past/present colleagues. The typeface in-use on this website is{" "}
+          <ExternalLink href="https://abcdinamo.com/typefaces/diatype">
+            Diatype Mono
+          </ExternalLink>{" "}
+          by <ExternalLink href="https://abcdinamo.com/">Dinamo</ExternalLink>.
+        </p>
+        <blockquote>
+          <p>&ldquo;Styles come and go. Good design is a language, not a style.&rdquo;</p>
+          <footer>
+            <span aria-hidden="true">- </span>
+            <cite className="not-italic">Massimo Vignelli</cite>
+          </footer>
+        </blockquote>
+      </section>
+
+      <EmojiFooter />
+    </SiteShell>
   );
 }
