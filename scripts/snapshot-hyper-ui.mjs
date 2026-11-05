@@ -23,6 +23,7 @@ const entries = [
   "components/avatar-stack/index.tsx",
   "components/dialog.tsx",
   "components/input.tsx",
+  "components/label.tsx",
   "components/dropdown-menu.tsx",
   "components/meeting-ui/surfaces/call-controls/index.tsx",
   "components/meeting-ui/surfaces/meeting-island/index.ts",
@@ -33,6 +34,12 @@ const entries = [
   "components/meeting-ui/surfaces/more-panel/more-panel.tsx",
   "components/meeting-ui/surfaces/side-panel/side-panel.tsx",
   "components/meeting-ui/surfaces/reactions/reaction-stream.tsx",
+  "components/meeting-ui/surfaces/participants/index.ts",
+  "components/chat-ui/thread.tsx",
+  "components/chat-ui/message.tsx",
+  "components/chat-ui/composer.tsx",
+  "components/chat-ui/toolbar.tsx",
+  "components/attachment.tsx",
   "components/alert-dialog.tsx",
   "components/meeting-ui/surfaces/status/status.tsx",
 ];
@@ -131,6 +138,43 @@ function visit(file) {
   let adapted = original;
   for (const edit of edits.sort((a, b) => b.start - a.start))
     adapted = adapted.slice(0, edit.start) + edit.text + adapted.slice(edit.end);
+  // Put the prototype's implemented nested panels first in More's Most used group.
+  if (file === path.join(uiRoot, "components/meeting-ui/surfaces/more-panel/meeting-more-panel.tsx")) {
+    const itemStart = (id) => adapted.indexOf(`            <MorePanelActionItem\n              dataHyperElid="${id}"`);
+    const agenda = itemStart("agenda-panel");
+    const chat = itemStart("chat-panel");
+    const notes = adapted.indexOf("            {actions.notes ? (");
+    const participants = itemStart("participants-panel");
+    const transcript = itemStart("transcript");
+    if (!(agenda >= 0 && agenda < chat && chat < notes && notes < participants && participants < transcript)) {
+      throw new Error("Cannot adapt the More panel item order: upstream structure changed.");
+    }
+    adapted = adapted.slice(0, agenda)
+      + adapted.slice(chat, notes)
+      + adapted.slice(participants, transcript)
+      + adapted.slice(agenda, chat)
+      + adapted.slice(notes, participants)
+      + adapted.slice(transcript);
+  }
+  // The scroller's render-prop merge needs a keyed child; display:contents keeps its layout.
+  if (file === path.join(uiRoot, "components/message-scroller.tsx")) {
+    adapted = adapted
+      .replace("        <>", '        <span className="contents" key="scroll-button-content">')
+      .replace("        </>", "        </span>");
+  }
+  // Keep active formatting at a collapsed caret using the preceding text leaf.
+  if (file === path.join(uiRoot, "components/chat-ui/composer-editor.ts")) {
+    adapted = adapted.replace(
+      "  const leaves = [...editor.exec(LeavesInRange)];",
+      `  const leaves = editor.selection[0] === editor.selection[1]
+    ? [getLeafAt(editor.doc, editor.selection[0], true)?.[0]].filter((leaf) => leaf !== undefined)
+    : [...editor.exec(LeavesInRange)];`,
+    );
+  }
+  // Keep the meeting menu's copy action explicit about the invitation URL.
+  if (file === path.join(uiRoot, "components/meeting-ui/surfaces/meeting-island/meeting-island.tsx")) {
+    adapted = adapted.replace("              Copy link", "              Copy invite link");
+  }
   // The prototype uses 20px primary call-control icons; caret sizes stay native.
   if (file.startsWith(path.join(uiRoot, "components/meeting-ui/surfaces/call-controls/"))) {
     adapted = adapted.replaceAll("size-4.5", "size-5");
@@ -169,6 +213,7 @@ for (const icon of [
   "LucideChevronDown",
   "LucideLayoutPanelLeft",
   "LucideSearch",
+  "LucideFileText",
   "HugeSettings02Duotone",
   "HugeSettings02Stroke",
   "HugeAirplayLineDuotone",

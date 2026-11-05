@@ -92,10 +92,22 @@
       "snapshotSha256": "2c0cd59cc72e7e68f56f3c8adf56b2c4fb94ac2b0c244db2f111ea5e87a1c501"
     },
     {
+      "source": "packages/icons/src/icons/HugeDelete02Stroke.tsx",
+      "file": "icons/icons/HugeDelete02Stroke.tsx",
+      "sourceSha256": "77b7d55bf01a87842357be0a8e720267bf0c4b0789f25c84bd3dccbe0fe062da",
+      "snapshotSha256": "77b7d55bf01a87842357be0a8e720267bf0c4b0789f25c84bd3dccbe0fe062da"
+    },
+    {
       "source": "packages/icons/src/icons/HugeEdit02Stroke.tsx",
       "file": "icons/icons/HugeEdit02Stroke.tsx",
       "sourceSha256": "b12849d54f53f2b39ff408004294030c20563de41bc63ea085d1a367bfad0bc3",
       "snapshotSha256": "b12849d54f53f2b39ff408004294030c20563de41bc63ea085d1a367bfad0bc3"
+    },
+    {
+      "source": "packages/icons/src/icons/HugeHelpCircleStroke.tsx",
+      "file": "icons/icons/HugeHelpCircleStroke.tsx",
+      "sourceSha256": "0c2c6046f7929ef5bfa9f31ae7e135132eecb6e2ae1f9f667a02db82410fa78a",
+      "snapshotSha256": "0c2c6046f7929ef5bfa9f31ae7e135132eecb6e2ae1f9f667a02db82410fa78a"
     },
     {
       "source": "packages/icons/src/icons/HugeHierarchySolid.tsx",
@@ -224,6 +236,24 @@
       "snapshotSha256": "15129aed35dfe587a47ee1b1653bd452b12023fddfeaa0f02fd5ce26da03cb10"
     },
     {
+      "source": "packages/icons/src/icons/LucideArrowDown.tsx",
+      "file": "icons/icons/LucideArrowDown.tsx",
+      "sourceSha256": "cde62751189d9b3e9a59393bd4f87e784867eb42fdc254d6b70e4e7c6067a5ff",
+      "snapshotSha256": "cde62751189d9b3e9a59393bd4f87e784867eb42fdc254d6b70e4e7c6067a5ff"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideArrowLeft.tsx",
+      "file": "icons/icons/LucideArrowLeft.tsx",
+      "sourceSha256": "dd14b2fd20e12fc3bd34f72b5e29162e2fbf2c836b7d8d91c017a77cb9e4f212",
+      "snapshotSha256": "dd14b2fd20e12fc3bd34f72b5e29162e2fbf2c836b7d8d91c017a77cb9e4f212"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideBold.tsx",
+      "file": "icons/icons/LucideBold.tsx",
+      "sourceSha256": "218659f171473bf5833decabe4010b7b0e7e0f4fe7f69df82bb3e146a9402095",
+      "snapshotSha256": "218659f171473bf5833decabe4010b7b0e7e0f4fe7f69df82bb3e146a9402095"
+    },
+    {
       "source": "packages/icons/src/icons/LucideCheck.tsx",
       "file": "icons/icons/LucideCheck.tsx",
       "sourceSha256": "6d79884074fca7a9e327ea42794cdf3ff14d4b5012b671d52244eb7e7dcbe80e",
@@ -254,10 +284,22 @@
       "snapshotSha256": "c2f94469e6e557660714cc2151b20a7c68a37c69b9f62be92affe358f53ffde0"
     },
     {
+      "source": "packages/icons/src/icons/LucideChevronUp.tsx",
+      "file": "icons/icons/LucideChevronUp.tsx",
+      "sourceSha256": "551aa329a395f110257d664ea7741cdede88e12eb450af1cee42bb0b1f6d705c",
+      "snapshotSha256": "551aa329a395f110257d664ea7741cdede88e12eb450af1cee42bb0b1f6d705c"
+    },
+    {
       "source": "packages/icons/src/icons/LucideCircle.tsx",
       "file": "icons/icons/LucideCircle.tsx",
       "sourceSha256": "24382a110e14d4c33cf29a91170b0e3bddb8258b8a5a0ddbcc980ebce7ff98af",
       "snapshotSha256": "24382a110e14d4c33cf29a91170b0e3bddb8258b8a5a0ddbcc980ebce7ff98af"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideCode2.tsx",
+      "file": "icons/icons/LucideCode2.tsx",
+      "sourceSha256": "5b097c3e0440207e09923035d6b278049b4d48350e18040503d9b910974f72c3",
+      "snapshotSha256": "5b097c3e0440207e09923035d6b278049b4d48350e18040503d9b910974f72c3"
     },
     {
       "source": "packages/icons/src/icons/LucideCopy.tsx",
@@ -272,10 +314,28 @@
       "snapshotSha256": "6d28a15c6c843afe1f460748cc750ec0922e483b2323b6a52eb6a7fe53bad528"
     },
     {
+      "source": "packages/icons/src/icons/LucideFileText.tsx",
+      "file": "icons/icons/LucideFileText.tsx",
+      "sourceSha256": "3bf4b731bb238db0aac40e8ab269154d2a1438d6fa54fe1b42f0093f6f589cbb",
+      "snapshotSha256": "3bf4b731bb238db0aac40e8ab269154d2a1438d6fa54fe1b42f0093f6f589cbb"
+    },
+    {
       "source": "packages/icons/src/icons/LucideGripVertical.tsx",
       "file": "icons/icons/LucideGripVertical.tsx",
       "sourceSha256": "031ceaafdd7c338736013d9ef80680bd723da15f4f4b68626948db2f3b4ce2cd",
       "snapshotSha256": "031ceaafdd7c338736013d9ef80680bd723da15f4f4b68626948db2f3b4ce2cd"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideImage.tsx",
+      "file": "icons/icons/LucideImage.tsx",
+      "sourceSha256": "1e4433381483ec7140f81499f36c817d0cbb071a971f12e5ba7dba2983cbf978",
+      "snapshotSha256": "1e4433381483ec7140f81499f36c817d0cbb071a971f12e5ba7dba2983cbf978"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideItalic.tsx",
+      "file": "icons/icons/LucideItalic.tsx",
+      "sourceSha256": "37242aca95ea4b2e2c8830d8616385d4c3bc7cb6165a206411e50d43c6c187f0",
+      "snapshotSha256": "37242aca95ea4b2e2c8830d8616385d4c3bc7cb6165a206411e50d43c6c187f0"
     },
     {
       "source": "packages/icons/src/icons/LucideLayoutPanelLeft.tsx",
@@ -284,10 +344,40 @@
       "snapshotSha256": "a8a1364eb0d9ad9675d45084ff6980490952b2ba322264f4cfa75b6d2c4c126a"
     },
     {
+      "source": "packages/icons/src/icons/LucideLink.tsx",
+      "file": "icons/icons/LucideLink.tsx",
+      "sourceSha256": "dc0412d18dba95bffc0b47883ec96fefd8f5e441050ceb1cda8253b40bdea1c4",
+      "snapshotSha256": "dc0412d18dba95bffc0b47883ec96fefd8f5e441050ceb1cda8253b40bdea1c4"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideList.tsx",
+      "file": "icons/icons/LucideList.tsx",
+      "sourceSha256": "b906ef010fad519554982ccda8bf605a1e955a5bc061ca19098ffb6861699c1a",
+      "snapshotSha256": "b906ef010fad519554982ccda8bf605a1e955a5bc061ca19098ffb6861699c1a"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideListOrdered.tsx",
+      "file": "icons/icons/LucideListOrdered.tsx",
+      "sourceSha256": "9a8bf128be76925f9e4926a0295379f0bc09ceada5e6cc22cd394e2b2a99cfa1",
+      "snapshotSha256": "9a8bf128be76925f9e4926a0295379f0bc09ceada5e6cc22cd394e2b2a99cfa1"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideListTodo.tsx",
+      "file": "icons/icons/LucideListTodo.tsx",
+      "sourceSha256": "a1be20f939179721dd599d6a528b8e69cd3cf576a8ab0d7f4bdab46fd5d53371",
+      "snapshotSha256": "a1be20f939179721dd599d6a528b8e69cd3cf576a8ab0d7f4bdab46fd5d53371"
+    },
+    {
       "source": "packages/icons/src/icons/LucideLoader.tsx",
       "file": "icons/icons/LucideLoader.tsx",
       "sourceSha256": "367c9de7361d56ddc6d8b5be15d9aa204e578e562949285c5d4a091104b30abc",
       "snapshotSha256": "367c9de7361d56ddc6d8b5be15d9aa204e578e562949285c5d4a091104b30abc"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideLoader2.tsx",
+      "file": "icons/icons/LucideLoader2.tsx",
+      "sourceSha256": "e836b735ab42f2c3d8b76d30aa61dea5266be5c9157c2e022bbf79a6db71df28",
+      "snapshotSha256": "e836b735ab42f2c3d8b76d30aa61dea5266be5c9157c2e022bbf79a6db71df28"
     },
     {
       "source": "packages/icons/src/icons/LucideLoaderCircle.tsx",
@@ -350,10 +440,28 @@
       "snapshotSha256": "ae3f0e1bf168d148ed44ac5b08cc45c89d7812d32a73c296f373b77f01cf8ea0"
     },
     {
+      "source": "packages/icons/src/icons/LucideQuote.tsx",
+      "file": "icons/icons/LucideQuote.tsx",
+      "sourceSha256": "665508e08ba7121b61e22a0f7608cd531a398550a7bce61850b8348f59753dd1",
+      "snapshotSha256": "665508e08ba7121b61e22a0f7608cd531a398550a7bce61850b8348f59753dd1"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideScreenShare.tsx",
+      "file": "icons/icons/LucideScreenShare.tsx",
+      "sourceSha256": "3f91701e3dbe8e0758eaf4fcde7abaeade1b66aa10357b272aa878d25e22f7a6",
+      "snapshotSha256": "3f91701e3dbe8e0758eaf4fcde7abaeade1b66aa10357b272aa878d25e22f7a6"
+    },
+    {
       "source": "packages/icons/src/icons/LucideSearch.tsx",
       "file": "icons/icons/LucideSearch.tsx",
       "sourceSha256": "63416e062814a077f6947934caaffa70dcf91e2fa18e1e0239ef5d632512d9e1",
       "snapshotSha256": "63416e062814a077f6947934caaffa70dcf91e2fa18e1e0239ef5d632512d9e1"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideSend.tsx",
+      "file": "icons/icons/LucideSend.tsx",
+      "sourceSha256": "c3ccef4ea91c5a6e01ada00c258d23353d3629e95c9b43dbb707646025ed9144",
+      "snapshotSha256": "c3ccef4ea91c5a6e01ada00c258d23353d3629e95c9b43dbb707646025ed9144"
     },
     {
       "source": "packages/icons/src/icons/LucideSettings.tsx",
@@ -366,6 +474,36 @@
       "file": "icons/icons/LucideSignal.tsx",
       "sourceSha256": "097e99409a3ac0045d24af6691650acb03513ee15fb8312fe309648c53435b92",
       "snapshotSha256": "097e99409a3ac0045d24af6691650acb03513ee15fb8312fe309648c53435b92"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideSmile.tsx",
+      "file": "icons/icons/LucideSmile.tsx",
+      "sourceSha256": "bc412fe3e0ffe4da16e039cda57bc6b400bd71d2916a8835228ede1e7596597a",
+      "snapshotSha256": "bc412fe3e0ffe4da16e039cda57bc6b400bd71d2916a8835228ede1e7596597a"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideSquare.tsx",
+      "file": "icons/icons/LucideSquare.tsx",
+      "sourceSha256": "9baed06199467d2f8d69707764d8147ccadc3f8197d020c10d7c25ed3f3fccb4",
+      "snapshotSha256": "9baed06199467d2f8d69707764d8147ccadc3f8197d020c10d7c25ed3f3fccb4"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideStrikethrough.tsx",
+      "file": "icons/icons/LucideStrikethrough.tsx",
+      "sourceSha256": "57be8b2e44fbbf24d5433b6e07f800b744abc4f943ca1b67abb14d118079a501",
+      "snapshotSha256": "57be8b2e44fbbf24d5433b6e07f800b744abc4f943ca1b67abb14d118079a501"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideUnderline.tsx",
+      "file": "icons/icons/LucideUnderline.tsx",
+      "sourceSha256": "10aa4ab79eda7f285656b695a7fea63a1d4f4ffe46beafdbd4a76d9dfcf6a6dc",
+      "snapshotSha256": "10aa4ab79eda7f285656b695a7fea63a1d4f4ffe46beafdbd4a76d9dfcf6a6dc"
+    },
+    {
+      "source": "packages/icons/src/icons/LucideUpload.tsx",
+      "file": "icons/icons/LucideUpload.tsx",
+      "sourceSha256": "6bb5d909429cb3be0848a0100c931ade0644f95eb437fde5b431833dcf89bfda",
+      "snapshotSha256": "6bb5d909429cb3be0848a0100c931ade0644f95eb437fde5b431833dcf89bfda"
     },
     {
       "source": "packages/icons/src/icons/LucideVideo.tsx",
@@ -392,10 +530,22 @@
       "snapshotSha256": "a23288c2b9e04403e5f3c37eec2bbe31e07ac8eaebe6d7ebcc4c9944e6584b01"
     },
     {
+      "source": "packages/ui/src/components/activity-bars-icon.tsx",
+      "file": "ui/components/activity-bars-icon.tsx",
+      "sourceSha256": "686667a06a5a2ca5cba8f2bae417f83e3ef32dae6e6e12e80cf1ac25ae9e922c",
+      "snapshotSha256": "686667a06a5a2ca5cba8f2bae417f83e3ef32dae6e6e12e80cf1ac25ae9e922c"
+    },
+    {
       "source": "packages/ui/src/components/alert-dialog.tsx",
       "file": "ui/components/alert-dialog.tsx",
       "sourceSha256": "04546650bab966df77f2c2ef4166b6263509d287750b1dbaf54b3c53df4ca121",
       "snapshotSha256": "ad3f1f8cb9b046564eb9cc4663220ec2db989672a8439e65cf188dc802589b1a"
+    },
+    {
+      "source": "packages/ui/src/components/attachment.tsx",
+      "file": "ui/components/attachment.tsx",
+      "sourceSha256": "8dd97731c8110d5ffafb21197d7b3d34fd7493aecc43f5398326021de1805fce",
+      "snapshotSha256": "b8ff492379df4345f5b8ec13df0c72084bd1d1ed80e9c617c3d63577114ee476"
     },
     {
       "source": "packages/ui/src/components/audio-level-meter.tsx",
@@ -416,6 +566,12 @@
       "snapshotSha256": "ce6a37194830a5d7dc77aa1928511e0057199d7930dee3818e82649dae1f3c0e"
     },
     {
+      "source": "packages/ui/src/components/badge.tsx",
+      "file": "ui/components/badge.tsx",
+      "sourceSha256": "13c708d14950b2caf47b12373780bc948a7fc162b6b1c6329005bcbff6c9a827",
+      "snapshotSha256": "aa90832c68d7a8253c4a92d405b59c631fdd63940e77e9743767e77997c12448"
+    },
+    {
       "source": "packages/ui/src/components/brand/logo-full.tsx",
       "file": "ui/components/brand/logo-full.tsx",
       "sourceSha256": "8fb6d12bfce2d05d1f4f74be636c04370aa7700292b87308a6b2704f5e23fa4f",
@@ -434,6 +590,12 @@
       "snapshotSha256": "ceaab0bc0d5ebc8c7aba0bb34ef964e736caed0f1ee754f0edc00dce04e9db9b"
     },
     {
+      "source": "packages/ui/src/components/bubble.tsx",
+      "file": "ui/components/bubble.tsx",
+      "sourceSha256": "8668a9a216eefc3e78d8aa8a669c26934e0f27d1d3408b155e181cb61e66b319",
+      "snapshotSha256": "552ff4e368a8b283b30ebe9802ea3aed51bc766774ff1596e0cb297998958ec4"
+    },
+    {
       "source": "packages/ui/src/components/button-group.tsx",
       "file": "ui/components/button-group.tsx",
       "sourceSha256": "0388b7bce3f745835f4d6da1e1e356f82daa18659c46d15bf78df6897819dd13",
@@ -444,6 +606,144 @@
       "file": "ui/components/button.tsx",
       "sourceSha256": "40e191e513a5c3ad12635e53c5e213e439d8f5771de32ca0dbf6e5c782fb2718",
       "snapshotSha256": "3d2a66ff939c8fc1a5c9100494693efbff5204d5e56aacd12e538ad7ab3b7d8a"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/chat-document.ts",
+      "file": "ui/components/chat-ui/chat-document.ts",
+      "sourceSha256": "47cf404d4d667f5350e438359daa694ad8f200ecd51bbef56774aa69420f9e1d",
+      "snapshotSha256": "fa38a7470a5bac6c5f852f21d4ca38db82625afc1d7e271b222b46ac85e909c4"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/composer-context.tsx",
+      "file": "ui/components/chat-ui/composer-context.tsx",
+      "sourceSha256": "8158e8d1b5b04bdb62f05792d381afd8ce75863066d62b2889c9318cbd3e22d1",
+      "snapshotSha256": "8158e8d1b5b04bdb62f05792d381afd8ce75863066d62b2889c9318cbd3e22d1"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/composer-controller.ts",
+      "file": "ui/components/chat-ui/composer-controller.ts",
+      "sourceSha256": "20f3a31aca31fa327aec299a78025c5871cde13ddf9699a38867dd4688041c88",
+      "snapshotSha256": "20f3a31aca31fa327aec299a78025c5871cde13ddf9699a38867dd4688041c88"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/composer-editor.ts",
+      "file": "ui/components/chat-ui/composer-editor.ts",
+      "sourceSha256": "81e86b905a8923f2af2bc1b09b7d29d381e74c8d3ea637041fc247931f66db1d",
+      "snapshotSha256": "68b3be85da400adcf8171f89a33f6571a03c045449888d081f393877cb8a01da"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/composer-focus.ts",
+      "file": "ui/components/chat-ui/composer-focus.ts",
+      "sourceSha256": "09bae57a782bb3835a1832b83d6aeffcf0793184140716c362e7603e0355f165",
+      "snapshotSha256": "09bae57a782bb3835a1832b83d6aeffcf0793184140716c362e7603e0355f165"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/composer-keydown.ts",
+      "file": "ui/components/chat-ui/composer-keydown.ts",
+      "sourceSha256": "99ea163662143df88881226d7689eb30dac128d32c092014f2ff8cac5f54557f",
+      "snapshotSha256": "99ea163662143df88881226d7689eb30dac128d32c092014f2ff8cac5f54557f"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/composer-primitives.tsx",
+      "file": "ui/components/chat-ui/composer-primitives.tsx",
+      "sourceSha256": "602297816cd999039b141ca4d0ba7ac52db797dc71f11b2d629f72008730c95e",
+      "snapshotSha256": "602297816cd999039b141ca4d0ba7ac52db797dc71f11b2d629f72008730c95e"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/composer-renderer.tsx",
+      "file": "ui/components/chat-ui/composer-renderer.tsx",
+      "sourceSha256": "1f5f6d8dd925280732992955fe05d4e8c65bd42190905b3945073079a73392f8",
+      "snapshotSha256": "5bdf8aba39fa2f0b069b181de45918c0cc96157f8f2e0ef46f54ef8bfd0d999c"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/composer-suggestion-controller.ts",
+      "file": "ui/components/chat-ui/composer-suggestion-controller.ts",
+      "sourceSha256": "d1abc0abf6e1ca359c4b8395762435139c8ef922640cf4625f9dbd0daa942199",
+      "snapshotSha256": "d1abc0abf6e1ca359c4b8395762435139c8ef922640cf4625f9dbd0daa942199"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/composer-suggestion-detection.ts",
+      "file": "ui/components/chat-ui/composer-suggestion-detection.ts",
+      "sourceSha256": "efe533575112a4d446ae0d4a2a530bcf623cec4243514e028958fd1b0e907943",
+      "snapshotSha256": "efe533575112a4d446ae0d4a2a530bcf623cec4243514e028958fd1b0e907943"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/composer.tsx",
+      "file": "ui/components/chat-ui/composer.tsx",
+      "sourceSha256": "c2d6a3de98c1144011b812b744fc051851cfa0324ba59b9022962393c2d435c9",
+      "snapshotSha256": "d1b76ace478d4098fdae6d76699e6f695af39f170713d4f9dc70442e016826cb"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/emoji-picker.tsx",
+      "file": "ui/components/chat-ui/emoji-picker.tsx",
+      "sourceSha256": "8d5b8b8a0449ecc3e84b5d43cd4c60d26ad97e9dca024299738634c9ff57bb48",
+      "snapshotSha256": "8d5b8b8a0449ecc3e84b5d43cd4c60d26ad97e9dca024299738634c9ff57bb48"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/message-variants.ts",
+      "file": "ui/components/chat-ui/message-variants.ts",
+      "sourceSha256": "9d9c6965575c58f4e3e047cda9ac1d2f77e99907209e54052152a4f92cf070e9",
+      "snapshotSha256": "9d9c6965575c58f4e3e047cda9ac1d2f77e99907209e54052152a4f92cf070e9"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/message.tsx",
+      "file": "ui/components/chat-ui/message.tsx",
+      "sourceSha256": "e85795d9956f275f0a31dc0c658bdb166abda76dde118e72b41011ebb50b68b7",
+      "snapshotSha256": "3cb130e9e0416765df60ed1f64ada7028bb9f9d9bc0d4b1e2eefcb7d5e8e18a5"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/rich-message-content.tsx",
+      "file": "ui/components/chat-ui/rich-message-content.tsx",
+      "sourceSha256": "2ed59676437d063ebef14be19b1355d96a3c5b9fca6f516e0e84d4d0bc1c4f76",
+      "snapshotSha256": "2ed59676437d063ebef14be19b1355d96a3c5b9fca6f516e0e84d4d0bc1c4f76"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/suggestion-anchor.ts",
+      "file": "ui/components/chat-ui/suggestion-anchor.ts",
+      "sourceSha256": "25875a72d70b1b97e3809220308928fc168209a84ee196fa760be66732fd1c2a",
+      "snapshotSha256": "c689e241c233af32df52a7706d414e68137f6249397e670216028eedec05fd70"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/suggestions.tsx",
+      "file": "ui/components/chat-ui/suggestions.tsx",
+      "sourceSha256": "45a7a50f53c3fd2ca2a7aaa365ca7bf7035aafb86fec7d4dfe1f13c8d818e016",
+      "snapshotSha256": "bfa5f9e8ae0869da68a6ad782d33cb98567141057c73a7d3bdafed8a65a3fbf5"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/thread-variants.ts",
+      "file": "ui/components/chat-ui/thread-variants.ts",
+      "sourceSha256": "8b24ed41ead7418a3c4b3b098edbc68f51989708cdfd8dc075d19d8aefb9cd30",
+      "snapshotSha256": "8b24ed41ead7418a3c4b3b098edbc68f51989708cdfd8dc075d19d8aefb9cd30"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/thread.tsx",
+      "file": "ui/components/chat-ui/thread.tsx",
+      "sourceSha256": "9a59b66df33b2318d6cc57f8e1a3d637d28cd6466493f0446c583ff3df520b63",
+      "snapshotSha256": "c2b36c6a91360e18d568d05dc2cb6a0f3d971b15abb5d63d27fb0cb29fdee13c"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/toolbar-actions.tsx",
+      "file": "ui/components/chat-ui/toolbar-actions.tsx",
+      "sourceSha256": "2abd0822f39c2b62603748ee83cbddf032eb31675d326c9315f8c39244258a8b",
+      "snapshotSha256": "15e136d090a8caf597ae47a9399899f75cad125197f87fddd75ed92fed5a1d22"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/toolbar-variants.ts",
+      "file": "ui/components/chat-ui/toolbar-variants.ts",
+      "sourceSha256": "7fb274884f2fd970d4d123d3d174aa8b26f148e326241769bf7177ba4105a8eb",
+      "snapshotSha256": "7fb274884f2fd970d4d123d3d174aa8b26f148e326241769bf7177ba4105a8eb"
+    },
+    {
+      "source": "packages/ui/src/components/chat-ui/toolbar.tsx",
+      "file": "ui/components/chat-ui/toolbar.tsx",
+      "sourceSha256": "908aa677f23ff849607059caad4ed54ddb8a18d6edde7e15ac2ae8db50dea912",
+      "snapshotSha256": "cd13c32fb637a88d973cac7f3eeb5c1ca6abffa273ff14b4c8170a71f32a6071"
+    },
+    {
+      "source": "packages/ui/src/components/collapsible.tsx",
+      "file": "ui/components/collapsible.tsx",
+      "sourceSha256": "7e4e3c2ebd54529681aa79b31e64d266302585f5aa69530d4a666691466ff432",
+      "snapshotSha256": "7e4e3c2ebd54529681aa79b31e64d266302585f5aa69530d4a666691466ff432"
     },
     {
       "source": "packages/ui/src/components/device-picker-menu.tsx",
@@ -476,16 +776,46 @@
       "snapshotSha256": "0ef93a11f03765ae0fe6a8e0cbde2ff7c4c85a667154b0dce87f844f666ba69f"
     },
     {
+      "source": "packages/ui/src/components/emoji-picker.tsx",
+      "file": "ui/components/emoji-picker.tsx",
+      "sourceSha256": "7149e0f11ee7536ce47fa5a9d1a0f9dc71bf74de38462c953cef3de6edfb821f",
+      "snapshotSha256": "7149e0f11ee7536ce47fa5a9d1a0f9dc71bf74de38462c953cef3de6edfb821f"
+    },
+    {
+      "source": "packages/ui/src/components/empty-primitives.tsx",
+      "file": "ui/components/empty-primitives.tsx",
+      "sourceSha256": "f64516fb20cf9f652b7f983638ec87ff5a22f273855a0a762c4dbb93d6fa0523",
+      "snapshotSha256": "22ab35c6be03847b3dc6cb8db6ec6ce2e74313524457597a2631640e2e99ae4e"
+    },
+    {
       "source": "packages/ui/src/components/error-page.tsx",
       "file": "ui/components/error-page.tsx",
       "sourceSha256": "3a48e5932d49ff7ac33ccf187d80a917c31613ec54226aede58e13586d3db2a1",
       "snapshotSha256": "f8d585abc6a198fa015fe4f48b0894b4785114b077be0fc550a4050618effa04"
     },
     {
+      "source": "packages/ui/src/components/gif-browser.tsx",
+      "file": "ui/components/gif-browser.tsx",
+      "sourceSha256": "faf7f23ecfc4575fd8e1afa27b56904c1a28cd97c61946b57a2737b1921c5b59",
+      "snapshotSha256": "afbf7078f724e29e5e6768c420e33cefe9af7bc50b6874d8fd31ec3198462213"
+    },
+    {
+      "source": "packages/ui/src/components/illustrations/empty-chat.tsx",
+      "file": "ui/components/illustrations/empty-chat.tsx",
+      "sourceSha256": "a59e81cf46d07450256e6b5dfbc03ddab444d45a74b9fcc55e74bf95a86d5628",
+      "snapshotSha256": "a9202addf758dfdf0dc2270a75f320fa95ee748eee07debefc08ad51dd8690b6"
+    },
+    {
       "source": "packages/ui/src/components/input.tsx",
       "file": "ui/components/input.tsx",
       "sourceSha256": "4513e1f4921b5ec757a8bdcc621aac6f7c2a76b60a63534e66cf33c6be7f0560",
       "snapshotSha256": "02622502ca768cc7c9fbb0fdfbe1c1f1f4fb95fcee3267857dc7d1bf0ffc2692"
+    },
+    {
+      "source": "packages/ui/src/components/label.tsx",
+      "file": "ui/components/label.tsx",
+      "sourceSha256": "929d4918e6ac7a19d1ae9794eea1a54ddefddac66be3566f2ebf5973a310b9c9",
+      "snapshotSha256": "bacdb6fcdb9495042c8942ab2028be132fae8b19b0d51bd603f1a65d8725091e"
     },
     {
       "source": "packages/ui/src/components/layouts/meeting-shell.tsx",
@@ -683,19 +1013,49 @@
       "source": "packages/ui/src/components/meeting-ui/surfaces/meeting-island/meeting-island.tsx",
       "file": "ui/components/meeting-ui/surfaces/meeting-island/meeting-island.tsx",
       "sourceSha256": "fbbe247fdd27bfad43106c1ca825c2f9857a18a64d950f35f79e1b7499e89d19",
-      "snapshotSha256": "0fb0bbcd86be408a772c123d965ad4e45fe3935ed2b2acdbc95a6ab90fe405ee"
+      "snapshotSha256": "4e2eec908d22ee5b72f29c6eda22e829e0409b4e6b1120cdcc1b6384e31521f9"
     },
     {
       "source": "packages/ui/src/components/meeting-ui/surfaces/more-panel/meeting-more-panel.tsx",
       "file": "ui/components/meeting-ui/surfaces/more-panel/meeting-more-panel.tsx",
       "sourceSha256": "90b1222eb8ff0884f1bb549bcdc085707f9ca581e6a7c094e902de0d21709da4",
-      "snapshotSha256": "31ee632ad0f52c3c994982bca168c412363f75cb9ac48960774d1e72de6e4d36"
+      "snapshotSha256": "90431284029eb4dba13a976ead3ef31c02942a4b727255a5d98abe89f27b1f99"
     },
     {
       "source": "packages/ui/src/components/meeting-ui/surfaces/more-panel/more-panel.tsx",
       "file": "ui/components/meeting-ui/surfaces/more-panel/more-panel.tsx",
       "sourceSha256": "335ce116f84781ce469603844bce82708b5e9858ac5a73f67fa94c728c18b610",
       "snapshotSha256": "67fc3d83a0435bb38aef1e7eccc5f0d91d32f9b976e35dfdce4038c90c5df84f"
+    },
+    {
+      "source": "packages/ui/src/components/meeting-ui/surfaces/participants/index.ts",
+      "file": "ui/components/meeting-ui/surfaces/participants/index.ts",
+      "sourceSha256": "9140247d9d1607f1743651d38fe77bfad924832aca52ae80f4dbfd2ba6ab6ced",
+      "snapshotSha256": "9140247d9d1607f1743651d38fe77bfad924832aca52ae80f4dbfd2ba6ab6ced"
+    },
+    {
+      "source": "packages/ui/src/components/meeting-ui/surfaces/participants/participant-context.tsx",
+      "file": "ui/components/meeting-ui/surfaces/participants/participant-context.tsx",
+      "sourceSha256": "733d7b13a9a8f5c085685b5bd664d77f97dcb2cc4678902c98a440f97e0bb004",
+      "snapshotSha256": "733d7b13a9a8f5c085685b5bd664d77f97dcb2cc4678902c98a440f97e0bb004"
+    },
+    {
+      "source": "packages/ui/src/components/meeting-ui/surfaces/participants/participant-row.tsx",
+      "file": "ui/components/meeting-ui/surfaces/participants/participant-row.tsx",
+      "sourceSha256": "d42025ceaa3d14b9cb86e01c2f3aca8cc6ae649eb37a0a5812a03f3782cd8fe2",
+      "snapshotSha256": "549b16cea34f1733cd6aa2d20fa4560eaf6dc89e6acc535a2252ecf8a56e3421"
+    },
+    {
+      "source": "packages/ui/src/components/meeting-ui/surfaces/participants/participant-types.ts",
+      "file": "ui/components/meeting-ui/surfaces/participants/participant-types.ts",
+      "sourceSha256": "9b5c1faed8aa7e4c9cae11cd2a9a8b40459d42ab3a677f68920a8f7ee9450db6",
+      "snapshotSha256": "9b5c1faed8aa7e4c9cae11cd2a9a8b40459d42ab3a677f68920a8f7ee9450db6"
+    },
+    {
+      "source": "packages/ui/src/components/meeting-ui/surfaces/participants/participants.tsx",
+      "file": "ui/components/meeting-ui/surfaces/participants/participants.tsx",
+      "sourceSha256": "a7bed8ff0efd8edc1189eda77d40a714c1f358290f62fd945c4df9cc919f487d",
+      "snapshotSha256": "12ec5dc61995bf93bd2df07a62631e0b778208cd141ce8f684675c29b7f4202b"
     },
     {
       "source": "packages/ui/src/components/meeting-ui/surfaces/reactions/reaction-stream.tsx",
@@ -794,6 +1154,18 @@
       "snapshotSha256": "cff807d2c2e689e041a630bd0606729f9932336a50a14e07e35930ff1548219d"
     },
     {
+      "source": "packages/ui/src/components/message-scroller.tsx",
+      "file": "ui/components/message-scroller.tsx",
+      "sourceSha256": "5065f298462dda70741d1b824de33c182d5236067adb819067e1a03a075a944a",
+      "snapshotSha256": "5b3259fec65c7dff5ef5974284849948f18ba4690b146ab5b3cb0c27bbf414b3"
+    },
+    {
+      "source": "packages/ui/src/components/message.tsx",
+      "file": "ui/components/message.tsx",
+      "sourceSha256": "a2b6200ae576f7bed9b246be3580455e91cdc6d07fb92c500bb6ef0b893040a5",
+      "snapshotSha256": "b92fef0015c17138cb90a74211a0ef69b00dde1f6dd290bd0443403cebc13ef3"
+    },
+    {
       "source": "packages/ui/src/components/popover.tsx",
       "file": "ui/components/popover.tsx",
       "sourceSha256": "94b2318aea4bd806620da1552cec3471af06a5198a9181db4e4622e89072ee16",
@@ -822,6 +1194,36 @@
       "file": "ui/components/progress.tsx",
       "sourceSha256": "638e64e348c512f07abfc2f9086ffaae4bd127a2be2a179e87f73ac8dd93cd62",
       "snapshotSha256": "271ab96ffd9167e8ccfcd0354b39d6c0134348dc2d7000926aab9ffa0d768f31"
+    },
+    {
+      "source": "packages/ui/src/components/rich-text-editor/code-languages.ts",
+      "file": "ui/components/rich-text-editor/code-languages.ts",
+      "sourceSha256": "f92482cfd027a34101e1f25d95a07ad543fb467c6ee3074a766b6baaa3867ecf",
+      "snapshotSha256": "f92482cfd027a34101e1f25d95a07ad543fb467c6ee3074a766b6baaa3867ecf"
+    },
+    {
+      "source": "packages/ui/src/components/rich-text-editor/hotkeys.ts",
+      "file": "ui/components/rich-text-editor/hotkeys.ts",
+      "sourceSha256": "aeb0821b661634df81848ac4c7059f8c5ddbf1ec1a0c138383cc50732638f135",
+      "snapshotSha256": "1c4351ff2fcf05dc4ed1726013c415908e54ead44eab1c5e5bde795832b529c8"
+    },
+    {
+      "source": "packages/ui/src/components/rich-text-editor/mention-text.tsx",
+      "file": "ui/components/rich-text-editor/mention-text.tsx",
+      "sourceSha256": "d92fe91cb8ef23ca916406fccceb138e9f455d4708876f865165e9e326fa51a2",
+      "snapshotSha256": "d92fe91cb8ef23ca916406fccceb138e9f455d4708876f865165e9e326fa51a2"
+    },
+    {
+      "source": "packages/ui/src/components/rich-text-editor/types.ts",
+      "file": "ui/components/rich-text-editor/types.ts",
+      "sourceSha256": "3addff9454720ac367e254bcd985b4124a0e61732e6e49048b7a6878c68aa50c",
+      "snapshotSha256": "3addff9454720ac367e254bcd985b4124a0e61732e6e49048b7a6878c68aa50c"
+    },
+    {
+      "source": "packages/ui/src/components/scroll-area.tsx",
+      "file": "ui/components/scroll-area.tsx",
+      "sourceSha256": "375cd31bf2997371ae3426561cf11253e2503aae24e04be1c441d75e555e8420",
+      "snapshotSha256": "eb77ce3580fa7fb796e459cfce7a805820105646f0de573d154b6d07bd4070f0"
     },
     {
       "source": "packages/ui/src/components/separator.tsx",
@@ -938,6 +1340,18 @@
       "snapshotSha256": "cb93558a26a9038c610346084008df6f70a32c286f943556edbfac4837dd99ca"
     },
     {
+      "source": "packages/ui/src/lib/gif-url.ts",
+      "file": "ui/lib/gif-url.ts",
+      "sourceSha256": "499e296af31244da5cc905d207672fb64c3ae466aae19c2b5f0aa35248d21041",
+      "snapshotSha256": "499e296af31244da5cc905d207672fb64c3ae466aae19c2b5f0aa35248d21041"
+    },
+    {
+      "source": "packages/ui/src/lib/initials.ts",
+      "file": "ui/lib/initials.ts",
+      "sourceSha256": "aed6c46cc30e21f688c20cabfd6e69aadd5776d5b865775f4830cab1e8d5dd3d",
+      "snapshotSha256": "aed6c46cc30e21f688c20cabfd6e69aadd5776d5b865775f4830cab1e8d5dd3d"
+    },
+    {
       "source": "packages/ui/src/lib/predicate.ts",
       "file": "ui/lib/predicate.ts",
       "sourceSha256": "b818c2516f026eef24d1bd209a88e3f08b38cbc7b593f624c580ab3b5ec5af63",
@@ -978,6 +1392,7 @@
     "@base-ui/react/alert-dialog",
     "@base-ui/react/avatar",
     "@base-ui/react/button",
+    "@base-ui/react/collapsible",
     "@base-ui/react/dialog",
     "@base-ui/react/drawer",
     "@base-ui/react/input",
@@ -985,18 +1400,29 @@
     "@base-ui/react/merge-props",
     "@base-ui/react/popover",
     "@base-ui/react/progress",
+    "@base-ui/react/scroll-area",
     "@base-ui/react/separator",
     "@base-ui/react/tabs",
     "@base-ui/react/tooltip",
     "@base-ui/react/use-render",
     "@formkit/drag-and-drop/react",
     "@outpacelabs/avatars",
+    "@shadcn/react/message-scroller",
+    "@standard-schema/spec",
+    "@virtuoso.dev/masonry",
     "class-variance-authority",
     "cn",
+    "editate",
     "es-toolkit",
     "es-toolkit/compat",
     "es-toolkit/predicate",
+    "frimousse",
+    "is-hotkey",
     "motion/react",
-    "react"
+    "react",
+    "sugar-high",
+    "sugar-high/core",
+    "sugar-high/lang",
+    "zod/mini"
   ]
 }

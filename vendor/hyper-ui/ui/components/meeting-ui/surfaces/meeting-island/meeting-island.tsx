@@ -521,7 +521,7 @@ function MeetingIslandMenu({
               onSelect={onCopyLink}
             >
               <LucideCopy className="size-4 text-muted-foreground" />
-              Copy link
+              Copy invite link
             </DropdownMenuItem>
           )}
         </DropdownMenuGroup>

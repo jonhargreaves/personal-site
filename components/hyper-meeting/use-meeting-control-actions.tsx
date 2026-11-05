@@ -25,6 +25,7 @@ export function useMeetingControlActions({
 }) {
   const [captionsOn, setCaptionsOn] = useState(false);
   const [sharing, setSharing] = useState(false);
+  const moreOpen = activePanel === "more";
   function togglePanel(panel: MeetingControlPanel) {
     onPanelChange(activePanel === panel ? null : panel);
   }
@@ -76,7 +77,7 @@ export function useMeetingControlActions({
       icon: <HugeChatting01Duotone className="size-5" />,
       isActive: activePanel === "chat",
       tone: activePanel === "chat" ? "panelActive" : undefined,
-      buttonProps: { "aria-pressed": activePanel === "chat" },
+      buttonProps: { "aria-expanded": activePanel === "chat", "aria-controls": "hyper-more-panel" },
       onClick: () => togglePanel("chat"),
       tooltipText: activePanel === "chat" ? "Close chat" : "Open chat",
     },
@@ -86,7 +87,7 @@ export function useMeetingControlActions({
       icon: <HugeUserMultiple02Duotone className="size-5" />,
       isActive: activePanel === "people",
       tone: activePanel === "people" ? "panelActive" : undefined,
-      buttonProps: { "aria-pressed": activePanel === "people" },
+      buttonProps: { "aria-expanded": activePanel === "people", "aria-controls": "hyper-more-panel" },
       onClick: () => togglePanel("people"),
       tooltipText: activePanel === "people" ? "Close participants" : "View participants",
     },
@@ -95,13 +96,13 @@ export function useMeetingControlActions({
       label: "More",
       icon: <MeetingMoreIcon />,
       buttonClassName: "group/control-button",
-      isActive: activePanel === "more",
-      tone: activePanel === "more" ? "panelActive" : undefined,
-      onClick: () => togglePanel("more"),
-      tooltipText: activePanel === "more" ? "Close more options" : "More options",
+      isActive: moreOpen,
+      tone: moreOpen ? "panelActive" : undefined,
+      onClick: () => onPanelChange(moreOpen ? null : "more"),
+      tooltipText: moreOpen ? "Close more options" : "More options",
       buttonProps: {
         id: "hyper-more-trigger",
-        "aria-expanded": activePanel === "more",
+        "aria-expanded": moreOpen,
         "aria-controls": "hyper-more-panel",
       },
     },

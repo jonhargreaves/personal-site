@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   MeetingIslandDesktop,
   MeetingIslandMobile,
   type MeetingIslandStatus,
 } from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/meeting-island";
+import MeetingRenameDialog from "./meeting-rename-dialog";
 
 const recordingStatuses: readonly MeetingIslandStatus[] = [{ type: "recording" }];
 const initialElapsedMs = (5 * 60 + 23) * 1000;
@@ -38,24 +39,44 @@ export default function MeetingRecordingIsland({
   onCopyLink: () => void;
   onLeave: () => void;
 }) {
-  if (compact) {
-    return (
-      <MeetingIslandMobile
-        className="min-w-0 max-w-full"
-        statuses={recordingStatuses}
-        title={title}
-      />
-    );
-  }
+  const [renameOpen, setRenameOpen] = useState(false);
+  const [draftTitle, setDraftTitle] = useState(title);
+  const islandRef = useRef<HTMLDivElement>(null);
 
   return (
-    <MeetingIslandDesktop
-      elapsedMs={elapsedMs}
-      onCopyLink={onCopyLink}
-      onEndMeeting={onLeave}
-      onTitleChange={onTitleChange}
-      statuses={recordingStatuses}
-      title={title}
-    />
+    <>
+      <div ref={islandRef} className="contents">
+        {compact ? (
+          <MeetingIslandMobile
+            className="min-w-0 max-w-full"
+            statuses={recordingStatuses}
+            title={title}
+          />
+        ) : (
+          <MeetingIslandDesktop
+            elapsedMs={elapsedMs}
+            onCopyLink={onCopyLink}
+            onEndMeeting={onLeave}
+            onRename={() => {
+              setDraftTitle(title);
+              setRenameOpen(true);
+            }}
+            statuses={recordingStatuses}
+            title={title}
+          />
+        )}
+      </div>
+      <MeetingRenameDialog
+        open={renameOpen}
+        draft={draftTitle}
+        onDraftChange={setDraftTitle}
+        onOpenChange={setRenameOpen}
+        onTitleChange={onTitleChange}
+        returnFocus={() =>
+          islandRef.current?.querySelector<HTMLElement>("[data-slot=meeting-island-menu-trigger]") ??
+          document.querySelector<HTMLElement>("button[aria-label='Search meeting']")
+        }
+      />
+    </>
   );
 }

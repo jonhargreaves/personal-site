@@ -27,6 +27,8 @@ button:not(
   [data-slot^="call-controls"] button,
   [data-slot="meeting-shell-bottom-bar"] button,
   [data-slot="meeting-more-panel-item"],
+  [data-slot="chat-message-reactions"] button,
+  [data-slot="toast"] button,
   [data-slot="drawer-content"] button,
   [data-slot="popover-content"] button
 ) {

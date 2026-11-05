@@ -20,6 +20,7 @@ import MeetingStage from "./meeting-stage";
 import MeetingControls from "./meeting-controls";
 import MeetingMoreOptions from "./meeting-more-panel";
 import type { MeetingControlPanel } from "./use-meeting-control-actions";
+import { useMeetingParticipants } from "./use-meeting-participants";
 
 export default function HyperMeeting() {
   const [muted, setMuted] = useState(false);
@@ -27,8 +28,9 @@ export default function HyperMeeting() {
   const [focused, setFocused] = useState<string | null>(null);
   const [pinned, setPinned] = useState<string | null>(null);
   const [activePanel, setActivePanel] = useState<MeetingControlPanel | null>(null);
-  const moreOpen = activePanel === "more";
+  const moreOpen = activePanel === "more" || activePanel === "chat" || activePanel === "people";
   const [left, setLeft] = useState(false);
+  const meetingParticipants = useMeetingParticipants({ muted, videoOn, onMutedChange: setMuted, onVideoChange: setVideoOn, onLeave: () => setLeft(true) });
   const [reactions, setReactions] = useState<MeetingReactionEvent[]>([]);
   const overlay = useIsMobile(MEETING_SIDE_PANEL_INLINE_MIN_CONTAINER_WIDTH);
   function closeMore() {
@@ -39,6 +41,7 @@ export default function HyperMeeting() {
     });
   }
   function onKeyDown(event: KeyboardEvent) {
+    if (event.defaultPrevented) return;
     if (event.key === "Escape" && moreOpen) {
       event.preventDefault();
       closeMore();
@@ -58,6 +61,7 @@ export default function HyperMeeting() {
     setFocused(null);
     setPinned(null);
     setReactions([]);
+    meetingParticipants.reset();
   }
   return (
     <MeetingShell
@@ -77,8 +81,7 @@ export default function HyperMeeting() {
         <>
           <div className="flex min-h-0 min-w-0 flex-1 flex-col" inert={overlay && moreOpen}>
             <MeetingTopBar
-              onLayoutChange={(focus) => setFocused(focus ? "jon" : null)}
-              onMoreOpen={() => setActivePanel("more")}
+              participants={meetingParticipants.roster}
               onParticipantsOpen={() => setActivePanel("people")}
               onLeave={() => setLeft(true)}
             />
@@ -86,8 +89,7 @@ export default function HyperMeeting() {
               <MeetingCallStageRoot>
                 <MeetingCallStageMain variant="fullBleed" className="relative min-h-0">
                   <MeetingStage
-                    muted={muted}
-                    videoOn={videoOn}
+                    participants={meetingParticipants.roster}
                     focused={focused}
                     pinned={pinned}
                     onFocus={(id) => setFocused((current) => (current === id ? null : id))}
@@ -112,7 +114,25 @@ export default function HyperMeeting() {
               onReaction={react}
             />
           </div>
-          <MeetingMoreOptions open={moreOpen} overlay={overlay} onClose={closeMore} />
+          <MeetingMoreOptions
+            open={moreOpen}
+            overlay={overlay}
+            view={activePanel === "chat" || activePanel === "people" ? activePanel : "more"}
+            onViewChange={setActivePanel}
+            onClose={closeMore}
+            participants={meetingParticipants.roster}
+            onAudioToggle={meetingParticipants.toggleAudio}
+            onVideoToggle={meetingParticipants.toggleVideo}
+            onRemove={(person) => {
+              meetingParticipants.remove(person);
+              if (focused === person.layoutId) setFocused(null);
+              if (pinned === person.layoutId) setPinned(null);
+            }}
+            focused={focused}
+            pinned={pinned}
+            onFocus={(id) => setFocused((current) => current === id ? null : id)}
+            onPin={(id) => setPinned((current) => current === id ? null : id)}
+          />
         </>
       )}
     </MeetingShell>

@@ -1,15 +1,15 @@
 import { Avatar, AvatarFallback } from "@/vendor/hyper-ui/ui/components/avatar";
 import { AvatarStack, AvatarStackItem } from "@/vendor/hyper-ui/ui/components/avatar-stack";
-import { participants } from "./participants";
+import type { MeetingParticipant } from "./participants";
 import styles from "./meeting-participant-stack.module.css";
 
-export default function MeetingParticipantStack() {
+export default function MeetingParticipantStack({ participants }: { participants: readonly MeetingParticipant[] }) {
   return (
     <AvatarStack
       className={styles.stack}
       size={24}
       overlap={6}
-      aria-label="4 meeting participants"
+      aria-label={`${participants.length} meeting participants`}
     >
       {participants.map((participant) => (
         <AvatarStackItem key={participant.layoutId}>

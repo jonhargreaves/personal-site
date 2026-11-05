@@ -9,12 +9,11 @@ import {
   MeetingTileGridPagination,
   MeetingTileGridViewport,
 } from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/stage/stage";
-import { participants } from "./participants";
+import type { MeetingParticipant } from "./participants";
 import { useSimulatedConversation } from "./use-simulated-conversation";
 
 export default function MeetingStage({
-  muted,
-  videoOn,
+  participants,
   focused,
   pinned,
   onFocus,
@@ -23,8 +22,7 @@ export default function MeetingStage({
   reactions,
   onReactionComplete,
 }: {
-  muted: boolean;
-  videoOn: boolean;
+  participants: readonly MeetingParticipant[];
   focused: string | null;
   pinned: string | null;
   onFocus: (id: string) => void;
@@ -59,11 +57,11 @@ export default function MeetingStage({
                     displayName={participant.displayName}
                     fallbackInitials={participant.initials}
                     avatarColor={participant.avatarColor}
-                    hasAudio={participant.isSelf ? !muted : true}
-                    hasVideo={participant.isSelf && videoOn}
+                    hasAudio={participant.hasAudio}
+                    hasVideo={participant.hasVideo}
                     isSelf={participant.isSelf}
                     isSpeaking={
-                      speakers.includes(participant.layoutId) && (!participant.isSelf || !muted)
+                      speakers.includes(participant.layoutId) && participant.hasAudio
                     }
                     isFocused={focused === participant.layoutId}
                     isPinned={pinned === participant.layoutId}

@@ -152,18 +152,25 @@ export function MeetingMorePanel({
           <MeetingMorePanelSectionTitle>Most used</MeetingMorePanelSectionTitle>
           <MeetingMorePanelItems>
             <MorePanelActionItem
-              dataHyperElid="agenda-panel"
-              description="Plan topics for this meeting"
-              icon={<HugeCheckListSolid />}
-              title="Agenda"
-              {...actions.agenda}
-            />
-            <MorePanelActionItem
               dataHyperElid="chat-panel"
               description="Message everyone in the meeting"
               icon={<HugeChatting01Solid />}
               title="Chat"
               {...actions.chat}
+            />
+            <MorePanelActionItem
+              dataHyperElid="participants-panel"
+              description="See everyone in the meeting"
+              icon={<HugeUserMultiple02Solid />}
+              title="Participants"
+              {...actions.participants}
+            />
+            <MorePanelActionItem
+              dataHyperElid="agenda-panel"
+              description="Plan topics for this meeting"
+              icon={<HugeCheckListSolid />}
+              title="Agenda"
+              {...actions.agenda}
             />
             {actions.notes ? (
               <MorePanelActionItem
@@ -174,13 +181,6 @@ export function MeetingMorePanel({
                 {...actions.notes}
               />
             ) : null}
-            <MorePanelActionItem
-              dataHyperElid="participants-panel"
-              description="See everyone in the meeting"
-              icon={<HugeUserMultiple02Solid />}
-              title="Participants"
-              {...actions.participants}
-            />
             <MorePanelActionItem
               dataHyperElid="transcript"
               description="Recording of the meeting conversation"

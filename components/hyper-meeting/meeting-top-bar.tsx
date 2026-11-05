@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { toast } from "@/components/ui/toast";
 import {
   HugeUserAdd01Stroke,
   LucideChevronDown,
@@ -15,19 +15,17 @@ import {
 import MeetingSearch from "./meeting-search";
 import MeetingRecordingIsland, { useMeetingRecording } from "./meeting-recording-island";
 import MeetingParticipantStack from "./meeting-participant-stack";
+import type { MeetingParticipant } from "./participants";
 
 export default function MeetingTopBar({
-  onLayoutChange,
-  onMoreOpen,
+  participants,
   onParticipantsOpen,
   onLeave,
 }: {
-  onLayoutChange: (focused: boolean) => void;
-  onMoreOpen: () => void;
+  participants: readonly MeetingParticipant[];
   onParticipantsOpen: () => void;
   onLeave: () => void;
 }) {
-  const [copied, setCopied] = useState(false);
   const compact = useIsMobile(767);
   const recording = useMeetingRecording();
   async function copyLink() {
@@ -35,10 +33,15 @@ export default function MeetingTopBar({
       await navigator.clipboard.writeText(
         new URL("/work/hyper-meeting-ui", window.location.origin).href,
       );
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 2000);
+      toast.add({ id: "meeting-invite-copy", title: "Meeting invite link copied", type: "success" });
     } catch {
-      setCopied(false);
+      toast.add({
+        id: "meeting-invite-copy",
+        title: "Unable to copy invite link",
+        description: "Copy the link from your browser’s address bar.",
+        type: "error",
+        timeout: 6000,
+      });
     }
   }
   return (
@@ -55,7 +58,15 @@ export default function MeetingTopBar({
             <Logo className="size-6" />
           </span>
         ) : (
-          <LogoFull className="h-6 w-auto shrink-0" />
+          <Button
+            type="button"
+            size="sm"
+            variant="ghost"
+            className="shrink-0 rounded-lg px-1.5"
+            aria-label="Hyper"
+          >
+            <LogoFull className="size-auto h-6 shrink-0" />
+          </Button>
         )}
         <Button
           type="button"
@@ -85,7 +96,7 @@ export default function MeetingTopBar({
             onClick={onParticipantsOpen}
             className="shrink-0 cursor-pointer rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            <MeetingParticipantStack />
+            <MeetingParticipantStack participants={participants} />
           </button>
         ) : null}
         <div className="flex items-center gap-2">
@@ -96,9 +107,9 @@ export default function MeetingTopBar({
             onClick={copyLink}
             aria-label="Copy prototype link"
           >
-            {compact ? <HugeUserAdd01Stroke /> : copied ? "Copied" : "Invite"}
+            {compact ? <HugeUserAdd01Stroke /> : "Invite"}
           </Button>
-          <MeetingSearch onLayoutChange={onLayoutChange} onMoreOpen={onMoreOpen} />
+          <MeetingSearch />
         </div>
       </MeetingTopBarSlot>
     </MeetingTopBarPrimitive>

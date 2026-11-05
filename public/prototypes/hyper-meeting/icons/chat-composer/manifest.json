@@ -1,0 +1,105 @@
+{
+  "fileKey": "bAUaF3c0AlJQ9gpOWA4ad8",
+  "composerNodeId": "4781:11876",
+  "selectionNodeId": "4781:12545",
+  "assets": [
+    {
+      "nodeId": "I4781:11902;28685:126067",
+      "width": 16,
+      "height": 16,
+      "file": "add.svg",
+      "sha256": "4a70890dcfcf544cd69c2c3ef9f48788751959c486845288f84b056c058f83d0"
+    },
+    {
+      "nodeId": "I4781:11903;28685:126069",
+      "width": 16,
+      "height": 16,
+      "file": "formatting.svg",
+      "sha256": "cb2176542d3497843afe498a6ad4c2d683b57df78b00501bf5afc53bf435a00e"
+    },
+    {
+      "nodeId": "I4781:11904;28685:126067",
+      "width": 16,
+      "height": 16,
+      "file": "emoji.svg",
+      "sha256": "7a950ff5621023c1e2396b709744d9be9f6372f2b1f1bdcc844a3aa4c90f5d29"
+    },
+    {
+      "nodeId": "I4781:11905;28685:126067",
+      "width": 16,
+      "height": 16,
+      "file": "mention.svg",
+      "sha256": "51362dc59773878568e5cf9b1c24d4ff1803160ee8e14da46d504c5d54395f18"
+    },
+    {
+      "nodeId": "4781:11880",
+      "width": 16,
+      "height": 16,
+      "file": "bold.svg",
+      "sha256": "b88b3aa0f1f656c99c6b388c1ef5afc54bdcdede9cb4a2bf0b9667ba39a83cd4"
+    },
+    {
+      "nodeId": "4781:11882",
+      "width": 16,
+      "height": 16,
+      "file": "italic.svg",
+      "sha256": "5823036b422a56ff30e318e212a8d1f649bc28a7bcb887eeeb6be89235e31702"
+    },
+    {
+      "nodeId": "4781:11884",
+      "width": 16,
+      "height": 16,
+      "file": "underline.svg",
+      "sha256": "06fdaee637e3aad7ca279cc26545c22a6ee6088fab4a3947e3fc22266b8e163c"
+    },
+    {
+      "nodeId": "4781:11886",
+      "width": 16,
+      "height": 16,
+      "file": "strikethrough.svg",
+      "sha256": "24c66496da2dba3c9e6be27b08b38f69a3e432ed9768b935d11fb3a9984fe26d"
+    },
+    {
+      "nodeId": "4781:11889",
+      "width": 16,
+      "height": 16,
+      "file": "link.svg",
+      "sha256": "4d74f225c9269685140cca24f641bbcb20a3b92c80d75ac047c7f4b6d943d294"
+    },
+    {
+      "nodeId": "4781:11891",
+      "width": 16,
+      "height": 16,
+      "file": "numbered-list.svg",
+      "sha256": "747114dc881f4d892b729cbc101df3651a35a8287438d3acc3556d7ee4b00411"
+    },
+    {
+      "nodeId": "4781:11893",
+      "width": 16,
+      "height": 16,
+      "file": "bulleted-list.svg",
+      "sha256": "c9c59d8e74428c552810abe8ea65e6f63d661b6e249a6a326597bc5bbf7c6c8e"
+    },
+    {
+      "nodeId": "4781:11895",
+      "width": 16,
+      "height": 16,
+      "file": "code.svg",
+      "sha256": "c1ba5dcca30f060eed9a681cd4cfa78adddbc02c18498305f6f23f12d2f76c03"
+    },
+    {
+      "nodeId": "4781:11907",
+      "width": 16,
+      "height": 16,
+      "file": "send.svg",
+      "sha256": "22c3609156a85b8d1fa9df2e03d16af8fb92c25f986db539d1e706c88274c9b9"
+    },
+    {
+      "nodeId": "4781:11887",
+      "width": 1,
+      "height": 17,
+      "file": "divider.svg",
+      "sha256": "61269913ef0530559aed744a29ea623b48bb8ad2bb15c689ab3a89f51de55772"
+    }
+  ]
+}

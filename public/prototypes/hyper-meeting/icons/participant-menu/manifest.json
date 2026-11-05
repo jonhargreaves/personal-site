@@ -1,0 +1,41 @@
+{
+  "fileKey": "pIU0iGy2dcot2b822Meju8",
+  "nodeId": "2805:29715",
+  "assets": [
+    {
+      "file": "pin.svg",
+      "nodeId": "I2805:29715;13:337;6836:13249",
+      "width": 16,
+      "height": 16,
+      "sha256": "7ce5dfdcd6b801103cd9f08c1cd8c6428c6a9550135b26147215085716cf4c93"
+    },
+    {
+      "file": "full-screen.svg",
+      "nodeId": "I2805:29715;4:6375;6836:13249",
+      "width": 16,
+      "height": 16,
+      "sha256": "e8c454cf1570708e4df3134003f5abec947d80c4127112cc88f9d0bc82f6041d"
+    },
+    {
+      "file": "mic-off-02.svg",
+      "nodeId": "I2805:29715;4:6526;6836:13249",
+      "width": 16,
+      "height": 16,
+      "sha256": "2fc2ed0c1f135fd95889d377942b5b70805c685b6fe4a008d000a5f250f24f17"
+    },
+    {
+      "file": "video-off.svg",
+      "nodeId": "I2805:29715;4:6527;6836:13249",
+      "width": 16,
+      "height": 16,
+      "sha256": "8dc3d1ef5db94880c430bd011cbf7d2311e844ad03555c6db7d9a8048799ee6d"
+    },
+    {
+      "file": "door-01.svg",
+      "nodeId": "I2805:29715;4:6571;6836:13143",
+      "width": 16,
+      "height": 16,
+      "sha256": "1d989c69c9869023761550ab95108118418081ee99b9d44fb0eefcb69c18db29"
+    }
+  ]
+}

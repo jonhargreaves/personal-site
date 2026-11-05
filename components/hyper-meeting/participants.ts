@@ -36,3 +36,8 @@ export const participants = [
     source: "camera",
   },
 ] as const;
+
+export type MeetingParticipant = (typeof participants)[number] & {
+  hasAudio: boolean;
+  hasVideo: boolean;
+};

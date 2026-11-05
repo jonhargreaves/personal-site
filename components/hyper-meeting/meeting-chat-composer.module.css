@@ -1,0 +1,158 @@
+.root {
+  height: auto;
+  gap: 8px;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--input) 30%, transparent);
+  /* Figma's inside stroke keeps the 8px content inset and 116px single-line height. */
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--input) 50%, transparent);
+  transition: none;
+}
+
+.root:focus-within {
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--input) 50%, transparent);
+}
+
+.toolbar {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.controls {
+  flex-shrink: 0;
+  gap: 4px;
+  overflow: visible;
+}
+
+.controls button,
+.send {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  padding: 0;
+  border-radius: 8px;
+  color: var(--muted-foreground);
+  transition: none;
+}
+
+.controls button:hover,
+.send:hover {
+  background: color-mix(in oklab, var(--foreground) 8%, transparent);
+  color: var(--foreground);
+}
+
+.controls button[aria-pressed="true"] {
+  background: color-mix(in oklab, var(--foreground) 5%, transparent);
+  color: var(--foreground);
+}
+
+.controls button:focus-visible,
+.send:focus-visible {
+  outline: 2px solid var(--accent-foreground);
+  outline-offset: 1px;
+}
+
+.controls button:active,
+.send:active {
+  scale: 0.96;
+}
+
+.icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background: currentColor;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.divider {
+  position: relative;
+  width: 0;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.divider::after {
+  content: "";
+  position: absolute;
+  inset: -0.5px auto auto -0.5px;
+  width: 1px;
+  height: 17px;
+  background: var(--border);
+  mask-image: url("/prototypes/hyper-meeting/icons/chat-composer/divider.svg");
+}
+
+.scrollArea {
+  min-height: 28px;
+  max-height: 160px;
+  flex: none;
+  padding: 0;
+  background: transparent;
+}
+
+.frame {
+  height: auto;
+}
+
+.editable,
+.placeholder {
+  min-height: 28px;
+  height: auto;
+  padding: 4px 6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.editable {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  color: var(--foreground);
+  caret-color: var(--accent-foreground);
+}
+
+.editable ::selection {
+  background: rgb(79 57 246 / 50%);
+}
+
+.editable [data-slot="mention-text"] {
+  display: inline;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--accent-foreground);
+  line-height: inherit;
+}
+
+.send {
+  color: var(--accent-foreground);
+}
+
+.send:disabled {
+  color: var(--muted-foreground);
+  opacity: 0.5;
+}
+
+.floatingToolbar {
+  display: flex;
+  width: auto;
+  padding: 4px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--background);
+  box-shadow: inset 0 0 0 1px var(--input);
+  animation: none;
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .controls button:active,
+  .send:active {
+    scale: none;
+  }
+}
