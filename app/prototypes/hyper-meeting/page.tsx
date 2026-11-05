@@ -1,0 +1,12 @@
+import type { Metadata } from "next";
+import HyperMeeting from "@/components/hyper-meeting/hyper-meeting";
+import "./hyper.css";
+
+export const metadata: Metadata = {
+  title: "Hyper meeting prototype",
+  robots: { index: false, follow: false },
+};
+
+export default function HyperMeetingPrototypePage() {
+  return <HyperMeeting />;
+}

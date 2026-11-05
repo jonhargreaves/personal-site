@@ -2,6 +2,7 @@ import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import PrototypeViewer from "@/components/prototype/prototype-viewer";
 import ProjectList from "@/components/project-list";
 import SectionHeading from "@/components/section-heading";
 import SiteShell from "@/components/site-shell";
@@ -41,7 +42,11 @@ export default function CaseStudy({ study }: { study: (typeof work)[number] }) {
         <p>Case study coming soon.</p>
       </header>
 
-      <ImagePlaceholder caption="Placeholder · Project overview and final designs." />
+      {study.slug === "hyper-meeting-ui" ? (
+        <PrototypeViewer src="/prototypes/hyper-meeting" title="Hyper meeting interface" />
+      ) : (
+        <ImagePlaceholder caption="Placeholder · Project overview and final designs." />
+      )}
 
       <section aria-labelledby="overview-heading" className="flex flex-col gap-6">
         <SectionHeading id="overview-heading">Overview</SectionHeading>

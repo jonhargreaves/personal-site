@@ -1,0 +1,12 @@
+/* Keep the shadcn trigger's neutral dark theme; menus use the site's shared styles. */
+.theme {
+  --background: 0 0% 3.9215686275%;
+  --foreground: 0 0% 98.0392156863%;
+  --muted-foreground: 0 0% 63.137254902%;
+  --input: 0 0% 100% / 0.15;
+  --ring: 0 0% 45.0980392157%;
+}
+
+.theme[data-slot="select-trigger"] {
+  border-radius: 0.5rem;
+}

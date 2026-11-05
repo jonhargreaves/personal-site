@@ -1,0 +1,215 @@
+/* ── Logo loader ─────────────────────────────────────────
+ * Animated treatments of the Hyper mark, used as branded loading states.
+ * Owned by src/components/brand/logo-loader.tsx.
+ * The mark radiates from user-space origin (0, 94.5), so every transform
+ * that should read as "outward" pins its origin there.
+ */
+
+.logo-loader,
+.logo-loader-progress {
+  --logo-loader-color: #565add;
+}
+
+.logo-loader {
+  display: block;
+  /* The ripple overshoot intentionally bleeds past the viewBox. */
+  overflow: visible;
+}
+
+.dark .logo-loader,
+.dark .logo-loader-progress {
+  --logo-loader-color: #7b7ef0;
+}
+
+.logo-loader-arc {
+  fill: var(--logo-loader-color);
+}
+
+.logo-loader-glyph {
+  fill: currentColor;
+}
+
+/* ── ripple: arcs light up in sequence, origin outward ── */
+
+.logo-loader-ripple .logo-loader-arc {
+  opacity: 0.2;
+  transform-box: view-box;
+  transform-origin: 0 94.5px;
+  animation: logo-loader-ripple 1.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@keyframes logo-loader-ripple {
+  0%,
+  55%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  16% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* ── sweep: specular highlight crossing a dimmed mark ─── */
+
+.logo-loader-sweep .logo-loader-base {
+  opacity: 0.22;
+}
+
+.logo-loader-band {
+  transform-box: view-box;
+  animation: logo-loader-sweep 1.9s linear infinite;
+}
+
+@keyframes logo-loader-sweep {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(297px);
+  }
+}
+
+.logo-loader-band-wide {
+  animation-name: logo-loader-sweep-wide;
+  animation-duration: 2.6s;
+}
+
+@keyframes logo-loader-sweep-wide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(680px);
+  }
+}
+
+/* ── trace: the mark draws itself, then fills ─────────── */
+
+.logo-loader-trace .logo-loader-arc,
+.logo-loader-trace .logo-loader-glyph {
+  opacity: 0.32;
+  animation: logo-loader-trace-fill 1.4s ease-in-out infinite;
+}
+
+.logo-loader-trace .logo-loader-arc-stroke,
+.logo-loader-trace .logo-loader-glyph-stroke {
+  fill: none;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  stroke-linecap: round;
+  stroke-width: 2.5;
+  animation: logo-loader-trace-draw 1.4s ease-in-out infinite;
+}
+
+.logo-loader-trace .logo-loader-arc-stroke {
+  stroke: var(--logo-loader-color);
+}
+
+.logo-loader-trace .logo-loader-glyph-stroke {
+  stroke: currentColor;
+}
+
+@keyframes logo-loader-trace-draw {
+  0% {
+    opacity: 1;
+    stroke-dashoffset: 1;
+  }
+  42% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  58%,
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes logo-loader-trace-fill {
+  0%,
+  18% {
+    opacity: 0.32;
+  }
+  42%,
+  82% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.32;
+  }
+}
+
+/* ── determinate progress and stage changes ──────────── */
+
+.logo-loader-progress-track [data-slot="progress-indicator"] {
+  border-radius: 999px;
+  background: var(--logo-loader-color);
+  transition: width 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.logo-loader-stage {
+  animation: logo-loader-stage-in 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes logo-loader-stage-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Completion settles every treatment into the same solid brand mark. */
+.logo-loader-progress[data-complete] .logo-loader * {
+  animation: none;
+}
+
+.logo-loader-progress[data-complete] .logo-loader-arc,
+.logo-loader-progress[data-complete] .logo-loader-glyph,
+.logo-loader-progress[data-complete] .logo-loader-base {
+  opacity: 1;
+}
+
+.logo-loader-progress[data-complete] .logo-loader-arc-stroke,
+.logo-loader-progress[data-complete] .logo-loader-glyph-stroke {
+  display: none;
+}
+
+/* ── reduced motion: hold a legible, static mark ──────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-loader-arc,
+  .logo-loader-arc-stroke,
+  .logo-loader-band,
+  .logo-loader-glyph,
+  .logo-loader-glyph-stroke {
+    animation: none !important;
+  }
+
+  .logo-loader-stage {
+    animation: none;
+  }
+
+  .logo-loader-progress-track [data-slot="progress-indicator"] {
+    transition: none;
+  }
+
+  .logo-loader .logo-loader-arc,
+  .logo-loader .logo-loader-glyph {
+    opacity: 1;
+  }
+
+  .logo-loader-trace .logo-loader-arc-stroke,
+  .logo-loader-trace .logo-loader-glyph-stroke {
+    display: none;
+  }
+
+  .logo-loader-sweep .logo-loader-base {
+    opacity: 1;
+  }
+}
