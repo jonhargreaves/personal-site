@@ -131,6 +131,11 @@ function visit(file) {
   let adapted = original;
   for (const edit of edits.sort((a, b) => b.start - a.start))
     adapted = adapted.slice(0, edit.start) + edit.text + adapted.slice(edit.end);
+  // The prototype uses 20px primary call-control icons; caret sizes stay native.
+  if (file.startsWith(path.join(uiRoot, "components/meeting-ui/surfaces/call-controls/"))) {
+    adapted = adapted.replaceAll("size-4.5", "size-5");
+    adapted = adapted.replace('size === "lg" ? 22 : 18', 'size === "lg" ? 22 : 20');
+  }
   // Match participant mute indicators to the call control's original Hyper glyph.
   if (file === path.join(uiRoot, "components/meeting-ui/surfaces/tiles/tile-overlays.tsx")) {
     adapted = adapted.replace("  LucideMicOff,", "  HugeMicOff02Duotone as LucideMicOff,");

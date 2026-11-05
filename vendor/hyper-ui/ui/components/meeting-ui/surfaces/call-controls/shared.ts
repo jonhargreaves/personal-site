@@ -14,7 +14,7 @@ export function getControlSizeClasses(size: ControlSize) {
       circularButtonSize: "h-10 w-10",
       controlGap: "gap-2",
       gap: "gap-1",
-      iconSize: "size-4.5",
+      iconSize: "size-5",
       labelSize: "text-xs leading-none",
     },
     md: {
@@ -25,7 +25,7 @@ export function getControlSizeClasses(size: ControlSize) {
       circularButtonSize: "h-12 w-12",
       controlGap: "gap-2",
       gap: "gap-1",
-      iconSize: "size-4.5",
+      iconSize: "size-5",
       labelSize: "text-sm",
     },
     lg: {
@@ -65,8 +65,8 @@ export const controlButtonVariants = cva(
   {
     variants: {
       size: {
-        sm: "[&_svg]:size-4.5",
-        md: "[&_svg]:size-4.5",
+        sm: "[&_svg]:size-5",
+        md: "[&_svg]:size-5",
         lg: "[&_svg]:size-5.5",
       },
       variant: {

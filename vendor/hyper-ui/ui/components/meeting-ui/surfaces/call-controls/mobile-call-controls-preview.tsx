@@ -331,7 +331,7 @@ export function MobileCallControlsMoreTrigger({
   const { controller, size, variant } = useMobileCallControlsContext(
     "CallControls.MobileMoreTrigger"
   );
-  const iconPixelSize = iconSize ?? (size === "lg" ? 22 : 18);
+  const iconPixelSize = iconSize ?? (size === "lg" ? 22 : 20);
   const moreButtonSize = getButtonSizeClass(size, variant);
 
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = (event) => {

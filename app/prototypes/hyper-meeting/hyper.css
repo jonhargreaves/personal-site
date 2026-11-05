@@ -38,6 +38,16 @@ button:not(
   border-radius: 16px;
 }
 
+/* Compact fallback avatars retain their mobile size. */
+[data-slot="video-tile-fallback"] [data-slot="avatar"] {
+  inline-size: 80px;
+  block-size: 80px;
+}
+
+[data-slot="video-tile-fallback"] [data-slot="avatar-fallback"] {
+  font-size: 20px;
+}
+
 /* Keep tile chrome inset consistently at every tile size. */
 [data-slot="meeting-tile-name-overlay"] {
   bottom: 8px;
@@ -46,6 +56,15 @@ button:not(
 }
 
 @media (min-width: 768px) {
+  [data-slot="video-tile-fallback"] [data-slot="avatar"] {
+    inline-size: 96px;
+    block-size: 96px;
+  }
+
+  [data-slot="video-tile-fallback"] [data-slot="avatar-fallback"] {
+    font-size: 24px;
+  }
+
   [data-slot="meeting-tile-name-overlay"] {
     padding-inline: 10px;
     padding-block: 6px;

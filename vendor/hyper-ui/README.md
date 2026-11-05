@@ -1,5 +1,9 @@
 # Hyper UI source snapshot
 
+The snapshot script changes the call controls' 18px (`size-4.5`) primary icon tokens to 20px (`size-5`), including media toggles, reaction hover states, More, and compact controls. Device-picker carets retain their original sizing. The local Figma video-off adapter uses the same 20px icon frame.
+
+Participant tile fallback avatars use a 96px size with Hyper's corresponding 24px initials on desktop and tablet viewports (768px and above), and 80px avatars with 20px initials on mobile. These sizes are scoped through the prototype stylesheet. Their original avatar components and speaking ripples remain intact.
+
 The layout control retains its Dynamic label and original appearance, but its dropdown menu is omitted for now. Activating it does not change participant views or the stage layout.
 
 At desktop and tablet viewport widths (768px and above), tile name labels use 10px inline padding and 6px block padding. Their 8px edge offsets and corner radii apply at every viewport size.
@@ -20,7 +24,7 @@ This is the subset of the user-supplied `hyper-ui` repository needed by the Hype
 
 The component implementations, icons, design tokens, and interactions come from Hyper UI. Imports are rewritten to relative paths so this repository builds without the sibling checkout or private registry credentials. The icon entrypoint includes only the required exports. The upstream tiles entry references an absent `LucideVideoOff` export; the local facade maps that legacy name to Hyper's existing `HyperVideoOffDuotone` asset. Type exports use `export type` for Next.js isolated modules.
 
-The meeting's `MeetingVideoOffIcon` is a user-requested Figma replacement from file `7p0SO1BOGmnOaB0CiQZhKk`, node `459:3265`. The snapshot script routes that leaf to the site's adapter in `components/hyper-meeting/icons/`; both original and adapted hashes remain in the manifest. The adapter renders the untouched exported SVG in `public/prototypes/hyper-meeting/icons/video-off.svg`, preserving its natural dimensions and placement within the 20×20 Figma frame. The host stylesheet removes the split pill's horizontal SVG nudge for the microphone and camera toggles so their icons stay centered in both states.
+The meeting's `MeetingVideoOffIcon` is a user-requested Figma replacement from file `7p0SO1BOGmnOaB0CiQZhKk`, node `588:3679`. The snapshot script routes that leaf to the site's adapter in `components/hyper-meeting/icons/`; both original and adapted hashes remain in the manifest. The adapter renders the exported SVG in `public/prototypes/hyper-meeting/icons/video-off.svg`, preserving its natural dimensions and centered placement within the 24×24 Figma frame, displayed at 20px. Only the exported palette is changed from `#262626` to the prototype's existing `#FF6467` red, as requested. The host stylesheet removes the split pill's horizontal SVG nudge for the microphone and camera toggles so their icons stay centered in both states.
 
 The stylesheet retains Hyper's tokens, utilities, and motion. Imports and source scans for unused Markdown, AI, and shimmer integrations are omitted. It is loaded only by `/prototypes/hyper-meeting`, inside the case study's iframe, so its Tailwind theme cannot change the portfolio page.
 

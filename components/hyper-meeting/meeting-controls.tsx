@@ -109,7 +109,7 @@ export default function MeetingControls({
                 id="leave"
                 label="Leave"
                 tooltipText="Leave the call"
-                icon={<HugeCallEnd04Duotone />}
+                icon={<HugeCallEnd04Duotone className="size-5" />}
                 isDanger
                 onClick={onLeave}
               />
@@ -144,7 +144,7 @@ export default function MeetingControls({
                   <CallControls.MobilePreviewAction
                     id="leave"
                     label="Leave"
-                    icon={<HugeCallEnd04Duotone />}
+                    icon={<HugeCallEnd04Duotone className="size-5" />}
                     tone="danger"
                     onClick={onLeave}
                   />

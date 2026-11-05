@@ -35,7 +35,7 @@ export function useMeetingControlActions({
     settings: {
       id: "settings",
       label: "Settings",
-      icon: <HugeSettings02Duotone />,
+      icon: <HugeSettings02Duotone className="size-5" />,
       isActive: activePanel === "settings",
       buttonProps: { "aria-pressed": activePanel === "settings" },
       onClick: () => togglePanel("settings"),
@@ -44,16 +44,16 @@ export function useMeetingControlActions({
     access: {
       id: "access",
       label: "Access",
-      icon: <HugeSecurityDuotone secondaryOpacity={0.1} />,
+      icon: <HugeSecurityDuotone className="size-5" secondaryOpacity={0.1} />,
       isActive: activePanel === "access",
       buttonProps: { "aria-pressed": activePanel === "access" },
       onClick: () => togglePanel("access"),
-      tooltipText: activePanel === "access" ? "Close participant access" : "Participant access",
+      tooltipText: "Participant access",
     },
     captions: {
       id: "captions",
       label: "Captions",
-      icon: <HugeClosedCaptionDuotone secondaryOpacity={0.1} />,
+      icon: <HugeClosedCaptionDuotone className="size-5" secondaryOpacity={0.1} />,
       isActive: captionsOn,
       tone: captionsOn ? "accent" : undefined,
       buttonProps: { "aria-pressed": captionsOn },
@@ -63,7 +63,7 @@ export function useMeetingControlActions({
     share: {
       id: "share",
       label: "Share",
-      icon: <HugeAirplayLineDuotone />,
+      icon: <HugeAirplayLineDuotone className="size-5" />,
       isActive: sharing,
       tone: sharing ? "accent" : undefined,
       buttonProps: { "aria-pressed": sharing },
@@ -73,7 +73,7 @@ export function useMeetingControlActions({
     chat: {
       id: "chat",
       label: "Chat",
-      icon: <HugeChatting01Duotone />,
+      icon: <HugeChatting01Duotone className="size-5" />,
       isActive: activePanel === "chat",
       tone: activePanel === "chat" ? "panelActive" : undefined,
       buttonProps: { "aria-pressed": activePanel === "chat" },
@@ -83,7 +83,7 @@ export function useMeetingControlActions({
     people: {
       id: "people",
       label: "People",
-      icon: <HugeUserMultiple02Duotone />,
+      icon: <HugeUserMultiple02Duotone className="size-5" />,
       isActive: activePanel === "people",
       tone: activePanel === "people" ? "panelActive" : undefined,
       buttonProps: { "aria-pressed": activePanel === "people" },

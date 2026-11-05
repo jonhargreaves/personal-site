@@ -57,7 +57,7 @@ export function MeetingMoreIcon({
   return (
     <svg
       aria-hidden="true"
-      className={cn("size-4.5", className)}
+      className={cn("size-5", className)}
       data-slot="meeting-more-icon"
       fill="none"
       height="20"

@@ -25,7 +25,7 @@ export interface MobileCallControlsSelectedSheetItem {
 }
 
 function getMobileCallControlsIconSize(size: ControlSize) {
-  return size === "lg" ? "size-5.5" : "size-4.5";
+  return size === "lg" ? "size-5.5" : "size-5";
 }
 
 export function useMobileCallControlsController({

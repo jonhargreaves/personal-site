@@ -593,7 +593,7 @@
       "source": "packages/ui/src/components/meeting-ui/surfaces/call-controls/meeting-more-icon.tsx",
       "file": "ui/components/meeting-ui/surfaces/call-controls/meeting-more-icon.tsx",
       "sourceSha256": "51f353093ec4dd06c532120c8147290b78abbdeb3fc0af0cef6dacd2cf6ac2b1",
-      "snapshotSha256": "1c408fe74c20f851e8caf018fbcf44cc0fb536f0ae168471050cc08f26d153c5"
+      "snapshotSha256": "c511b6d39de2e166c72e8cfc84c37907553a08d49b5546a5d875cb3fdf432c64"
     },
     {
       "source": "packages/ui/src/components/meeting-ui/surfaces/call-controls/meeting-reaction-icon.tsx",
@@ -617,7 +617,7 @@
       "source": "packages/ui/src/components/meeting-ui/surfaces/call-controls/mobile-call-controls-controller.ts",
       "file": "ui/components/meeting-ui/surfaces/call-controls/mobile-call-controls-controller.ts",
       "sourceSha256": "d56f41ce96c9384ed9ce7444dac09576a8de631402219c8de43b6fefb129eb8a",
-      "snapshotSha256": "d56f41ce96c9384ed9ce7444dac09576a8de631402219c8de43b6fefb129eb8a"
+      "snapshotSha256": "30309f55598a5072f9695e84e8cf2ed903eb57baf6ec69650f10de7129341939"
     },
     {
       "source": "packages/ui/src/components/meeting-ui/surfaces/call-controls/mobile-call-controls-media-context.tsx",
@@ -629,7 +629,7 @@
       "source": "packages/ui/src/components/meeting-ui/surfaces/call-controls/mobile-call-controls-preview.tsx",
       "file": "ui/components/meeting-ui/surfaces/call-controls/mobile-call-controls-preview.tsx",
       "sourceSha256": "dd590ce56658d69bcadfd426c271d40df8d26ab902b864c541c1b115d258d4bf",
-      "snapshotSha256": "40ec4ffbdee6d61fa6b3ed62f125c6b167c7e7232c32b7a79f38ffeff36df3fa"
+      "snapshotSha256": "1aa5b6f8b555f088ee063dc98c321ad973317255a9a7063be7ea18132086ea17"
     },
     {
       "source": "packages/ui/src/components/meeting-ui/surfaces/call-controls/mobile-call-controls-sheet.tsx",
@@ -653,13 +653,13 @@
       "source": "packages/ui/src/components/meeting-ui/surfaces/call-controls/reaction-picker.tsx",
       "file": "ui/components/meeting-ui/surfaces/call-controls/reaction-picker.tsx",
       "sourceSha256": "6c4530ef66cbc21ae149959607481198e8430fecf948d14b05a2899124c634b2",
-      "snapshotSha256": "8b21ae723ccf763b1a792e83cb8ad74e834e202e803e82ccf2fde5ddff3395fa"
+      "snapshotSha256": "8badf014948d4df6ec1850b621a4167769e281c8cf1d9d05ef79d0c935b9d337"
     },
     {
       "source": "packages/ui/src/components/meeting-ui/surfaces/call-controls/shared.ts",
       "file": "ui/components/meeting-ui/surfaces/call-controls/shared.ts",
       "sourceSha256": "33f4e97f414b7e9c0ee1a2730e598e3edd1bbf0f8dfeed784bfc6a28d25c4a2a",
-      "snapshotSha256": "33f4e97f414b7e9c0ee1a2730e598e3edd1bbf0f8dfeed784bfc6a28d25c4a2a"
+      "snapshotSha256": "b719b2543abdda5386dbaca9986b8d9f9dd0d19ae1712ac5b28b692fb62284db"
     },
     {
       "source": "packages/ui/src/components/meeting-ui/surfaces/call-controls/types.ts",
