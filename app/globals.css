@@ -1,8 +1,12 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 @import "tw-animate-css";
 
-/* Hyper has its own Tailwind build inside the prototype iframe. */
-@source not "../vendor";
+/* Each prototype builds its own theme inside an isolated iframe.
+   Scan portfolio code and lightweight previews, never the interactive UI. */
+@source "./**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+@source "../lib/**/*.{ts,tsx}";
+@source "../prototypes/*/preview/**/*.{ts,tsx}";
 
 @custom-variant dark (&:is(.dark *));
 

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useSyncExternalStore, type ReactNode } from "react";
+import { useState, useSyncExternalStore } from "react";
 import dynamic from "next/dynamic";
 import PrototypeFrame from "./prototype-frame";
-import MeetingSkeleton from "@/components/hyper-meeting/meeting-skeleton";
+import type { PrototypeDefinition } from "./types";
+import styles from "./prototype-frame.module.css";
 import {
   availablePrototypeDevices,
   resolvePrototypeDevice,
@@ -19,20 +20,18 @@ const getWidth = () => window.innerWidth;
 const getServerWidth = () => 0;
 const DeviceSelector = dynamic(() => import("./device-selector"), {
   ssr: false,
-  loading: () => <MeetingSkeleton className="h-9 w-[180px] rounded-lg" />,
+  loading: () => <div aria-hidden="true" className={styles.selectorLoading} />,
 });
 
 export default function PrototypeViewer({
+  id,
   src,
   title,
-  label = "Interactive prototype",
+  label,
   logo,
-}: {
-  src: string;
-  title: string;
-  label?: string;
-  logo?: ReactNode;
-}) {
+  loading,
+  sections,
+}: PrototypeDefinition) {
   const viewportWidth = useSyncExternalStore(subscribe, getWidth, getServerWidth);
   const [requestedDevice, setRequestedDevice] = useState<PrototypeDeviceId>("desktop");
   const device = resolvePrototypeDevice(requestedDevice, viewportWidth);
@@ -59,7 +58,7 @@ export default function PrototypeViewer({
           </div>
         </div>
         <div className="flex w-full min-w-0 justify-center p-8">
-          <PrototypeFrame key={src} src={src} title={title} width={preview.width} height={preview.height} viewportReady={viewportWidth > 0} />
+          <PrototypeFrame key={src} prototypeId={id} src={src} title={title} loading={loading} sections={sections} width={preview.width} height={preview.height} viewportReady={viewportWidth > 0} />
         </div>
       </div>
     </figure>

@@ -12,7 +12,8 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "check": "pnpm run lint && pnpm run typecheck && pnpm run build"
+    "check": "pnpm run lint && pnpm run typecheck && pnpm run build",
+    "test": "node --test components/prototype/*.test.mjs prototypes/*.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

@@ -7,7 +7,7 @@ import ProjectList from "@/components/project-list";
 import SectionHeading from "@/components/section-heading";
 import SiteShell from "@/components/site-shell";
 import { work } from "@/lib/work";
-import { Logo as HyperLogo } from "@/vendor/hyper-ui/ui/components/brand/logo";
+import { caseStudyPrototypes } from "@/prototypes/catalog";
 
 function ImagePlaceholder({ caption }: { caption: string }) {
   return (
@@ -23,6 +23,7 @@ function ImagePlaceholder({ caption }: { caption: string }) {
 }
 
 export default function CaseStudy({ study }: { study: (typeof work)[number] }) {
+  const prototype = caseStudyPrototypes[study.slug];
   return (
     <SiteShell>
       <header className="flex flex-col gap-6">
@@ -43,22 +44,13 @@ export default function CaseStudy({ study }: { study: (typeof work)[number] }) {
         <hr className="h-px w-full border-0 bg-[repeating-linear-gradient(to_right,currentColor_0_4px,transparent_4px_8px)] text-white/25" />
         <p>
           {study.slug === "hyper-meeting-ui"
-            ? "Hyper is built for premium meeting experiences: fast joining, low latency, clear audio, steady video streams, and AI tooling that remembers the conversation."
+            ? "Hyper is designed for a premium meeting experience: fast joining, low latency, clear audio, steady video streams, and AI tooling that remembers the conversation."
             : "Case study coming soon."}
         </p>
       </header>
 
-      {study.slug === "hyper-meeting-ui" ? (
-        <PrototypeViewer
-          src="/prototypes/hyper-meeting"
-          title="Hyper meeting interface"
-          label="Hyper Meeting UI Prototype"
-          logo={
-            <span role="img" aria-label="Hyper" className="flex size-8 items-center justify-center">
-              <HyperLogo className="size-6 text-white/25 [&_path]:fill-current" />
-            </span>
-          }
-        />
+      {prototype ? (
+        <PrototypeViewer {...prototype} />
       ) : (
         <ImagePlaceholder caption="Placeholder · Project overview and final designs." />
       )}

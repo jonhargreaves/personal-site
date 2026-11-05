@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import MeetingLoading from "@/components/hyper-meeting/meeting-loading";
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import { isPrototypeProgress } from "./protocol";
 import { useLoadingPhase } from "./use-loading-phase";
 import styles from "./prototype-frame.module.css";
 
-type FrameProps = { src: string; title: string; width: number; height: number; viewportReady: boolean };
+type FrameProps = { prototypeId: string; loading: ReactNode; sections: number; src: string; title: string; width: number; height: number; viewportReady: boolean };
 
-function PrototypeDocument({ src, title, width, height, frameWidth, onRetry }: Omit<FrameProps, "viewportReady"> & {
+function PrototypeDocument({ prototypeId, loading, sections, src, title, width, height, frameWidth, onRetry }: Omit<FrameProps, "viewportReady"> & {
   frameWidth: number;
   onRetry: () => void;
 }) {
@@ -22,23 +22,22 @@ function PrototypeDocument({ src, title, width, height, frameWidth, onRetry }: O
     function onMessage(event: MessageEvent) {
       if (event.origin !== new URL(src, window.location.href).origin ||
           event.source !== iframeRef.current?.contentWindow) return;
-      if (event.data?.type === "hyper-meeting-progress" &&
-          Number.isInteger(event.data.completed) && event.data.completed >= 0 && event.data.completed <= 3) {
+      if (isPrototypeProgress(event.data, prototypeId, sections)) {
         setCompleted(event.data.completed);
-      }
-      if (event.data?.type === "hyper-meeting-ready") {
-        setReady(true);
-        setLoaded(true);
+        if (event.data.completed === sections) {
+          setReady(true);
+          setLoaded(true);
+        }
       }
     }
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
-  }, [src]);
+  }, [src, prototypeId, sections]);
 
   return (
     <>
       <div className="absolute inset-0" aria-busy={!ready}>
-        {!loaded && <div className="absolute inset-0 origin-top-left" style={viewportStyle}><MeetingLoading /></div>}
+        {!loaded && <div className="absolute inset-0 origin-top-left" style={viewportStyle}>{loading}</div>}
         <iframe
           ref={iframeRef}
           src={src}
@@ -56,8 +55,8 @@ function PrototypeDocument({ src, title, width, height, frameWidth, onRetry }: O
         <div className={phase === "initial" ? "sr-only" : styles.loadingStatus}>
           <p role="status" className="text-xs leading-5 text-white/70">
             {phase !== "initial" && (phase === "slow"
-              ? `The meeting is taking longer to load. ${completed} of 3 sections ready. You can keep reading while it loads.`
-              : `Preparing the meeting · ${completed} of 3 sections ready`)}
+              ? `The prototype is taking longer to load. ${completed} of ${sections} sections ready. You can keep reading while it loads.`
+              : `Preparing the prototype · ${completed} of ${sections} sections ready`)}
           </p>
           {phase === "slow" && <button type="button" onClick={onRetry} className="shrink-0 cursor-pointer rounded-lg border border-white/15 px-3 py-2 text-xs text-white/80 transition-[color,background-color] duration-150 hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none">Retry</button>}
         </div>
@@ -66,7 +65,7 @@ function PrototypeDocument({ src, title, width, height, frameWidth, onRetry }: O
   );
 }
 
-export default function PrototypeFrame({ src, title, width, height, viewportReady }: FrameProps) {
+export default function PrototypeFrame({ prototypeId, loading, sections, src, title, width, height, viewportReady }: FrameProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [frameWidth, setFrameWidth] = useState(0);
   const [started, setStarted] = useState(false);
@@ -102,8 +101,8 @@ export default function PrototypeFrame({ src, title, width, height, viewportRead
   return (
     <div ref={containerRef} className={`${styles.frame} relative w-full overflow-hidden rounded-lg bg-neutral-950`} style={viewportReady ? { maxWidth: width, aspectRatio: width / height } : undefined}>
       {mounted
-        ? <PrototypeDocument key={attempt} src={src} title={title} width={width} height={height} frameWidth={frameWidth} onRetry={() => setAttempt((current) => current + 1)} />
-        : <div className="absolute inset-0"><MeetingLoading /></div>}
+        ? <PrototypeDocument key={attempt} prototypeId={prototypeId} loading={loading} sections={sections} src={src} title={title} width={width} height={height} frameWidth={frameWidth} onRetry={() => setAttempt((current) => current + 1)} />
+        : <div className="absolute inset-0">{loading}</div>}
     </div>
   );
 }

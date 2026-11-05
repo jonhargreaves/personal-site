@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import HyperMeeting from "@/components/hyper-meeting/hyper-meeting";
+import HyperMeeting from "@/prototypes/hyper-meeting/hyper-meeting";
 import { Toaster } from "@/components/ui/toast";
-import "./hyper.css";
+import "../../../prototypes/hyper-meeting/styles/prototype.css";
 
 export const metadata: Metadata = {
   title: "Hyper meeting prototype",
