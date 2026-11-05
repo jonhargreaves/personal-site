@@ -21,6 +21,7 @@ import MeetingControls from "./meeting-controls";
 import MeetingMoreOptions from "./meeting-more-panel";
 import type { MeetingControlPanel } from "./use-meeting-control-actions";
 import { useMeetingParticipants } from "./use-meeting-participants";
+import { useSimulatedConversation } from "./use-simulated-conversation";
 
 export default function HyperMeeting() {
   const [muted, setMuted] = useState(false);
@@ -30,6 +31,7 @@ export default function HyperMeeting() {
   const [activePanel, setActivePanel] = useState<MeetingControlPanel | null>(null);
   const moreOpen = activePanel === "more" || activePanel === "chat" || activePanel === "people";
   const [left, setLeft] = useState(false);
+  const speakers = useSimulatedConversation(!left);
   const meetingParticipants = useMeetingParticipants({ muted, videoOn, onMutedChange: setMuted, onVideoChange: setVideoOn, onLeave: () => setLeft(true) });
   const [reactions, setReactions] = useState<MeetingReactionEvent[]>([]);
   const overlay = useIsMobile(MEETING_SIDE_PANEL_INLINE_MIN_CONTAINER_WIDTH);
@@ -90,6 +92,7 @@ export default function HyperMeeting() {
                 <MeetingCallStageMain variant="fullBleed" className="relative min-h-0">
                   <MeetingStage
                     participants={meetingParticipants.roster}
+                    speakers={speakers}
                     focused={focused}
                     pinned={pinned}
                     onFocus={(id) => setFocused((current) => (current === id ? null : id))}
@@ -105,6 +108,7 @@ export default function HyperMeeting() {
             </MeetingShellStage>
             <MeetingControls
               muted={muted}
+              speaking={speakers.includes("jon") && !muted}
               videoOn={videoOn}
               onMutedChange={setMuted}
               onVideoChange={setVideoOn}

@@ -28,10 +28,11 @@ const conversation: readonly {
   { duration: 1000, speakers: [] },
 ];
 
-export function useSimulatedConversation() {
+export function useSimulatedConversation(enabled = true) {
   const [turn, setTurn] = useState(0);
 
   useEffect(() => {
+    if (!enabled) return;
     let timer: ReturnType<typeof setTimeout> | undefined;
     function scheduleTurn() {
       clearTimeout(timer);
@@ -49,7 +50,7 @@ export function useSimulatedConversation() {
       clearTimeout(timer);
       document.removeEventListener("visibilitychange", scheduleTurn);
     };
-  }, [turn]);
+  }, [enabled, turn]);
 
   return conversation[turn].speakers;
 }

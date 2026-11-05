@@ -10,10 +10,10 @@ import {
   MeetingTileGridViewport,
 } from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/stage/stage";
 import type { MeetingParticipant } from "./participants";
-import { useSimulatedConversation } from "./use-simulated-conversation";
 
 export default function MeetingStage({
   participants,
+  speakers,
   focused,
   pinned,
   onFocus,
@@ -23,6 +23,7 @@ export default function MeetingStage({
   onReactionComplete,
 }: {
   participants: readonly MeetingParticipant[];
+  speakers: readonly MeetingParticipant["layoutId"][];
   focused: string | null;
   pinned: string | null;
   onFocus: (id: string) => void;
@@ -31,7 +32,6 @@ export default function MeetingStage({
   reactions: readonly MeetingReactionEvent[];
   onReactionComplete: (id: string) => void;
 }) {
-  const speakers = useSimulatedConversation();
   const { containerRef, tileById, tileLayout } = useMeetingTileLayout({
     tiles: participants,
     focusedTileId: focused,

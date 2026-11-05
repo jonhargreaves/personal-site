@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HugeCallEnd04Duotone } from "@/vendor/hyper-ui/icons";
-import { AudioLevelMeter } from "@/vendor/hyper-ui/ui/components/audio-level-meter";
+import MeetingMicrophoneMeter from "./meeting-microphone-meter";
 import { DrawerTrigger } from "@/vendor/hyper-ui/ui/components/drawer";
 import { useMeetingDevices } from "./meeting-devices";
 import { useMeetingControlActions, type MeetingControlPanel } from "./use-meeting-control-actions";
@@ -23,6 +23,7 @@ const desktopControlsMinWidth = 768;
 
 export default function MeetingControls({
   muted,
+  speaking,
   videoOn,
   onMutedChange,
   onVideoChange,
@@ -32,6 +33,7 @@ export default function MeetingControls({
   onReaction,
 }: {
   muted: boolean;
+  speaking: boolean;
   videoOn: boolean;
   onMutedChange: (muted: boolean) => void;
   onVideoChange: (videoOn: boolean) => void;
@@ -56,7 +58,7 @@ export default function MeetingControls({
     onSettings: openSettings,
     renderDeviceTrailing: (id) =>
       id === devices.microphone ? (
-        <AudioLevelMeter level={muted ? 0 : 0.55} variant="gradient" />
+        <MeetingMicrophoneMeter speaking={speaking} />
       ) : null,
   };
   const videoPicker: CallControlsVideoPickerProps = {
