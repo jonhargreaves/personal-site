@@ -1,14 +1,27 @@
-import { useEffect, useRef } from "react";
-import { MeetingMorePanel } from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/more-panel/meeting-more-panel";
+import { lazy, Suspense, useEffect, useRef, type ReactNode } from "react";
 import {
   MeetingSidePanelRoot,
   MeetingSidePanelShell,
 } from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/side-panel/side-panel";
-import MeetingPeoplePanel from "./meeting-people-panel";
-import MeetingChatPanel from "./meeting-chat-panel";
+import MeetingPanelLoading from "./meeting-panel-loading";
+import type { MeetingControlPanel } from "./use-meeting-control-actions";
 import type { MeetingParticipant } from "./participants";
+import loadingStyles from "./meeting-loading.module.css";
 
 export type MeetingMoreView = "more" | "chat" | "people";
+
+const MeetingMorePanel = lazy(() => import("@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/more-panel/meeting-more-panel").then((module) => ({ default: module.MeetingMorePanel })));
+const MeetingPeoplePanel = lazy(() => import("./meeting-people-panel"));
+const MeetingChatPanel = lazy(() => import("./meeting-chat-panel"));
+
+// Restore focus when a pending panel replaces its loading header.
+function PanelFocus({ active, children }: { active: boolean; children: ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (active) ref.current?.querySelector<HTMLButtonElement>("button:not(:disabled)")?.focus({ preventScroll: true });
+  }, [active]);
+  return <div ref={ref} className={`${loadingStyles.reveal} ${loadingStyles.panelReveal} flex min-h-0 flex-1 flex-col`}>{children}</div>;
+}
 
 export default function MeetingMoreOptions({
   open,
@@ -16,6 +29,7 @@ export default function MeetingMoreOptions({
   onClose,
   view,
   onViewChange,
+  visitedPanels,
   participants,
   onAudioToggle,
   onVideoToggle,
@@ -30,6 +44,7 @@ export default function MeetingMoreOptions({
   onClose: () => void;
   view: MeetingMoreView;
   onViewChange: (view: MeetingMoreView) => void;
+  visitedPanels: readonly MeetingControlPanel[];
   participants: readonly MeetingParticipant[];
   onAudioToggle: (person: MeetingParticipant) => void;
   onVideoToggle: (person: MeetingParticipant) => void;
@@ -86,13 +101,25 @@ export default function MeetingMoreOptions({
     >
       <MeetingSidePanelShell className="rounded-[16px]">
         <div data-panel-view="more" className={view === "more" ? "flex min-h-0 flex-1 flex-col" : "hidden"}>
-          <MeetingMorePanel actions={actions} onClose={onClose} />
+          {visitedPanels.includes("more") && (
+            <Suspense fallback={<MeetingPanelLoading title="More" onClose={onClose} />}>
+              <PanelFocus active={open && view === "more"}><MeetingMorePanel actions={actions} onClose={onClose} /></PanelFocus>
+            </Suspense>
+          )}
         </div>
         <div data-panel-view="people" className={view === "people" ? "flex min-h-0 flex-1 flex-col" : "hidden"}>
-          <MeetingPeoplePanel participants={participants} onAudioToggle={onAudioToggle} onVideoToggle={onVideoToggle} onRemove={onRemove} focused={focused} pinned={pinned} onFocus={onFocus} onPin={onPin} onBack={() => onViewChange("more")} onClose={onClose} />
+          {visitedPanels.includes("people") && (
+            <Suspense fallback={<MeetingPanelLoading title="People" onBack={() => onViewChange("more")} onClose={onClose} />}>
+              <PanelFocus active={open && view === "people"}><MeetingPeoplePanel participants={participants} onAudioToggle={onAudioToggle} onVideoToggle={onVideoToggle} onRemove={onRemove} focused={focused} pinned={pinned} onFocus={onFocus} onPin={onPin} onBack={() => onViewChange("more")} onClose={onClose} /></PanelFocus>
+            </Suspense>
+          )}
         </div>
         <div data-panel-view="chat" className={view === "chat" ? "flex min-h-0 flex-1 flex-col" : "hidden"}>
-          <MeetingChatPanel onBack={() => onViewChange("more")} onClose={onClose} />
+          {visitedPanels.includes("chat") && (
+            <Suspense fallback={<MeetingPanelLoading title="Chat" onBack={() => onViewChange("more")} onClose={onClose} />}>
+              <PanelFocus active={open && view === "chat"}><MeetingChatPanel onBack={() => onViewChange("more")} onClose={onClose} /></PanelFocus>
+            </Suspense>
+          )}
         </div>
       </MeetingSidePanelShell>
     </MeetingSidePanelRoot>

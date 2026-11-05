@@ -1,19 +1,23 @@
+import { useEffect } from "react";
+import dynamic from "next/dynamic";
+import { MeetingStageLoading } from "./meeting-loading";
 import { MeetingParticipantTile } from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/tiles/tiles";
 import { useMeetingTileLayout } from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/stage/meeting-tile-layout";
-import {
-  MeetingReactionStream,
-  type MeetingReactionEvent,
-} from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/reactions/reaction-stream";
+import type { MeetingReactionEvent } from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/reactions/reaction-stream";
 import {
   MeetingCallContentFrame,
   MeetingTileGridPagination,
   MeetingTileGridViewport,
 } from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/stage/stage";
 import type { MeetingParticipant } from "./participants";
+import { useMeetingSpeakers } from "./meeting-conversation";
+import loadingStyles from "./meeting-loading.module.css";
+
+const MeetingReactionStream = dynamic(() => import("@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/reactions/reaction-stream").then((module) => module.MeetingReactionStream), { ssr: false });
 
 export default function MeetingStage({
+  onReady,
   participants,
-  speakers,
   focused,
   pinned,
   onFocus,
@@ -22,8 +26,8 @@ export default function MeetingStage({
   reactions,
   onReactionComplete,
 }: {
+  onReady: () => void;
   participants: readonly MeetingParticipant[];
-  speakers: readonly MeetingParticipant["layoutId"][];
   focused: string | null;
   pinned: string | null;
   onFocus: (id: string) => void;
@@ -32,12 +36,16 @@ export default function MeetingStage({
   reactions: readonly MeetingReactionEvent[];
   onReactionComplete: (id: string) => void;
 }) {
+  const speakers = useMeetingSpeakers();
   const { containerRef, tileById, tileLayout } = useMeetingTileLayout({
     tiles: participants,
     focusedTileId: focused,
     pinnedTileId: pinned,
     transitionKey,
   });
+  useEffect(() => {
+    if (tileLayout.isMeasured) onReady();
+  }, [tileLayout.isMeasured, onReady]);
   return (
     <MeetingCallContentFrame>
       <MeetingTileGridViewport ref={containerRef} {...tileLayout.containerProps}>
@@ -53,7 +61,7 @@ export default function MeetingStage({
                   {...layoutTile.dragHandlers}
                 >
                   <MeetingParticipantTile
-                    className="min-h-0"
+                    className={`${loadingStyles.reveal} min-h-0`}
                     displayName={participant.displayName}
                     fallbackInitials={participant.initials}
                     avatarColor={participant.avatarColor}
@@ -74,13 +82,13 @@ export default function MeetingStage({
                           className="pointer-events-none absolute inset-0 overflow-hidden"
                           data-slot="meeting-tile-reactions"
                         >
-                          <MeetingReactionStream
+                          {reactions.length > 0 && <MeetingReactionStream
                             aria-label="Reactions from Jon (you)"
                             className="w-full sm:w-full"
                             placement="center"
                             reactions={reactions}
                             onReactionComplete={onReactionComplete}
-                          />
+                          />}
                         </div>
                       ) : undefined
                     }
@@ -88,7 +96,7 @@ export default function MeetingStage({
                 </div>
               );
             })
-          : null}
+          : <MeetingStageLoading />}
         {tileLayout.renderDraggableDivider({ onPositionChange: tileLayout.setStageSize })}
         <MeetingTileGridPagination
           currentPage={tileLayout.currentPage}

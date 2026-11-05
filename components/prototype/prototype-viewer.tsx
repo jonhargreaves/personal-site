@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
-import DeviceSelector from "./device-selector";
+import { useState, useSyncExternalStore, type ReactNode } from "react";
+import dynamic from "next/dynamic";
+import PrototypeFrame from "./prototype-frame";
+import MeetingSkeleton from "@/components/hyper-meeting/meeting-skeleton";
 import {
   availablePrototypeDevices,
   resolvePrototypeDevice,
@@ -15,6 +17,10 @@ function subscribe(onChange: () => void) {
 }
 const getWidth = () => window.innerWidth;
 const getServerWidth = () => 0;
+const DeviceSelector = dynamic(() => import("./device-selector"), {
+  ssr: false,
+  loading: () => <MeetingSkeleton className="h-9 w-[180px] rounded-lg" />,
+});
 
 export default function PrototypeViewer({
   src,
@@ -32,18 +38,6 @@ export default function PrototypeViewer({
   const device = resolvePrototypeDevice(requestedDevice, viewportWidth);
   const available = availablePrototypeDevices(viewportWidth);
   const preview = prototypeViewport(device, viewportWidth);
-  const frameRef = useRef<HTMLDivElement>(null);
-  const [frameWidth, setFrameWidth] = useState(0);
-
-  useEffect(() => {
-    const frame = frameRef.current;
-    if (!frame) return;
-    const observer = new ResizeObserver(([entry]) => {
-      setFrameWidth(entry.contentRect.width);
-    });
-    observer.observe(frame);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <figure
@@ -57,35 +51,15 @@ export default function PrototypeViewer({
             {label}
           </p>
           <div className="col-start-2 row-start-1 hidden min-w-0 max-w-full justify-self-end md:block [&_[role=combobox]]:max-w-full @[640px]/prototype-viewer:col-start-3">
-            <DeviceSelector
+            {viewportWidth >= 768 && <DeviceSelector
               available={available.map((item) => item.id)}
               selected={device.id}
               onSelect={setRequestedDevice}
-            />
+            />}
           </div>
         </div>
         <div className="flex w-full min-w-0 justify-center p-8">
-          <div
-            ref={frameRef}
-            className="relative w-full overflow-hidden rounded-lg"
-            style={{ maxWidth: preview.width, aspectRatio: preview.width / preview.height }}
-          >
-            <iframe
-              src={src}
-              title={title}
-              loading="lazy"
-              // The development React Grab script annotates same-origin iframes before hydration.
-              suppressHydrationWarning
-              style={{
-                width: preview.width,
-                height: preview.height,
-                // Preserve the selected device's viewport while fitting the available space.
-                transform: `scale(${Math.min(1, frameWidth / preview.width)})`,
-              }}
-              className="absolute inset-0 block max-w-none origin-top-left rounded-lg bg-neutral-950 outline outline-white/10 -outline-offset-1"
-              allow="clipboard-write"
-            />
-          </div>
+          <PrototypeFrame key={src} src={src} title={title} width={preview.width} height={preview.height} viewportReady={viewportWidth > 0} />
         </div>
       </div>
     </figure>

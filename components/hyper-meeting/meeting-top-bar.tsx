@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { toast } from "@/components/ui/toast";
 import {
   HugeUserAdd01Stroke,
@@ -16,18 +17,22 @@ import MeetingSearch from "./meeting-search";
 import MeetingRecordingIsland, { useMeetingRecording } from "./meeting-recording-island";
 import MeetingParticipantStack from "./meeting-participant-stack";
 import type { MeetingParticipant } from "./participants";
+import loadingStyles from "./meeting-loading.module.css";
 
 export default function MeetingTopBar({
+  onReady,
   participants,
   onParticipantsOpen,
   onLeave,
 }: {
+  onReady: () => void;
   participants: readonly MeetingParticipant[];
   onParticipantsOpen: () => void;
   onLeave: () => void;
 }) {
   const compact = useIsMobile(767);
   const recording = useMeetingRecording();
+  useEffect(onReady, [onReady]);
   async function copyLink() {
     try {
       await navigator.clipboard.writeText(
@@ -46,11 +51,11 @@ export default function MeetingTopBar({
   }
   return (
     <MeetingTopBarPrimitive
-      className={
+      className={`${loadingStyles.reveal} ${
         compact
           ? "grid-cols-[5.5rem_minmax(0,1fr)_5.5rem] gap-2 px-4 sm:gap-2 sm:px-4"
           : "px-4 sm:px-4"
-      }
+      }`}
     >
       <MeetingTopBarSlot className={compact ? "gap-2" : undefined}>
         {compact ? (

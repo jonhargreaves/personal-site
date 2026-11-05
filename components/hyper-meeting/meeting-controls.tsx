@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HugeCallEnd04Duotone } from "@/vendor/hyper-ui/icons";
 import MeetingMicrophoneMeter from "./meeting-microphone-meter";
+import { useMeetingSpeakers } from "./meeting-conversation";
+import loadingStyles from "./meeting-loading.module.css";
 import { DrawerTrigger } from "@/vendor/hyper-ui/ui/components/drawer";
 import { useMeetingDevices } from "./meeting-devices";
 import { useMeetingControlActions, type MeetingControlPanel } from "./use-meeting-control-actions";
@@ -22,8 +24,8 @@ import {
 const desktopControlsMinWidth = 768;
 
 export default function MeetingControls({
+  onReady,
   muted,
-  speaking,
   videoOn,
   onMutedChange,
   onVideoChange,
@@ -32,8 +34,8 @@ export default function MeetingControls({
   onLeave,
   onReaction,
 }: {
+  onReady: () => void;
   muted: boolean;
-  speaking: boolean;
   videoOn: boolean;
   onMutedChange: (muted: boolean) => void;
   onVideoChange: (videoOn: boolean) => void;
@@ -43,6 +45,8 @@ export default function MeetingControls({
   onReaction: (reaction: MeetingReactionOption) => void;
 }) {
   const [sheetOpen, setSheetOpen] = useState(false);
+  const speakers = useMeetingSpeakers();
+  useEffect(onReady, [onReady]);
   const devices = useMeetingDevices();
   const { actions, openSettings } = useMeetingControlActions({ activePanel, onPanelChange });
   const audioPicker: CallControlsAudioPickerProps = {
@@ -58,7 +62,7 @@ export default function MeetingControls({
     onSettings: openSettings,
     renderDeviceTrailing: (id) =>
       id === devices.microphone ? (
-        <MeetingMicrophoneMeter speaking={speaking} />
+        <MeetingMicrophoneMeter speaking={speakers.includes("jon") && !muted} />
       ) : null,
   };
   const videoPicker: CallControlsVideoPickerProps = {
@@ -80,7 +84,7 @@ export default function MeetingControls({
     actions.more,
   ];
   return (
-    <MeetingShellBottomBar>
+    <MeetingShellBottomBar className={loadingStyles.reveal}>
       <CallControls
         size="sm"
         showLabels

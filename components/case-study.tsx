@@ -29,7 +29,7 @@ export default function CaseStudy({ study }: { study: (typeof work)[number] }) {
         <Link
           href="/#work"
           aria-label="Back to Work"
-          className="mb-2 -mx-3 -mt-2 flex w-fit items-center gap-3 rounded-lg ps-3 pe-2 py-2 text-white/75 transition-[color,background-color,scale] duration-150 hover:bg-white/10 hover:text-white active:scale-[0.96] active:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none motion-reduce:active:scale-100"
+          className="mb-2 -mx-3 -mt-2 flex w-fit items-center gap-3 rounded-full ps-3 pe-2 py-2 text-white/75 transition-[color,background-color,scale] duration-150 hover:bg-white/10 hover:text-white active:scale-[0.96] active:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none motion-reduce:active:scale-100"
         >
           <div className="flex w-3 shrink-0 items-center justify-center" aria-hidden="true">
             <ChevronLeft size={20} strokeWidth={1.5} className="shrink-0" />
@@ -40,7 +40,12 @@ export default function CaseStudy({ study }: { study: (typeof work)[number] }) {
           <h1 className="text-white">{study.title}</h1>
           <p>{study.details}</p>
         </div>
-        <p>Case study coming soon.</p>
+        <hr className="h-px w-full border-0 bg-[repeating-linear-gradient(to_right,currentColor_0_4px,transparent_4px_8px)] text-white/25" />
+        <p>
+          {study.slug === "hyper-meeting-ui"
+            ? "Hyper is built for premium meeting experiences: fast joining, low latency, clear audio, steady video streams, and AI tooling that remembers the conversation."
+            : "Case study coming soon."}
+        </p>
       </header>
 
       {study.slug === "hyper-meeting-ui" ? (

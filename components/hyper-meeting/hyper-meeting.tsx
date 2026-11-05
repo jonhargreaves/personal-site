@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, type KeyboardEvent } from "react";
+import { useCallback, useEffect, useState, useSyncExternalStore, type KeyboardEvent } from "react";
+import dynamic from "next/dynamic";
 import { Button } from "@/vendor/hyper-ui/ui/components/button";
 import {
   MeetingShell,
@@ -15,26 +16,45 @@ import type { MeetingReactionEvent } from "@/vendor/hyper-ui/ui/components/meeti
 import { MeetingStateCard } from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/status/status";
 import type { MeetingReactionOption } from "@/vendor/hyper-ui/ui/components/meeting-ui/surfaces/call-controls";
 import { useIsMobile } from "@/vendor/hyper-ui/ui/hooks/use-mobile";
-import MeetingTopBar from "./meeting-top-bar";
-import MeetingStage from "./meeting-stage";
-import MeetingControls from "./meeting-controls";
+import { MeetingTopBarLoading, MeetingStageLoading, MeetingControlsLoading } from "./meeting-loading";
 import MeetingMoreOptions from "./meeting-more-panel";
 import type { MeetingControlPanel } from "./use-meeting-control-actions";
 import { useMeetingParticipants } from "./use-meeting-participants";
-import { useSimulatedConversation } from "./use-simulated-conversation";
+import { MeetingConversation } from "./meeting-conversation";
+
+const MeetingTopBar = dynamic(() => import("./meeting-top-bar"), { ssr: false, loading: MeetingTopBarLoading });
+const MeetingStage = dynamic(() => import("./meeting-stage"), { ssr: false, loading: MeetingStageLoading });
+const MeetingControls = dynamic(() => import("./meeting-controls"), { ssr: false, loading: MeetingControlsLoading });
+const subscribeStandalone = () => () => {};
+const getStandalone = () => window.parent === window;
+const getServerStandalone = () => false;
 
 export default function HyperMeeting() {
+  const standalone = useSyncExternalStore(subscribeStandalone, getStandalone, getServerStandalone);
   const [muted, setMuted] = useState(false);
   const [videoOn, setVideoOn] = useState(false);
   const [focused, setFocused] = useState<string | null>(null);
   const [pinned, setPinned] = useState<string | null>(null);
   const [activePanel, setActivePanel] = useState<MeetingControlPanel | null>(null);
+  const [visitedPanels, setVisitedPanels] = useState<readonly MeetingControlPanel[]>([]);
+  function changePanel(panel: MeetingControlPanel | null) {
+    if (panel !== null) setVisitedPanels((current) => current.includes(panel) ? current : [...current, panel]);
+    setActivePanel(panel);
+  }
   const moreOpen = activePanel === "more" || activePanel === "chat" || activePanel === "people";
   const [left, setLeft] = useState(false);
-  const speakers = useSimulatedConversation(!left);
   const meetingParticipants = useMeetingParticipants({ muted, videoOn, onMutedChange: setMuted, onVideoChange: setVideoOn, onLeave: () => setLeft(true) });
   const [reactions, setReactions] = useState<MeetingReactionEvent[]>([]);
   const overlay = useIsMobile(MEETING_SIDE_PANEL_INLINE_MIN_CONTAINER_WIDTH);
+  const [readySections, setReadySections] = useState(0);
+  const topBarReady = useCallback(() => setReadySections((current) => current | 1), []);
+  const stageReady = useCallback(() => setReadySections((current) => current | 2), []);
+  const controlsReady = useCallback(() => setReadySections((current) => current | 4), []);
+  const completedSections = [1, 2, 4].filter((section) => readySections & section).length;
+  useEffect(() => {
+    window.parent.postMessage({ type: "hyper-meeting-progress", completed: completedSections }, window.location.origin);
+    if (readySections === 7) window.parent.postMessage({ type: "hyper-meeting-ready" }, window.location.origin);
+  }, [readySections, completedSections]);
   function closeMore() {
     setActivePanel(null);
     // Wait until the mobile meeting column is no longer inert.
@@ -63,15 +83,19 @@ export default function HyperMeeting() {
     setFocused(null);
     setPinned(null);
     setReactions([]);
+    setVisitedPanels([]);
     meetingParticipants.reset();
   }
   return (
+    <MeetingConversation enabled={!left}>
     <MeetingShell
       height="fill"
       className="flex-row font-sans"
       onKeyDown={onKeyDown}
       aria-label="Hyper meeting prototype"
+      data-ready={readySections === 7}
     >
+      <p role={standalone ? "status" : undefined} aria-hidden={!standalone} className="sr-only">{readySections === 7 ? "" : `Loading meeting. ${completedSections} of 3 sections ready.`}</p>
       {left ? (
         <MeetingStateCard title="You left the meeting">
           <p className="mb-6 text-sm">Thanks for trying the Hyper meeting prototype.</p>
@@ -83,16 +107,17 @@ export default function HyperMeeting() {
         <>
           <div className="flex min-h-0 min-w-0 flex-1 flex-col" inert={overlay && moreOpen}>
             <MeetingTopBar
+              onReady={topBarReady}
               participants={meetingParticipants.roster}
-              onParticipantsOpen={() => setActivePanel("people")}
+              onParticipantsOpen={() => changePanel("people")}
               onLeave={() => setLeft(true)}
             />
             <MeetingShellStage>
               <MeetingCallStageRoot>
                 <MeetingCallStageMain variant="fullBleed" className="relative min-h-0">
                   <MeetingStage
+                    onReady={stageReady}
                     participants={meetingParticipants.roster}
-                    speakers={speakers}
                     focused={focused}
                     pinned={pinned}
                     onFocus={(id) => setFocused((current) => (current === id ? null : id))}
@@ -107,13 +132,13 @@ export default function HyperMeeting() {
               </MeetingCallStageRoot>
             </MeetingShellStage>
             <MeetingControls
+              onReady={controlsReady}
               muted={muted}
-              speaking={speakers.includes("jon") && !muted}
               videoOn={videoOn}
               onMutedChange={setMuted}
               onVideoChange={setVideoOn}
               activePanel={activePanel}
-              onPanelChange={setActivePanel}
+              onPanelChange={changePanel}
               onLeave={() => setLeft(true)}
               onReaction={react}
             />
@@ -122,7 +147,8 @@ export default function HyperMeeting() {
             open={moreOpen}
             overlay={overlay}
             view={activePanel === "chat" || activePanel === "people" ? activePanel : "more"}
-            onViewChange={setActivePanel}
+            onViewChange={changePanel}
+            visitedPanels={visitedPanels}
             onClose={closeMore}
             participants={meetingParticipants.roster}
             onAudioToggle={meetingParticipants.toggleAudio}
@@ -140,5 +166,6 @@ export default function HyperMeeting() {
         </>
       )}
     </MeetingShell>
+    </MeetingConversation>
   );
 }
