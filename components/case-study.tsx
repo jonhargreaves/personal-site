@@ -7,6 +7,7 @@ import ProjectList from "@/components/project-list";
 import SectionHeading from "@/components/section-heading";
 import SiteShell from "@/components/site-shell";
 import { work } from "@/lib/work";
+import { Logo as HyperLogo } from "@/vendor/hyper-ui/ui/components/brand/logo";
 
 function ImagePlaceholder({ caption }: { caption: string }) {
   return (
@@ -43,7 +44,16 @@ export default function CaseStudy({ study }: { study: (typeof work)[number] }) {
       </header>
 
       {study.slug === "hyper-meeting-ui" ? (
-        <PrototypeViewer src="/prototypes/hyper-meeting" title="Hyper meeting interface" />
+        <PrototypeViewer
+          src="/prototypes/hyper-meeting"
+          title="Hyper meeting interface"
+          label="Hyper Meeting UI Prototype"
+          logo={
+            <span role="img" aria-label="Hyper" className="flex size-8 items-center justify-center">
+              <HyperLogo className="size-6 text-white/25 [&_path]:fill-current" />
+            </span>
+          }
+        />
       ) : (
         <ImagePlaceholder caption="Placeholder · Project overview and final designs." />
       )}
